@@ -1,0 +1,1328 @@
+/* =========================================================
+   آموزش ریاضی
+   استایل کامل سایت
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    font-family: "Vazirmatn", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.97);
+
+    border-bottom: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 3px 15px rgba(0,0,0,0.06);
+
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    min-height: 72px;
+
+    margin: 0 auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.logo {
+    color: #1d4ed8;
+    text-decoration: none;
+
+    font-size: 1.25rem;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    color: #475569;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+.nav-menu a:hover {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.nav-menu a.active {
+    color: #2563eb;
+    background: #eff6ff;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    padding: 80px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8 0%,
+            #2563eb 45%,
+            #0891b2 100%
+        );
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -150px;
+    left: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    bottom: -120px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.06);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.hero-icon {
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    font-size: 1.05rem;
+
+    line-height: 2.1;
+
+    color:
+        rgba(255,255,255,0.92);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+
+    padding: 12px 24px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: white;
+
+    color: #1d4ed8;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,0.12);
+}
+
+.btn-secondary {
+    background:
+        rgba(255,255,255,0.14);
+
+    color: white;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.5);
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 70px 25px;
+}
+
+.section-title {
+    position: relative;
+
+    text-align: center;
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: #172554;
+
+    margin-bottom: 45px;
+}
+
+.section-title::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    margin: 12px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4
+        );
+}
+
+
+/* =========================================================
+   GRADE CARDS
+   ========================================================= */
+
+.grade-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.grade-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15,23,42,0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.grade-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4
+        );
+}
+
+.grade-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(15,23,42,0.12);
+}
+
+.grade-card h3 {
+    color: #172554;
+
+    font-size: 1.25rem;
+
+    line-height: 1.8;
+
+    margin: 12px 0;
+}
+
+.grade-card p {
+    color: #475569;
+
+    font-size: 0.95rem;
+
+    line-height: 2;
+
+    min-height: 76px;
+}
+
+.grade10 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fbff
+        );
+}
+
+.grade11 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fffc
+        );
+}
+
+.grade12 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fffaf5
+        );
+}
+
+.card-icon {
+    font-size: 2.7rem;
+
+    margin-bottom: 8px;
+}
+
+.grade-label {
+    display: inline-block;
+
+    padding: 5px 14px;
+
+    margin-top: 8px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+}
+
+.card-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 22px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.card-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(37,99,235,0.3);
+}
+
+.grade10 .card-icon {
+    line-height: 1;
+}
+
+.grade10 h3 {
+    min-height: 58px;
+}
+
+.grade10 p {
+    min-height: 105px;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 28px 20px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 20px
+        rgba(15,23,42,0.05);
+
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(15,23,42,0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+
+    margin-bottom: 12px;
+}
+
+.feature-card h3 {
+    color: #172554;
+
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: #64748b;
+
+    font-size: 0.9rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   LEARNING STEPS
+   ========================================================= */
+
+.learning {
+    background: #f8fafc;
+}
+
+.steps {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+}
+
+.step {
+    padding: 28px 20px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 20px
+        rgba(15,23,42,0.05);
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0891b2
+        );
+
+    color: white;
+
+    font-weight: 800;
+}
+
+.step h3 {
+    color: #172554;
+
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: #64748b;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   PDF
+   ========================================================= */
+
+.pdf-section {
+    padding-top: 20px;
+}
+
+.pdf-box {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+
+    border:
+        1px solid #bfdbfe;
+}
+
+.pdf-icon {
+    font-size: 3.5rem;
+}
+
+.pdf-content {
+    flex: 1;
+}
+
+.pdf-content h3 {
+    color: #172554;
+
+    margin-bottom: 8px;
+}
+
+.pdf-content p {
+    color: #475569;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   محتوای درس
+   ========================================================= */
+
+.lesson-box {
+    position: relative;
+
+    margin-bottom: 30px;
+
+    padding: 32px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15,23,42,0.05);
+}
+
+.lesson-box h2 {
+    color: #172554;
+
+    font-size: 1.55rem;
+
+    margin-bottom: 18px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        2px solid #e0f2fe;
+}
+
+.lesson-box h3 {
+    color: #1e3a8a;
+
+    margin-top: 22px;
+
+    margin-bottom: 12px;
+}
+
+.lesson-box p {
+    color: #334155;
+
+    line-height: 2.15;
+
+    margin-bottom: 12px;
+}
+
+.lesson-box ul {
+    padding-right: 25px;
+
+    color: #334155;
+}
+
+.lesson-box li {
+    margin-bottom: 10px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   شماره درس
+   ========================================================= */
+
+.lesson-number {
+    display: inline-block;
+
+    padding: 6px 16px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+
+    font-weight: 800;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   کادر تعریف
+   ========================================================= */
+
+.definition-box {
+    margin: 25px 0;
+
+    padding: 22px 25px;
+
+    border-right:
+        5px solid #2563eb;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+}
+
+.definition-box h3 {
+    color: #1d4ed8;
+
+    margin-top: 0;
+}
+
+.definition-box p {
+    color: #1e3a8a;
+}
+
+
+/* =========================================================
+   کادر مثال
+   ========================================================= */
+
+.example-box {
+    margin: 20px 0;
+
+    padding: 22px 25px;
+
+    border-right:
+        5px solid #0891b2;
+
+    border-radius: 14px;
+
+    background: #ecfeff;
+}
+
+.example-box h3 {
+    color: #0e7490;
+
+    margin-top: 0;
+}
+
+.example-box p {
+    color: #164e63;
+}
+
+
+/* =========================================================
+   کادر فرمول
+   ========================================================= */
+
+.formula-box {
+    margin: 25px auto;
+
+    padding: 25px;
+
+    max-width: 700px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eff6ff
+        );
+
+    border:
+        1px solid #bfdbfe;
+
+    box-shadow:
+        0 5px 15px
+        rgba(37,99,235,0.06);
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   نکته امتحانی
+   ========================================================= */
+
+.exam-tip {
+    margin: 25px 0 5px;
+
+    padding: 22px 25px;
+
+    border-right:
+        5px solid #f59e0b;
+
+    border-radius: 14px;
+
+    background: #fffbeb;
+}
+
+.exam-tip h3 {
+    color: #b45309;
+
+    margin-top: 0;
+}
+
+.exam-tip p {
+    color: #78350f;
+}
+
+
+/* =========================================================
+   نکته کنکوری
+   ========================================================= */
+
+.konkoor-tip {
+    background:
+        linear-gradient(
+            135deg,
+            #f0fdf4,
+            #ecfdf5
+        );
+
+    border:
+        1px solid #bbf7d0;
+}
+
+.konkoor-tip .lesson-number {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.konkoor-tip h2 {
+    border-bottom-color:
+        #bbf7d0;
+}
+
+.konkoor-tip h2,
+.konkoor-tip h3 {
+    color: #166534;
+}
+
+.konkoor-tip li {
+    color: #14532d;
+}
+
+
+/* =========================================================
+   تمرین
+   ========================================================= */
+
+.exercise-box {
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            #ffffff
+        );
+}
+
+.exercise {
+    margin: 18px 0;
+
+    padding: 20px 22px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    border:
+        1px solid #fed7aa;
+
+    border-right:
+        5px solid #f97316;
+}
+
+.exercise h3 {
+    color: #c2410c;
+
+    margin-top: 0;
+}
+
+.exercise p {
+    color: #431407;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    margin-top: 40px;
+
+    padding-top: 55px;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        0 25px 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-container h3 {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+.footer-container p {
+    color: #94a3b8;
+
+    line-height: 2;
+}
+
+.footer-container a {
+    display: block;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    margin: 8px 0;
+
+    transition: color 0.2s ease;
+}
+
+.footer-container a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding: 20px;
+
+    border-top:
+        1px solid #1e293b;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #64748b;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   بازگشت به بالا
+   ========================================================= */
+
+#backToTop {
+    position: fixed;
+
+    bottom: 25px;
+    left: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(15px);
+
+    transition: all 0.3s ease;
+
+    z-index: 1000;
+}
+
+#backToTop.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+#backToTop:hover {
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   تبلت
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .grade-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .steps {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .nav-container {
+        flex-direction: column;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   موبایل
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 18px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 50px 18px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+
+        margin-bottom: 32px;
+    }
+
+    .grade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-card {
+        padding: 25px 20px;
+    }
+
+    .grade-card h3 {
+        font-size: 1.15rem;
+
+        min-height: auto;
+    }
+
+    .grade-card p {
+        min-height: auto;
+    }
+
+    .card-icon {
+        font-size: 2.3rem;
+    }
+
+    .card-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .pdf-box {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 25px 18px;
+    }
+
+    .lesson-box {
+        padding: 22px 18px;
+
+        border-radius: 16px;
+    }
+
+    .lesson-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .definition-box,
+    .example-box,
+    .exam-tip,
+    .exercise {
+        padding: 18px;
+    }
+
+    .formula-box {
+        padding: 18px;
+
+        overflow-x: auto;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+    #backToTop {
+        bottom: 18px;
+        left: 18px;
+
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+/* =========================================================
+   موبایل کوچک
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .nav-menu {
+        width: 100%;
+
+        gap: 3px;
+    }
+
+    .nav-menu a {
+        padding: 7px 8px;
+
+        font-size: 0.8rem;
+    }
+
+    .hero-icon {
+        font-size: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/* =========================================================
+   چاپ
+   ========================================================= */
+
+@media print {
+
+    .navbar,
+    .hero-buttons,
+    #backToTop {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .hero {
+        background: white;
+        color: black;
+
+        padding: 30px;
+    }
+
+    .hero-description {
+        color: #333;
+    }
+
+    .grade-card,
+    .feature-card,
+    .step,
+    .lesson-box {
+        box-shadow: none;
+
+        border:
+            1px solid #999;
+    }
+
+    .footer {
+        background: white;
+
+        color: black;
+
+        border-top:
+            1px solid #999;
+    }
+}
