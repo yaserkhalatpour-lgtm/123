@@ -1,0 +1,3640 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>جزوه جامع حل ریاضی کنکور ۱۴۰۵ تجربی | سوالات ۱۱۱ تا ۱۲۵</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(','\\)']],
+        displayMath: [['\\[','\\]']]
+    },
+    svg: {
+        fontCache: 'global'
+    }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:
+        linear-gradient(135deg,#f5f9ff 0%,#ffffff 45%,#f8f5ff 100%);
+    color:#202124;
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+    line-height:2.15;
+}
+
+.container{
+    width:min(1100px,94%);
+    margin:auto;
+    padding:25px 0 60px;
+}
+
+/* =========================
+   Header
+========================= */
+
+.hero{
+    background:linear-gradient(135deg,#174ea6,#2563eb);
+    color:white;
+    border-radius:25px;
+    padding:38px 25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(30,90,160,.22);
+    margin-bottom:25px;
+}
+
+.hero h1{
+    margin:0;
+    font-size:clamp(24px,4vw,38px);
+    font-weight:800;
+}
+
+.hero h2{
+    margin:10px 0 5px;
+    font-size:clamp(19px,3vw,27px);
+    font-weight:700;
+}
+
+.hero p{
+    margin:8px 0 0;
+    opacity:.95;
+    font-size:16px;
+}
+
+/* =========================
+   Intro
+========================= */
+
+.intro{
+    background:#f5f5f5;
+    border:2px solid #1e5aa0;
+    border-radius:18px;
+    padding:22px 25px;
+    margin:25px 0;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.intro-title{
+    color:#174ea6;
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+/* =========================
+   Question
+========================= */
+
+.question{
+    background:white;
+    border-radius:22px;
+    margin:30px 0;
+    padding:0;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+    border:1px solid #e4e7eb;
+}
+
+.question-header{
+    background:linear-gradient(135deg,#174ea6,#3976d5);
+    color:white;
+    padding:18px 24px;
+    font-size:22px;
+    font-weight:800;
+}
+
+.question-body{
+    padding:25px;
+}
+
+.question-text{
+    background:#f8faff;
+    border-right:5px solid #1e5aa0;
+    padding:17px 20px;
+    border-radius:12px;
+    margin-bottom:22px;
+}
+
+/* =========================
+   Boxes
+========================= */
+
+.box{
+    border-radius:17px;
+    padding:20px 22px;
+    margin:22px 0;
+    border:2px solid;
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.box-title{
+    font-size:19px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.prebox{
+    background:#f0f6ff;
+    border-color:#1e5aa0;
+}
+
+.prebox .box-title{
+    color:#174ea6;
+}
+
+.solbox{
+    background:#f1fbf5;
+    border-color:#1e8250;
+}
+
+.solbox .box-title{
+    color:#176b43;
+}
+
+.fastbox{
+    background:#fff8ed;
+    border-color:#dc8214;
+}
+
+.fastbox .box-title{
+    color:#b76500;
+}
+
+.tipbox{
+    background:#f8f2ff;
+    border-color:#784696;
+}
+
+.tipbox .box-title{
+    color:#69358a;
+}
+
+.warnbox{
+    background:#fff3f3;
+    border-color:#be3232;
+}
+
+.warnbox .box-title{
+    color:#a52525;
+}
+
+.answerbox{
+    background:#effcff;
+    border-color:#1e8ca0;
+    text-align:center;
+}
+
+.answerbox .box-title{
+    color:#167487;
+}
+
+/* =========================
+   Lists
+========================= */
+
+ul,ol{
+    padding-right:28px;
+}
+
+li{
+    margin:7px 0;
+}
+
+/* =========================
+   Formula
+========================= */
+
+mjx-container{
+    overflow-x:auto;
+    overflow-y:hidden;
+    max-width:100%;
+}
+
+.formula{
+    text-align:center;
+    margin:15px 0;
+}
+
+/* =========================
+   Answer Badge
+========================= */
+
+.answer-number{
+    display:inline-block;
+    padding:8px 18px;
+    background:#e6f8fb;
+    border:2px solid #1e8ca0;
+    color:#126879;
+    border-radius:12px;
+    font-weight:800;
+    margin:5px;
+}
+
+/* =========================
+   Back Button
+========================= */
+
+.back{
+    text-align:center;
+    margin:35px 0 10px;
+}
+
+.back a{
+    display:inline-block;
+    text-decoration:none;
+    background:#174ea6;
+    color:white;
+    padding:12px 25px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.back a:hover{
+    transform:translateY(-2px);
+    background:#123e82;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    text-align:center;
+    color:#666;
+    padding:25px 10px;
+    border-top:1px solid #ddd;
+    margin-top:40px;
+    font-size:14px;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media(max-width:700px){
+
+    .container{
+        width:94%;
+        padding-top:12px;
+    }
+
+    .hero{
+        padding:28px 16px;
+        border-radius:19px;
+    }
+
+    .question-header{
+        font-size:18px;
+        padding:15px 17px;
+    }
+
+    .question-body{
+        padding:17px;
+    }
+
+    .box{
+        padding:16px;
+        border-radius:14px;
+    }
+
+    .question-text{
+        padding:13px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="hero">
+
+    <h1>جزوهٔ جامع حل ریاضی کنکور ۱۴۰۵ تجربی</h1>
+
+    <h2>سؤالات ۱۱۱ تا ۱۲۵</h2>
+
+    <p>
+        آموزش مفهومی + حل تشریحی + حل سریع + نکات کنکوری
+    </p>
+
+</header>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<div class="intro">
+
+    <div class="intro-title">
+        روش استفاده از این جزوه
+    </div>
+
+    <div>
+        در این جزوه تلاش شده است که فقط به پیدا کردن گزینه اکتفا نکنیم.
+        برای هر سؤال ابتدا پیش‌نیاز را یادآوری می‌کنیم، سپس ایدهٔ اصلی حل را
+        می‌گوییم و بعد محاسبات را مرحله‌به‌مرحله انجام می‌دهیم.
+        در پایان نیز یک روش سریع یا دام کنکوری ارائه می‌شود.
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     QUESTION 111
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۱ ـ سهمی و مساحت مثلث
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+    رأس سهمی
+
+    \[
+    y=-8x^2+ax+1
+    \]
+
+    و صفرهای آن، رأس‌های مثلثی با مساحت
+
+    \[
+    \frac{27}{64}
+    \]
+
+    هستند. اگر بخش بزرگ‌تر مساحت مثلث در ناحیهٔ دوم باشد،
+    مقدار \(a\) را بیابید.
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+برای این سؤال باید سه نکته را بلد باشیم:
+</p>
+
+<ul>
+
+<li>
+رأس سهمی \(y=Ax^2+Bx+C\) از رابطهٔ
+\[
+x_v=-\frac{B}{2A}
+\]
+به دست می‌آید.
+</li>
+
+<li>
+اگر دو ریشهٔ سهمی \(x_1,x_2\) باشند،
+طول قاعدهٔ مثلث برابر
+\[
+|x_2-x_1|
+\]
+است.
+</li>
+
+<li>
+مساحت مثلث برابر
+\[
+\frac12\times\text{قاعده}\times\text{ارتفاع}
+\]
+است.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+داریم:
+</p>
+
+\[
+y=-8x^2+ax+1.
+\]
+
+<p>
+ابتدا رأس سهمی را پیدا می‌کنیم.
+</p>
+
+\[
+x_v=-\frac{a}{2(-8)}
+=\frac{a}{16}.
+\]
+
+<p>
+اکنون مقدار \(y\) در رأس:
+</p>
+
+\[
+y_v
+=
+-8\left(\frac{a}{16}\right)^2
++a\left(\frac{a}{16}\right)+1.
+\]
+
+\[
+y_v
+=
+-\frac{a^2}{32}
++\frac{a^2}{16}
++1
+=
+1+\frac{a^2}{32}.
+\]
+
+<p>
+بنابراین ارتفاع مثلث:
+</p>
+
+\[
+h=1+\frac{a^2}{32}.
+\]
+
+<p>
+از طرف دیگر ریشه‌های سهمی از معادله
+</p>
+
+\[
+-8x^2+ax+1=0
+\]
+
+<p>
+به دست می‌آیند.
+</p>
+
+<p>
+ممیّز:
+</p>
+
+\[
+\Delta=a^2+32.
+\]
+
+<p>
+اختلاف دو ریشهٔ معادلهٔ درجه دوم برابر است با:
+</p>
+
+\[
+|x_1-x_2|
+=
+\frac{\sqrt{\Delta}}{|A|}
+=
+\frac{\sqrt{a^2+32}}{8}.
+\]
+
+<p>
+پس قاعده:
+</p>
+
+\[
+b=\frac{\sqrt{a^2+32}}8.
+\]
+
+<p>
+اکنون مساحت:
+</p>
+
+\[
+\frac12
+\left(
+\frac{\sqrt{a^2+32}}8
+\right)
+\left(
+1+\frac{a^2}{32}
+\right)
+=
+\frac{27}{64}.
+\]
+
+<p>
+ولی:
+</p>
+
+\[
+1+\frac{a^2}{32}
+=
+\frac{a^2+32}{32}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+\frac{\sqrt{a^2+32}(a^2+32)}
+{2\times8\times32}
+=
+\frac{27}{64}.
+\]
+
+\[
+\frac{(a^2+32)^{3/2}}{512}
+=
+\frac{27}{64}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+(a^2+32)^{3/2}=216.
+\]
+
+<p>
+چون:
+</p>
+
+\[
+216=36^{3/2},
+\]
+
+<p>
+داریم:
+</p>
+
+\[
+a^2+32=36.
+\]
+
+\[
+a^2=4
+\]
+
+<p>
+و:
+</p>
+
+\[
+a=\pm2.
+\]
+
+<p>
+اما گفته شده بخش بزرگ‌تر مثلث در ناحیهٔ دوم قرار دارد.
+رأس سهمی باید سمت چپ محور \(y\) باشد؛ بنابراین:
+</p>
+
+\[
+x_v=\frac a{16}<0.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+a<0.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+\boxed{a=-2}.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+<p>
+در این نوع سؤال، مستقیماً از فرمول‌های
+</p>
+
+\[
+x_v=\frac a{16},
+\qquad
+y_v=1+\frac{a^2}{32},
+\qquad
+|x_1-x_2|=\frac{\sqrt{a^2+32}}8
+\]
+
+<p>
+استفاده کنید.
+</p>
+
+<p>
+بعد از تشکیل مساحت، عبارت زیبای
+</p>
+
+\[
+\frac{(a^2+32)^{3/2}}{512}
+\]
+
+<p>
+به دست می‌آید.
+</p>
+
+</div>
+
+
+<div class="box tipbox">
+
+<div class="box-title">
+    ⭐ نکتهٔ امتحانی و کنکوری
+</div>
+
+<p>
+اگر سؤال بگوید «بخش بزرگ‌تر در ناحیهٔ دوم است»،
+معمولاً باید به جای حل دوبارهٔ هندسه، فقط علامت مختصات رأس را بررسی کنیم.
+</p>
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }1}
+\qquad
+\boxed{a=-2}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 112
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۲ ـ دامنهٔ تابع مرکب و خارج‌قسمت
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+از نمودار \(f\)، دامنه و صفرهای تابع را می‌خوانیم و داریم:
+</p>
+
+\[
+g(x)=-f\left(x+\frac12\right),
+\qquad
+h(x)=\frac{f(x)}{g(x)}.
+\]
+
+<p>
+تعداد اعداد صحیح موجود در دامنهٔ \(h\) را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+دو نکتهٔ مهم:
+</p>
+
+\[
+D_{f\circ g}
+=
+\{x\in D_g\mid g(x)\in D_f\}.
+\]
+
+<p>
+همچنین در تابع
+</p>
+
+\[
+\frac{f(x)}{g(x)}
+\]
+
+<p>
+علاوه بر دامنهٔ صورت و مخرج، باید داشته باشیم:
+</p>
+
+\[
+g(x)\neq0.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+از نمودار:
+</p>
+
+\[
+D_f=
+\left[-\frac32,\frac52\right].
+\]
+
+<p>
+صفرهای \(f\):
+</p>
+
+\[
+x=-\frac32,\quad x=0,\quad x=\frac52.
+\]
+
+<p>
+اکنون:
+</p>
+
+\[
+g(x)=-f\left(x+\frac12\right).
+\]
+
+<p>
+برای اینکه \(g\) تعریف شود باید:
+</p>
+
+\[
+x+\frac12\in
+\left[-\frac32,\frac52\right].
+\]
+
+<p>
+پس:
+</p>
+
+\[
+-2\le x\le2.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+D_g=[-2,2].
+\]
+
+<p>
+برای \(h\):
+</p>
+
+\[
+h(x)=\frac{f(x)}{g(x)}.
+\]
+
+<p>
+پس باید همزمان:
+</p>
+
+\[
+x\in D_f\cap D_g.
+\]
+
+<p>
+داریم:
+</p>
+
+\[
+D_f\cap D_g
+=
+\left[-\frac32,2\right].
+\]
+
+<p>
+اما مخرج نباید صفر باشد.
+</p>
+
+\[
+g(x)=0
+\]
+
+<p>
+یعنی:
+</p>
+
+\[
+f\left(x+\frac12\right)=0.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+x+\frac12
+\in
+\left\{-\frac32,0,\frac52\right\}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+x=-2,\quad -\frac12,\quad2.
+\]
+
+<p>
+از این سه عدد فقط دو تای آنها در
+</p>
+
+\[
+\left[-\frac32,2\right]
+\]
+
+<p>
+قرار دارند:
+</p>
+
+\[
+-\frac12,\qquad2.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+D_h=
+\left[-\frac32,2\right]
+\setminus
+\left\{-\frac12,2\right\}.
+\]
+
+<p>
+اعداد صحیح موجود:
+</p>
+
+\[
+-1,\quad0,\quad1.
+\]
+
+<p>
+پس تعداد آنها:
+</p>
+
+\[
+\boxed{3}.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+<p>
+ابتدا اشتراک دامنه‌ها را بگیر:
+</p>
+
+\[
+\left[-\frac32,2\right].
+\]
+
+<p>
+بعد صفرهای مخرج را حذف کن:
+</p>
+
+\[
+-\frac12,\quad2.
+\]
+
+<p>
+در نهایت فقط
+</p>
+
+\[
+-1,0,1
+\]
+
+<p>
+باقی می‌مانند.
+</p>
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }3}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 113
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۳ ـ تغییر ریشه‌های معادله
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+معادله:
+</p>
+
+\[
+x^2+1.35x-1.3=0
+\]
+
+<p>
+داده شده است. هر ریشهٔ معادلهٔ جدید، نیم واحد کمتر از ریشهٔ متناظر
+معادلهٔ بالا است. حاصل‌ضرب ریشه‌های معادلهٔ جدید را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+اگر ریشه‌ها \(r,s\) باشند:
+</p>
+
+\[
+r+s=-\frac BA,
+\qquad
+rs=\frac CA.
+\]
+
+<p>
+همچنین اگر هر ریشه به اندازهٔ \(k\) تغییر کند:
+</p>
+
+\[
+(r-k)(s-k)
+=
+rs-k(r+s)+k^2.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+فرض کنیم ریشه‌های اصلی:
+</p>
+
+\[
+r,\quad s.
+\]
+
+<p>
+طبق روابط ویتا:
+</p>
+
+\[
+r+s=-1.35
+\]
+
+<p>
+و:
+</p>
+
+\[
+rs=-1.3.
+\]
+
+<p>
+هر ریشه نیم واحد کمتر شده است؛ بنابراین ریشه‌های جدید:
+</p>
+
+\[
+r-\frac12,
+\qquad
+s-\frac12.
+\]
+
+<p>
+حاصل‌ضرب:
+</p>
+
+\[
+\left(r-\frac12\right)
+\left(s-\frac12\right).
+\]
+
+<p>
+باز می‌کنیم:
+</p>
+
+\[
+rs-\frac12(r+s)+\frac14.
+\]
+
+<p>
+جایگذاری:
+</p>
+
+\[
+=-1.3-\frac12(-1.35)+0.25.
+\]
+
+\[
+=-1.3+0.675+0.25
+\]
+
+\[
+=-0.375.
+\]
+
+<p>
+یعنی:
+</p>
+
+\[
+\boxed{-\frac38}.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+<p>
+فرمول طلایی:
+</p>
+
+\[
+(r-k)(s-k)=rs-k(r+s)+k^2.
+\]
+
+<p>
+در اینجا:
+</p>
+
+\[
+k=\frac12.
+\]
+
+<p>
+بدون اینکه اصلاً ریشه‌ها را حساب کنیم، جواب به دست می‌آید.
+</p>
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }1}
+\qquad
+\boxed{-\frac38}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 114
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۴ ـ دامنهٔ تابع مرکب
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+از نمودارها داریم:
+</p>
+
+\[
+f:[-3,0]\longrightarrow\mathbb R
+\]
+
+<p>
+و:
+</p>
+
+\[
+g:\left(-\frac12,\infty\right)\longrightarrow\mathbb R.
+\]
+
+<p>
+ضابطهٔ خط \(f\) از دو نقطهٔ
+</p>
+
+\[
+(-3,0),\qquad(0,-2)
+\]
+
+<p>
+به دست می‌آید.
+
+سؤال دامنهٔ
+</p>
+
+\[
+(g\circ f)\left(\frac x2\right)
+\]
+
+<p>
+را می‌خواهد.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+برای تابع مرکب:
+</p>
+
+\[
+(g\circ f)(u)
+\]
+
+<p>
+باید:
+</p>
+
+\[
+u\in D_f
+\]
+
+<p>
+و همچنین:
+</p>
+
+\[
+f(u)\in D_g.
+\]
+
+<p>
+پس دو شرط باید همزمان برقرار باشند.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+ابتدا ضابطهٔ \(f\) را پیدا می‌کنیم.
+</p>
+
+<p>
+شیب:
+</p>
+
+\[
+m=
+\frac{-2-0}{0-(-3)}
+=
+-\frac23.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+f(x)=-\frac23x-2.
+\]
+
+<p>
+اکنون در
+</p>
+
+\[
+(g\circ f)\left(\frac x2\right)
+\]
+
+<p>
+باید:
+</p>
+
+\[
+\frac x2\in[-3,0].
+\]
+
+<p>
+پس:
+</p>
+
+\[
+-6\le x\le0.
+\]
+
+<p>
+شرط دوم:
+</p>
+
+\[
+f\left(\frac x2\right)>-\frac12.
+\]
+
+<p>
+داریم:
+</p>
+
+\[
+-\frac23\left(\frac x2\right)-2>-\frac12.
+\]
+
+\[
+-\frac x3-2>-\frac12.
+\]
+
+\[
+-\frac x3>\frac32.
+\]
+
+<p>
+با ضرب در \(-3\)، علامت نامساوی عوض می‌شود:
+</p>
+
+\[
+x<-\frac92.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+-6\le x<-\frac92.
+\]
+
+<p>
+طول این بازه:
+</p>
+
+\[
+-\frac92-(-6)
+=
+6-\frac92
+=
+\frac32.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }3}
+\qquad
+\boxed{\frac32}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 115
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۵ ـ مثلثات و ربع سوم
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+داده شده است:
+</p>
+
+\[
+\sqrt{\tan x}-\sqrt{\cot x}
+=
+\frac2{\sqrt7}
+\]
+
+<p>
+و \(x\) در ربع سوم است. حاصل
+</p>
+
+\[
+\sin x-\cos x
+\]
+
+<p>
+را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+در ربع سوم:
+</p>
+
+\[
+\sin x<0,\qquad\cos x<0,
+\]
+
+<p>
+اما:
+</p>
+
+\[
+\tan x>0,\qquad\cot x>0.
+\]
+
+<p>
+همچنین:
+</p>
+
+\[
+\cot x=\frac1{\tan x}.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+بگذارید:
+</p>
+
+\[
+t=\sqrt{\tan x}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\sqrt{\cot x}=\frac1t.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+t-\frac1t=\frac2{\sqrt7}.
+\]
+
+<p>
+دو طرف را به توان دوم می‌رسانیم:
+</p>
+
+\[
+t^2+\frac1{t^2}-2=\frac47.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+t^2+\frac1{t^2}
+=
+2+\frac47
+=
+\frac{18}{7}.
+\]
+
+<p>
+اکنون:
+</p>
+
+\[
+\sin x-\cos x
+=
+\cos x(\tan x-1).
+\]
+
+<p>
+چون \(x\) در ربع سوم است:
+</p>
+
+\[
+\cos x=-\frac1{\sqrt{1+\tan^2x}}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+\sin x-\cos x
+=
+-\frac{\tan x-1}{\sqrt{1+\tan^2x}}.
+\]
+
+<p>
+از آنجا که
+</p>
+
+\[
+\tan x=t^2,
+\]
+
+<p>
+داریم:
+</p>
+
+\[
+-\frac{t^2-1}{\sqrt{1+t^4}}.
+\]
+
+<p>
+صورت را به شکل مناسب می‌نویسیم:
+</p>
+
+\[
+t^2-1
+=
+t\left(t-\frac1t\right)
+=
+\frac{2t}{\sqrt7}.
+\]
+
+<p>
+از طرف دیگر:
+</p>
+
+\[
+1+t^4
+=
+t^2\left(t^2+\frac1{t^2}\right)
+=
+t^2\frac{18}{7}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\sqrt{1+t^4}
+=
+t\sqrt{\frac{18}{7}}.
+\]
+
+<p>
+در نتیجه:
+</p>
+
+\[
+\sin x-\cos x
+=
+-\frac{\frac{2t}{\sqrt7}}
+{t\sqrt{\frac{18}{7}}}.
+\]
+
+\[
+=
+-\frac2{\sqrt{18}}
+=
+-\frac2{3\sqrt2}
+=
+-\frac{\sqrt2}{3}.
+\]
+
+</div>
+
+
+<div class="box tipbox">
+
+<div class="box-title">
+    ⭐ نکتهٔ امتحانی و کنکوری
+</div>
+
+<p>
+بزرگ‌ترین دام سؤال همین علامت است.
+</p>
+
+<p>
+اگر ربع سوم را فراموش کنیم، ممکن است به
+</p>
+
+\[
++\frac{\sqrt2}{3}
+\]
+
+<p>
+برسیم.
+</p>
+
+<p>
+اما در ربع سوم، هم سینوس و هم کسینوس منفی‌اند؛
+بنابراین جواب نهایی منفی است.
+</p>
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }4}
+\qquad
+\boxed{-\frac{\sqrt2}{3}}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 116
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۶ ـ قانون سینوس‌ها
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+در مثلث \(ABC\):
+</p>
+
+\[
+\angle ACB=45^\circ,
+\qquad
+\angle ABC=30^\circ,
+\qquad
+AB=6.
+\]
+
+<p>
+طول \(BC\) را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+قانون سینوس‌ها:
+</p>
+
+\[
+\frac a{\sin A}
+=
+\frac b{\sin B}
+=
+\frac c{\sin C}.
+\]
+
+<p>
+در این سؤال ضلع \(AB\) مقابل زاویهٔ \(C\) قرار دارد.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+ابتدا زاویهٔ سوم:
+</p>
+
+\[
+A=180^\circ-45^\circ-30^\circ
+=
+105^\circ.
+\]
+
+<p>
+ضلع \(AB=6\) مقابل زاویهٔ \(C=45^\circ\) است.
+</p>
+
+<p>
+ضلع \(BC\) مقابل زاویهٔ \(A=105^\circ\) است.
+</p>
+
+<p>
+پس:
+</p>
+
+\[
+\frac{BC}{\sin105^\circ}
+=
+\frac6{\sin45^\circ}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+BC
+=
+6\frac{\sin105^\circ}{\sin45^\circ}.
+\]
+
+<p>
+می‌دانیم:
+</p>
+
+\[
+\sin105^\circ
+=
+\sin(60^\circ+45^\circ)
+=
+\frac{\sqrt6+\sqrt2}{4}.
+\]
+
+<p>
+و:
+</p>
+
+\[
+\sin45^\circ=\frac{\sqrt2}{2}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+BC
+=
+6
+\frac{\frac{\sqrt6+\sqrt2}{4}}
+{\frac{\sqrt2}{2}}.
+\]
+
+\[
+BC
+=
+3(1+\sqrt3).
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }2}
+\qquad
+\boxed{3(1+\sqrt3)}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 117
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۷ ـ یکنواختی تابع مثلثاتی
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+\[
+f(x)=-\frac12\cos\left(\frac{3\pi}{2}+3x\right)
+\]
+
+<p>
+روی بازهٔ
+</p>
+
+\[
+[a,0]
+\]
+
+<p>
+اکیداً نزولی است. کمترین مقدار ممکن \(a\) را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+برای تشخیص نزولی بودن تابع مشتق می‌گیریم.
+</p>
+
+<p>
+اگر:
+</p>
+
+\[
+f'(x)<0
+\]
+
+<p>
+در تمام بازه برقرار باشد، تابع اکیداً نزولی است.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+داریم:
+</p>
+
+\[
+f(x)=-\frac12
+\cos\left(\frac{3\pi}{2}+3x\right).
+\]
+
+<p>
+مشتق:
+</p>
+
+\[
+f'(x)
+=
+-\frac12
+\left[
+-\sin\left(\frac{3\pi}{2}+3x\right)
+\right]3.
+\]
+
+\[
+f'(x)
+=
+\frac32
+\sin\left(\frac{3\pi}{2}+3x\right).
+\]
+
+<p>
+اما:
+</p>
+
+\[
+\sin\left(\frac{3\pi}{2}+3x\right)
+=
+-\cos3x.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+f'(x)=-\frac32\cos3x.
+\]
+
+<p>
+برای نزولی بودن:
+</p>
+
+\[
+f'(x)<0.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\cos3x>0.
+\]
+
+<p>
+اطراف \(x=0\)، داریم:
+</p>
+
+\[
+\cos0=1>0.
+\]
+
+<p>
+وقتی از صفر به سمت چپ حرکت کنیم، اولین مرز ناحیهٔ
+</p>
+
+\[
+\cos3x>0
+\]
+
+<p>
+در جایی است که:
+</p>
+
+\[
+3x=-\frac{\pi}{2}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+x=-\frac{\pi}{6}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+a=-\frac{\pi}{6}.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+<p>
+برای سؤال‌های «کمترین \(a\) که تابع در \([a,0]\) نزولی است»،
+کافی است اولین نقطه‌ای را پیدا کنیم که مشتق از منفی به صفر یا مثبت برسد.
+</p>
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }4}
+\qquad
+\boxed{-\frac{\pi}{6}}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 118
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۸ ـ معادلهٔ مثلثاتی
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+تعداد جواب‌های معادله در بازهٔ
+</p>
+
+\[
+[-2\pi,2\pi]
+\]
+
+<p>
+را بیابید:
+</p>
+
+\[
+\sin(\pi+x)\cos\left(\frac\pi2+x\right)+1
+=
+2\sin(\pi-x).
+\]
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+اتحادهای مهم:
+</p>
+
+\[
+\sin(\pi+x)=-\sin x,
+\]
+
+\[
+\cos\left(\frac\pi2+x\right)=-\sin x,
+\]
+
+<p>
+و:
+</p>
+
+\[
+\sin(\pi-x)=\sin x.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+جایگذاری اتحادها:
+</p>
+
+\[
+(-\sin x)(-\sin x)+1
+=
+2\sin x.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\sin^2x+1=2\sin x.
+\]
+
+<p>
+به یک مربع کامل تبدیل می‌کنیم:
+</p>
+
+\[
+\sin^2x-2\sin x+1=0.
+\]
+
+\[
+(\sin x-1)^2=0.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+\sin x=1.
+\]
+
+<p>
+جواب عمومی:
+</p>
+
+\[
+x=\frac\pi2+2k\pi.
+\]
+
+<p>
+اکنون در بازهٔ
+</p>
+
+\[
+[-2\pi,2\pi]
+\]
+
+<p>
+دو جواب داریم:
+</p>
+
+\[
+x=-\frac{3\pi}{2},
+\qquad
+x=\frac\pi2.
+\]
+
+<p>
+پس تعداد جواب‌ها:
+</p>
+
+\[
+\boxed2.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }2}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 119
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۱۹ ـ توان و لگاریتم
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+حاصل عبارت
+</p>
+
+\[
+(0.25)^{\,1-\log_4 10}
+\]
+
+<p>
+را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+دو تبدیل طلایی:
+</p>
+
+\[
+0.25=\frac14=4^{-1}
+\]
+
+<p>
+و:
+</p>
+
+\[
+(a^m)^n=a^{mn}.
+\]
+
+<p>
+همچنین:
+</p>
+
+\[
+a^{\log_a x}=x.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+عبارت:
+</p>
+
+\[
+(0.25)^{1-\log_4 10}.
+\]
+
+<p>
+چون:
+</p>
+
+\[
+0.25=\frac14=4^{-1},
+\]
+
+<p>
+داریم:
+</p>
+
+\[
+(4^{-1})^{1-\log_4 10}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+4^{-(1-\log_4 10)}.
+\]
+
+<p>
+علامت منفی را پخش می‌کنیم:
+</p>
+
+\[
+4^{-1+\log_4 10}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+4^{-1}4^{\log_4 10}.
+\]
+
+<p>
+اکنون:
+</p>
+
+\[
+4^{-1}=\frac14
+\]
+
+<p>
+و:
+</p>
+
+\[
+4^{\log_4 10}=10.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\frac14\times10
+=
+\frac{10}{4}
+=
+\frac52.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+\boxed{\frac52}.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+\[
+(0.25)^{1-\log_4 10}
+=
+\left(\frac14\right)^{1-\log_4 10}
+\]
+
+<p>
+و چون
+</p>
+
+\[
+\frac14=4^{-1},
+\]
+
+<p>
+داریم:
+</p>
+
+\[
+4^{\log_4 10-1}
+=
+\frac{10}{4}
+=
+\frac52.
+\]
+
+</div>
+
+
+<div class="box tipbox">
+
+<div class="box-title">
+    ⭐ نکتهٔ امتحانی و کنکوری
+</div>
+
+<p>
+دقت کن عبارت سؤال
+</p>
+
+\[
+1-\log_4 10
+\]
+
+<p>
+داخل توان قرار دارد.
+</p>
+
+<p>
+اگر «\(1-\)» را نبینیم، سؤال کاملاً به جواب دیگری می‌رسد.
+</p>
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }1}
+\qquad
+\boxed{\frac52=2.5}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 120
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۲۰ ـ چارک‌ها
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+داده‌ها:
+</p>
+
+\[
+1,10,12,14,15,16,18,23,25,34,42,45
+\]
+
+<p>
+با توجه به متن سؤال، دو عدد \(a,b\) به داده‌ها اضافه می‌شوند
+و چارک اول و سوم تغییر نمی‌کنند.
+میانگین \(a,b\) را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+ابتدا داده‌ها را مرتب می‌کنیم.
+</p>
+
+<p>
+برای ۱۱ داده:
+</p>
+
+\[
+Q_1=14,
+\qquad
+Q_3=34.
+\]
+
+<p>
+پس هدف این است که پس از اضافه شدن دو داده، همین چارک‌ها حفظ شوند.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+داده‌های اصلی:
+</p>
+
+\[
+10,12,14,15,16,18,23,25,34,42,45.
+\]
+
+<p>
+تعداد داده‌ها:
+</p>
+
+\[
+n=11.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+Q_1=14,
+\qquad
+Q_3=34.
+\]
+
+<p>
+بعد از اضافه شدن دو داده، تعداد داده‌ها:
+</p>
+
+\[
+13.
+\]
+
+<p>
+برای اینکه چارک اول همچنان در مرز \(14\) باقی بماند
+و چارک سوم نیز همچنان در مرز \(34\) قرار بگیرد،
+دو عدد افزوده‌شده باید همین دو مرز را تثبیت کنند:
+</p>
+
+\[
+\{a,b\}=\{14,34\}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+a+b=48.
+\]
+
+<p>
+بنابراین میانگین:
+</p>
+
+\[
+\frac{a+b}{2}
+=
+\frac{48}{2}
+=
+24.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+<p>
+اصل سؤال را این‌طور ببین:
+</p>
+
+\[
+Q_1=14,\qquad Q_3=34.
+\]
+
+<p>
+برای ثابت ماندن هر دو چارک، دو دادهٔ جدید باید مرزهای
+</p>
+
+\[
+14,\quad34
+\]
+
+<p>
+را حفظ کنند.
+</p>
+
+<p>
+پس:
+</p>
+
+\[
+a+b=14+34=48
+\]
+
+<p>
+و:
+</p>
+
+\[
+\boxed{\bar x=24}.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }3}
+\qquad
+\boxed{24}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 121
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۲۱ ـ تابع وارون
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+تابع:
+</p>
+
+\[
+f(x)=\frac1{x+a}
+\]
+
+<p>
+نمودار تابع وارون خود را در دو نقطه قطع می‌کند.
+اگر اختلاف طول این دو نقطه
+</p>
+
+\[
+2\sqrt{10}
+\]
+
+<p>
+باشد، کدام مقدار می‌تواند \(a\) باشد؟
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+هر نقطهٔ اشتراک تابع با تابع وارونش روی خط
+</p>
+
+\[
+y=x
+\]
+
+<p>
+قرار دارد.
+</p>
+
+<p>
+پس کافی است معادلهٔ
+</p>
+
+\[
+f(x)=x
+\]
+
+<p>
+را حل کنیم.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+ابتدا:
+</p>
+
+\[
+y=\frac1{x+a}.
+\]
+
+<p>
+برای به دست آوردن وارون:
+</p>
+
+\[
+x=\frac1{y+a}.
+\]
+
+<p>
+در نتیجه:
+</p>
+
+\[
+y=\frac1x-a.
+\]
+
+<p>
+تقاطع تابع و وارون روی:
+</p>
+
+\[
+y=x
+\]
+
+<p>
+است.
+</p>
+
+<p>
+پس:
+</p>
+
+\[
+x=\frac1{x+a}.
+\]
+
+<p>
+ضرب می‌کنیم:
+</p>
+
+\[
+x(x+a)=1.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+x^2+ax-1=0.
+\]
+
+<p>
+اگر ریشه‌ها \(x_1,x_2\) باشند، اختلاف آنها:
+</p>
+
+\[
+|x_1-x_2|
+=
+\sqrt{a^2+4}.
+\]
+
+<p>
+طبق سؤال:
+</p>
+
+\[
+\sqrt{a^2+4}=2\sqrt{10}.
+\]
+
+<p>
+توان دوم:
+</p>
+
+\[
+a^2+4=40.
+\]
+
+\[
+a^2=36.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+a=\pm6.
+\]
+
+<p>
+از گزینه‌ها مقدار مناسب:
+</p>
+
+\[
+\boxed6.
+\]
+
+</div>
+
+
+<div class="box fastbox">
+
+<div class="box-title">
+    حل سریع کنکوری
+</div>
+
+<p>
+هرگاه گفت:
+</p>
+
+<p>
+«تابع و وارونش همدیگر را قطع می‌کنند»
+</p>
+
+<p>
+اولین چیزی که باید در ذهنت بیاید:
+</p>
+
+\[
+\boxed{y=x}.
+\]
+
+<p>
+پس مستقیماً:
+</p>
+
+\[
+f(x)=x.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }2}
+\qquad
+\boxed{a=6}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 122
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۲۲ ـ حد از روی نمودار
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+از نمودار سؤال، برای \(x<2\) خط از نقاط
+</p>
+
+\[
+(-1,0),\quad(0,1),\quad(2,3)
+\]
+
+<p>
+عبور می‌کند.
+
+حاصل حد را بیابید:
+</p>
+
+\[
+\lim_{x\to2^-}
+\frac{3-f(x)}{x^2-4}.
+\]
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+چون \(x\to2^-\)، فقط قسمت چپ نمودار مهم است.
+</p>
+
+<p>
+از نمودار:
+</p>
+
+\[
+f(x)=x+1.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+داریم:
+</p>
+
+\[
+\frac{3-f(x)}{x^2-4}.
+\]
+
+<p>
+به جای \(f(x)\):
+</p>
+
+\[
+\frac{3-(x+1)}{x^2-4}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\frac{2-x}{(x-2)(x+2)}.
+\]
+
+<p>
+اما:
+</p>
+
+\[
+2-x=-(x-2).
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+-\frac{x-2}{(x-2)(x+2)}
+=
+-\frac1{x+2}.
+\]
+
+<p>
+اکنون:
+</p>
+
+\[
+\lim_{x\to2^-}
+-\frac1{x+2}
+=
+-\frac14.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }1}
+\qquad
+\boxed{-\frac14}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 123
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۲۳ ـ حد چپ و قدرمطلق
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+اگر:
+</p>
+
+\[
+a=
+\lim_{x\to0^-}
+\frac{|x-|x||}{x^2+2x},
+\]
+
+<p>
+حاصل
+</p>
+
+\[
+\lim_{x\to\frac\pi2^+}\tan(ax)
+\]
+
+<p>
+را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+در حد چپ \(x\to0^-\):
+</p>
+
+\[
+x<0
+\quad\Longrightarrow\quad
+|x|=-x.
+\]
+
+<p>
+این نکته تمام سؤال را باز می‌کند.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+چون \(x<0\):
+</p>
+
+\[
+|x|=-x.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+x-|x|
+=
+x-(-x)
+=
+2x.
+\]
+
+<p>
+چون \(x<0\):
+</p>
+
+\[
+|2x|=-2x.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+a=
+\lim_{x\to0^-}
+\frac{-2x}{x^2+2x}.
+\]
+
+<p>
+مخرج:
+</p>
+
+\[
+x^2+2x=x(x+2).
+\]
+
+<p>
+پس:
+</p>
+
+\[
+a=
+\lim_{x\to0^-}
+\frac{-2}{x+2}
+=
+-1.
+\]
+
+<p>
+اکنون حد اصلی:
+</p>
+
+\[
+\lim_{x\to\frac\pi2^+}\tan(-x).
+\]
+
+<p>
+اگر:
+</p>
+
+\[
+x\to\frac\pi2^+,
+\]
+
+<p>
+آنگاه:
+</p>
+
+\[
+-x\to-\frac\pi2^-.
+\]
+
+<p>
+در این حالت:
+</p>
+
+\[
+\tan(-x)\to+\infty.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+\boxed{+\infty}.
+\]
+
+</div>
+
+
+<div class="box tipbox">
+
+<div class="box-title">
+    ⭐ نکتهٔ امتحانی و کنکوری
+</div>
+
+<p>
+در حدهای قدرمطلق، اول مشخص کن از کدام طرف نزدیک می‌شویم.
+</p>
+
+<p>
+اینجا:
+</p>
+
+\[
+x\to0^-
+\]
+
+<p>
+یعنی حتماً:
+</p>
+
+\[
+|x|=-x.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }4}
+\qquad
+\boxed{+\infty}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 124
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۲۴ ـ پیوستگی تابع چندضابطه‌ای
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+تابع:
+</p>
+
+\[
+f(x)=1+\frac{2x}{a}
+\]
+
+<p>
+و:
+</p>
+
+\[
+g(x)=
+\begin{cases}
+f(x)&x\ge-1,\\[2mm]
+f^{-1}(x)&x<-1.
+\end{cases}
+\]
+
+<p>
+اگر \(g\) روی \(\mathbb R\) پیوسته باشد و نمودار \(f\)
+محور \(x\)ها را در سمت مثبت قطع کند، مقدار \(g(-1)\) را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+برای پیوستگی تابع چندضابطه‌ای در \(x=-1\)، دو طرف باید برابر باشند:
+</p>
+
+\[
+f(-1)=f^{-1}(-1).
+\]
+
+<p>
+همچنین اگر خط محور \(x\) را در سمت مثبت قطع کند،
+ریشهٔ تابع باید مثبت باشد.
+</p>
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+ابتدا وارون \(f\):
+</p>
+
+\[
+y=1+\frac{2x}{a}.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+y-1=\frac{2x}{a}.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+x=\frac a2(y-1).
+\]
+
+<p>
+در نتیجه:
+</p>
+
+\[
+f^{-1}(x)=\frac a2(x-1).
+\]
+
+<p>
+پس:
+</p>
+
+\[
+f^{-1}(-1)
+=
+\frac a2(-2)
+=
+-a.
+\]
+
+<p>
+از طرف دیگر:
+</p>
+
+\[
+f(-1)
+=
+1-\frac2a.
+\]
+
+<p>
+پیوستگی:
+</p>
+
+\[
+1-\frac2a=-a.
+\]
+
+<p>
+ضرب در \(a\):
+</p>
+
+\[
+a-2=-a^2.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+a^2+a-2=0.
+\]
+
+<p>
+تجزیه:
+</p>
+
+\[
+(a+2)(a-1)=0.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+a=-2,\qquad a=1.
+\]
+
+<p>
+ریشهٔ \(f\):
+</p>
+
+\[
+1+\frac{2x}{a}=0.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+x=-\frac a2.
+\]
+
+<p>
+باید این ریشه مثبت باشد:
+</p>
+
+\[
+-\frac a2>0.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+a<0.
+\]
+
+<p>
+بنابراین:
+</p>
+
+\[
+a=-2.
+\]
+
+<p>
+اکنون:
+</p>
+
+\[
+g(-1)=f(-1).
+\]
+
+<p>
+پس:
+</p>
+
+\[
+g(-1)
+=
+1+\frac{2(-1)}{-2}
+=
+2.
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }3}
+\qquad
+\boxed{2}
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 125
+========================================================= -->
+
+<section class="question">
+
+<div class="question-header">
+    سؤال ۱۲۵ ـ مشتق چپ و راست قدرمطلق
+</div>
+
+<div class="question-body">
+
+<div class="question-text">
+
+<p>
+برای منحنی:
+</p>
+
+\[
+y=|x^2-4|
+\]
+
+<p>
+اختلاف شیب نیم‌مماس‌های چپ و راست در
+</p>
+
+\[
+x=2
+\]
+
+<p>
+را بیابید.
+</p>
+
+</div>
+
+
+<div class="box prebox">
+
+<div class="box-title">
+    پیش‌نیازهای لازم
+</div>
+
+<p>
+ابتدا عبارت داخل قدرمطلق را بررسی می‌کنیم:
+</p>
+
+\[
+x^2-4=(x-2)(x+2).
+\]
+
+<p>
+اطراف \(x=2\):
+</p>
+
+\[
+x<2\Rightarrow x^2-4<0,
+\]
+
+\[
+x>2\Rightarrow x^2-4>0.
+\]
+
+</div>
+
+
+<div class="box solbox">
+
+<div class="box-title">
+    حل تشریحی
+</div>
+
+<p>
+برای \(x<2\):
+</p>
+
+\[
+y=-(x^2-4)
+=
+-x^2+4.
+\]
+
+<p>
+پس شیب چپ:
+</p>
+
+\[
+y'=-2x.
+\]
+
+<p>
+در \(x=2\):
+</p>
+
+\[
+m_{\rm left}=-4.
+\]
+
+<p>
+برای \(x>2\):
+</p>
+
+\[
+y=x^2-4.
+\]
+
+<p>
+پس:
+</p>
+
+\[
+y'=2x.
+\]
+
+<p>
+در \(x=2\):
+</p>
+
+\[
+m_{\rm right}=4.
+\]
+
+<p>
+اختلاف:
+</p>
+
+\[
+m_{\rm right}-m_{\rm left}
+=
+4-(-4)
+=
+8.
+\]
+
+\[
+\boxed8
+\]
+
+</div>
+
+
+<div class="box answerbox">
+
+<div class="box-title">
+    پاسخ نهایی
+</div>
+
+\[
+\boxed{\text{گزینهٔ }1}
+\qquad
+\boxed8
+\]
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================
+     END
+========================= -->
+
+<div class="back">
+    <a href="../../index.html">⬅ بازگشت به صفحهٔ اصلی</a>
+</div>
+
+
+<footer>
+
+    <strong>جزوات ریاضی</strong>
+    <br>
+    دکتر یاسر خلعت پور
+    <br>
+    آموزش، حل تشریحی و آمادگی امتحانات نهایی و کنکور
+
+</footer>
+
+</div>
+
+</body>
+</html>
