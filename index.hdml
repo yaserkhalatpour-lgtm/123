@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>حل سؤال ریاضی | دکتر یاسر خلعت پور</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+
+    font-family:"Vazirmatn",Tahoma,sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #f8fbff,
+            #eef9f4
+        );
+
+    color:#172033;
+
+    min-height:100vh;
+
+    line-height:2;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    background:
+        linear-gradient(
+            135deg,
+            #173b72,
+            #2563a6
+        );
+
+    color:white;
+
+    text-align:center;
+
+    padding:42px 20px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,.15);
+}
+
+header h1{
+
+    font-size:clamp(25px,5vw,38px);
+
+    font-weight:800;
+
+    margin-bottom:8px;
+}
+
+header h2{
+
+    font-size:clamp(17px,3vw,23px);
+
+    font-weight:600;
+
+    margin-bottom:5px;
+}
+
+header p{
+
+    opacity:.9;
+
+    font-size:14px;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+
+    width:min(950px,94%);
+
+    margin:30px auto 60px;
+}
+
+
+/* =====================================================
+   QUESTION BOX
+===================================================== */
+
+.question-box{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,.07);
+
+    border-right:
+        6px solid #2563a6;
+}
+
+.question-title{
+
+    color:#173b72;
+
+    font-size:22px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.question-text{
+
+    font-size:18px;
+
+    line-height:2.4;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+   MATH
+===================================================== */
+
+.math{
+
+    direction:ltr;
+
+    text-align:center;
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-size:22px;
+
+    margin:12px 0;
+
+    color:#172033;
+}
+
+.math.big{
+
+    font-size:27px;
+
+    font-weight:700;
+
+    margin:18px 0;
+}
+
+
+/* =====================================================
+   SOLUTION BOX
+===================================================== */
+
+.solution{
+
+    background:white;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 7px 25px
+        rgba(0,0,0,.07);
+
+    border:1px solid #e6ebf2;
+}
+
+.solution-title{
+
+    padding:16px 20px;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563a6,
+            #3287c9
+        );
+}
+
+.solution-content{
+
+    padding:22px;
+
+    font-size:16px;
+
+    line-height:2.2;
+
+    color:#344054;
+}
+
+
+/* =====================================================
+   STEP COLORS
+===================================================== */
+
+.step{
+
+    background:#f7faff;
+
+    border-radius:15px;
+
+    padding:15px 18px;
+
+    margin:15px 0;
+
+    border-right:
+        4px solid #3287c9;
+}
+
+.step.green{
+
+    background:#f0faf5;
+
+    border-right-color:#18815a;
+}
+
+.step.orange{
+
+    background:#fff9ed;
+
+    border-right-color:#c47a1a;
+}
+
+.step.purple{
+
+    background:#faf5ff;
+
+    border-right-color:#7b4ca0;
+}
+
+
+/* =====================================================
+   IMPORTANT NOTE
+===================================================== */
+
+.exam-tip{
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8e8,
+            #fffdf7
+        );
+
+    border:
+        2px solid #e2a43c;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-top:25px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(196,122,26,.08);
+}
+
+.exam-tip h3{
+
+    color:#a05d00;
+
+    font-size:19px;
+
+    margin-bottom:10px;
+}
+
+.exam-tip p{
+
+    color:#5f4b2a;
+
+    line-height:2.1;
+}
+
+
+/* =====================================================
+   ANSWER
+===================================================== */
+
+.answer{
+
+    background:
+        linear-gradient(
+            135deg,
+            #18815a,
+            #2ca673
+        );
+
+    color:white;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    text-align:center;
+
+    margin-top:28px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(24,129,90,.20);
+}
+
+.answer-title{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+}
+
+.answer-number{
+
+    direction:ltr;
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-size:34px;
+
+    font-weight:800;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#152238;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    line-height:2;
+}
+
+footer a{
+
+    color:#8bc4ff;
+
+    text-decoration:none;
+}
+
+footer a:hover{
+
+    text-decoration:underline;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    header{
+
+        padding:32px 15px;
+    }
+
+    .container{
+
+        width:95%;
+
+        margin-top:20px;
+    }
+
+    .question-box{
+
+        padding:20px;
+    }
+
+    .question-text{
+
+        font-size:16px;
+    }
+
+    .solution-content{
+
+        padding:17px;
+
+        font-size:15px;
+    }
+
+    .math{
+
+        font-size:19px;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+    }
+
+    .math.big{
+
+        font-size:23px;
+    }
+
+    .answer-number{
+
+        font-size:29px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <h1>
+        📚 حل تشریحی سؤال ریاضی
+    </h1>
+
+    <h2>
+        دکتر یاسر خلعت پور
+    </h2>
+
+    <p>
+        حل مفهومی و سریع با استفاده از روابط توان‌ها
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     QUESTION
+===================================================== -->
+
+<div class="question-box">
+
+    <div class="question-title">
+        📝 صورت سؤال
+    </div>
+
+    <div class="question-text">
+
+        اگر داشته باشیم:
+
+        <div class="math big">
+            x + y + z = 1
+        </div>
+
+        <div class="math big">
+            x² + y² + z² = 9
+        </div>
+
+        <div class="math big">
+            x³ + y³ + z³ = 1
+        </div>
+
+        مطلوب است محاسبه:
+
+        <div class="math big">
+            x⁴ + y⁴ + z⁴ = ?
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SOLUTION 1
+===================================================== -->
+
+<div class="solution">
+
+    <div class="solution-title">
+
+        🔵 گام اول: به دست آوردن xy + yz + zx
+
+    </div>
+
+
+    <div class="solution-content">
+
+        از اتحاد زیر استفاده می‌کنیم:
+
+        <div class="math">
+            (x+y+z)² = x²+y²+z² + 2(xy+yz+zx)
+        </div>
+
+        اطلاعات سؤال را جایگذاری می‌کنیم:
+
+        <div class="math">
+            1² = 9 + 2(xy+yz+zx)
+        </div>
+
+        بنابراین:
+
+        <div class="math">
+            1 = 9 + 2(xy+yz+zx)
+        </div>
+
+        در نتیجه:
+
+        <div class="math big">
+            xy + yz + zx = -4
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SOLUTION 2
+===================================================== -->
+
+<div class="solution">
+
+    <div class="solution-title">
+
+        🟢 گام دوم: به دست آوردن xyz
+
+    </div>
+
+
+    <div class="solution-content">
+
+        از اتحاد مهم مکعب مجموع سه عبارت استفاده می‌کنیم:
+
+        <div class="math">
+            x³+y³+z³
+            =
+            (x+y+z)³
+            -3(x+y+z)(xy+yz+zx)
+            +3xyz
+        </div>
+
+        اکنون مقادیر به دست آمده را جایگذاری می‌کنیم:
+
+        <div class="math">
+            1
+            =
+            1³
+            -3(1)(-4)
+            +3xyz
+        </div>
+
+        پس:
+
+        <div class="math">
+            1 = 1 + 12 + 3xyz
+        </div>
+
+        بنابراین:
+
+        <div class="math">
+            3xyz = -12
+        </div>
+
+        و در نتیجه:
+
+        <div class="math big">
+            xyz = -4
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     SOLUTION 3
+===================================================== -->
+
+<div class="solution">
+
+    <div class="solution-title">
+
+        🟠 گام سوم: محاسبه توان چهارم
+
+    </div>
+
+
+    <div class="solution-content">
+
+        برای سه عدد
+        <span dir="ltr">x,y,z</span>
+        از رابطه نیوتن استفاده می‌کنیم:
+
+        <div class="math">
+            p₄ - p₁p₃ + p₂(xy+yz+zx) - p₁xyz = 0
+        </div>
+
+        که در آن:
+
+        <div class="math">
+            p₁=x+y+z=1
+        </div>
+
+        <div class="math">
+            p₂=x²+y²+z²=9
+        </div>
+
+        <div class="math">
+            p₃=x³+y³+z³=1
+        </div>
+
+        و همچنین:
+
+        <div class="math">
+            xy+yz+zx=-4
+        </div>
+
+        <div class="math">
+            xyz=-4
+        </div>
+
+        بنابراین:
+
+        <div class="math">
+            p₄-(1)(1)+9(-4)-(1)(-4)=0
+        </div>
+
+        یعنی:
+
+        <div class="math">
+            p₄-1-36+4=0
+        </div>
+
+        پس:
+
+        <div class="math">
+            p₄-33=0
+        </div>
+
+        در نتیجه:
+
+        <div class="math big">
+            p₄=33
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     ALTERNATIVE SHORT SOLUTION
+===================================================== -->
+
+<div class="solution">
+
+    <div class="solution-title">
+
+        🟣 روش کوتاه‌تر و مناسب تست
+
+    </div>
+
+
+    <div class="solution-content">
+
+        اگر قرار دهیم:
+
+        <div class="math">
+            p₁=x+y+z
+        </div>
+
+        <div class="math">
+            p₂=x²+y²+z²
+        </div>
+
+        <div class="math">
+            p₃=x³+y³+z³
+        </div>
+
+        داریم:
+
+        <div class="step">
+
+            ابتدا:
+
+            <div class="math">
+                xy+yz+zx
+                =
+                ((x+y+z)²-(x²+y²+z²))/2
+                =
+                (1-9)/2
+                =
+                -4
+            </div>
+
+        </div>
+
+
+        <div class="step green">
+
+            سپس:
+
+            <div class="math">
+                xyz
+                =
+                [p₃-p₁³+3p₁(xy+yz+zx)]/3
+            </div>
+
+            بنابراین:
+
+            <div class="math">
+                xyz
+                =
+                [1-1+3(1)(-4)]/3
+                =
+                -4
+            </div>
+
+        </div>
+
+
+        <div class="step orange">
+
+            در نهایت:
+
+            <div class="math">
+                p₄
+                =
+                p₁p₃
+                -
+                (xy+yz+zx)p₂
+                +
+                xyz\,p₁
+            </div>
+
+            پس:
+
+            <div class="math">
+                p₄
+                =
+                (1)(1)
+                -
+                (-4)(9)
+                +
+                (-4)(1)
+            </div>
+
+            یعنی:
+
+            <div class="math big">
+                p₄=1+36-4=33
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     EXAM TIP
+===================================================== -->
+
+<div class="exam-tip">
+
+    <h3>
+        ⭐ نکتهٔ امتحانی و کنکوری
+    </h3>
+
+    <p>
+
+        هرگاه در سؤال مقادیر
+
+        <span dir="ltr">
+            x+y+z
+        </span>
+
+        و
+
+        <span dir="ltr">
+            x²+y²+z²
+        </span>
+
+        داده شده باشد، معمولاً اولین کاری که باید انجام دهیم
+        پیدا کردن
+
+        <strong dir="ltr">
+            xy+yz+zx
+        </strong>
+
+        است.
+
+        <br>
+
+        سپس با استفاده از رابطهٔ توان سوم می‌توانیم
+        <strong dir="ltr">
+            xyz
+        </strong>
+
+        را به دست آوریم.
+
+        <br>
+
+        بعد از آن، برای توان‌های بالاتر می‌توان از
+        روابط نیوتن استفاده کرد.
+
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     FINAL ANSWER
+===================================================== -->
+
+<div class="answer">
+
+    <div class="answer-title">
+        ✅ پاسخ نهایی
+    </div>
+
+    <div class="answer-number">
+        x⁴ + y⁴ + z⁴ = 33
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div>
+        © تمامی حقوق محفوظ است
+    </div>
+
+    <div>
+        دکتر یاسر خلعت پور
+    </div>
+
+    <div>
+
+        📧
+
+        <a href="mailto:yaserkhalatpour@gmail.com">
+            yaserkhalatpour@gmail.com
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
