@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -10,24 +9,25 @@
 
     <link rel="stylesheet" href="../css/style.css">
 
+    <!-- فونت -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
-    <!-- MathJax -->
+    <!-- =====================================================
+         تنظیم MathJax
+         ===================================================== -->
+
     <script>
         window.MathJax = {
             tex: {
                 inlineMath: [
-                    ['$', '$'],
-                    ['\', '\']
+                    ['\\(', '\\)']
                 ],
                 displayMath: [
-                    ['$$', '$$'],
-                    ['\', '\']
+                    ['\\[', '\\]']
                 ]
             },
             svg: {
@@ -37,341 +37,519 @@
     </script>
 
     <script
-        async
+        defer
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
 
-    <!-- استایل مخصوص صفحه -->
+
+    <!-- =====================================================
+         استایل اختصاصی این صفحه
+         ===================================================== -->
+
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: "Vazirmatn", sans-serif;
-        }
-
-        .page-hero {
-            padding: 55px 20px;
-            text-align: center;
-            background: linear-gradient(
-                135deg,
-                #173f67,
-                #246b9e
-            );
-            color: white;
-            border-radius: 0 0 35px 35px;
-            margin-bottom: 35px;
-        }
-
-        .page-hero h1 {
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-        }
-
-        .page-hero p {
-            font-size: 1.05rem;
-            opacity: 0.95;
-            margin: 8px 0;
-        }
-
-        .breadcrumb {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 0 20px;
-            color: #666;
-        }
-
-        .breadcrumb a {
-            color: #246b9e;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .question-list {
-            max-width: 1100px;
-            margin: 25px auto 40px;
-            padding: 25px;
-            background: #f5f7fa;
-            border: 1px solid #dce3ea;
-            border-radius: 20px;
-        }
-
-        .question-list h2 {
-            margin-bottom: 18px;
-            color: #173f67;
-        }
-
-        .question-links {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-        }
-
-        .question-links a {
-            display: block;
-            text-align: center;
-            padding: 10px 8px;
-            background: white;
-            border: 1px solid #d8e0e8;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #173f67;
-            font-weight: 700;
-            transition: 0.2s;
-        }
-
-        .question-links a:hover {
-            transform: translateY(-2px);
-            background: #eaf3fb;
-        }
-
-        .question-card {
-            max-width: 1100px;
-            margin: 0 auto 35px;
-            background: #fff;
-            border-radius: 22px;
-            padding: 28px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-            border: 1px solid #e3e8ed;
-        }
-
-        .question-title {
-            margin: -28px -28px 25px;
-            padding: 18px 25px;
-            border-radius: 22px 22px 0 0;
-            background: linear-gradient(
-                135deg,
-                #246b9e,
-                #173f67
-            );
-            color: white;
-        }
-
-        .question-title h2 {
             margin: 0;
-            font-size: 1.35rem;
+            font-family: "Vazirmatn", sans-serif;
+            background: #f4f7fb;
+            color: #20252b;
+            line-height: 2;
         }
 
-        .question-statement {
-            background: #f8fafc;
-            border-right: 5px solid #246b9e;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            line-height: 2.1;
-        }
+        /* =========================
+           هدر
+           ========================= */
 
-        .box {
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-            line-height: 2.1;
-        }
+        .booklet-hero {
+            background: linear-gradient(
+                135deg,
+                #123b5d,
+                #1d6fa5
+            );
 
-        .pre-box {
-            background: #edf5fc;
-            border-right: 5px solid #246b9e;
-        }
-
-        .solution-box {
-            background: #eef9f2;
-            border-right: 5px solid #278653;
-        }
-
-        .fast-box {
-            background: #fff7e9;
-            border-right: 5px solid #d88a16;
-        }
-
-        .tip-box {
-            background: #f5effa;
-            border-right: 5px solid #79509c;
-        }
-
-        .answer-box {
-            background: #edfafa;
-            border: 2px solid #2a9aa5;
+            color: white;
             text-align: center;
-            font-size: 1.1rem;
-            font-weight: 700;
+
+            padding: 55px 20px;
+
+            border-radius: 0 0 35px 35px;
+
+            margin-bottom: 30px;
         }
 
-        .warning-box {
-            background: #fff0f0;
-            border-right: 5px solid #c23d3d;
-        }
-
-        .box-title {
-            font-weight: 800;
-            font-size: 1.05rem;
+        .booklet-hero .icon {
+            font-size: 55px;
             margin-bottom: 10px;
         }
 
-        .pre-box .box-title {
-            color: #246b9e;
+        .booklet-hero h1 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+            font-weight: 800;
         }
 
-        .solution-box .box-title {
-            color: #278653;
+        .booklet-hero h2 {
+            margin: 8px 0;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
-        .fast-box .box-title {
-            color: #b66d08;
+        .booklet-hero p {
+            margin: 5px 0;
+            opacity: .95;
         }
 
-        .tip-box .box-title {
-            color: #79509c;
-        }
 
-        .warning-box .box-title {
-            color: #b12f2f;
-        }
+        /* =========================
+           مسیر
+           ========================= */
 
-        .answer-box .box-title {
-            color: #197b83;
-        }
-
-        .final-summary {
+        .breadcrumb-box {
             max-width: 1100px;
-            margin: 45px auto;
-            padding: 30px;
+            margin: 0 auto 25px;
+            padding: 0 20px;
+            color: #68727c;
+        }
+
+        .breadcrumb-box a {
+            color: #17679a;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           فهرست سؤال‌ها
+           ========================= */
+
+        .question-index {
+            max-width: 1100px;
+            margin: 0 auto 35px;
+            padding: 25px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .question-index h2 {
+            margin-top: 0;
+            color: #123b5d;
+        }
+
+        .question-index-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 10px;
+        }
+
+        .question-index a {
+            display: block;
+
+            text-align: center;
+
+            padding: 10px;
+
+            background: #edf5fb;
+
+            color: #164f74;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+
+            transition: .2s;
+        }
+
+        .question-index a:hover {
+            background: #d9ebf8;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           کارت سؤال
+           ========================= */
+
+        .question {
+            max-width: 1100px;
+
+            margin: 0 auto 35px;
+
+            background: white;
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 28px rgba(0,0,0,.07);
+        }
+
+
+        /* =========================
+           عنوان سؤال
+           ========================= */
+
+        .question-header {
             background: linear-gradient(
                 135deg,
-                #eef7ff,
-                #f7fbff
+                #17679a,
+                #123b5d
             );
-            border-radius: 22px;
-            border: 1px solid #cddfeb;
+
+            color: white;
+
+            padding: 18px 25px;
+        }
+
+        .question-header h2 {
+            margin: 0;
+
+            font-size: 1.25rem;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           محتوای سؤال
+           ========================= */
+
+        .question-body {
+            padding: 25px;
+        }
+
+        .statement {
+            background: #f5f8fb;
+
+            border-right: 5px solid #287da9;
+
+            padding: 18px 20px;
+
+            border-radius: 12px;
+
+            margin-bottom: 22px;
+        }
+
+        .statement-title {
+            font-weight: 800;
+
+            color: #123b5d;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           باکس‌ها
+           ========================= */
+
+        .info-box {
+            padding: 20px;
+
+            margin: 20px 0;
+
+            border-radius: 15px;
+        }
+
+        .info-title {
+            font-size: 1.05rem;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* پیش نیاز */
+
+        .prerequisite {
+            background: #edf6fc;
+
+            border-right: 5px solid #2477a3;
+        }
+
+        .prerequisite .info-title {
+            color: #17618b;
+        }
+
+
+        /* حل */
+
+        .solution {
+            background: #eef9f1;
+
+            border-right: 5px solid #25834d;
+        }
+
+        .solution .info-title {
+            color: #207341;
+        }
+
+
+        /* حل سریع */
+
+        .fast {
+            background: #fff7e8;
+
+            border-right: 5px solid #d18a18;
+        }
+
+        .fast .info-title {
+            color: #a96b08;
+        }
+
+
+        /* نکته */
+
+        .tip {
+            background: #f5effa;
+
+            border-right: 5px solid #8052a3;
+        }
+
+        .tip .info-title {
+            color: #70448f;
+        }
+
+
+        /* هشدار */
+
+        .warning {
+            background: #fff0f0;
+
+            border-right: 5px solid #c33d3d;
+        }
+
+        .warning .info-title {
+            color: #a82f2f;
+        }
+
+
+        /* پاسخ */
+
+        .answer {
+            background: #eaf9f8;
+
+            border: 2px solid #32999c;
+
+            text-align: center;
+        }
+
+        .answer .info-title {
+            color: #247d80;
+        }
+
+
+        /* =========================
+           فرمول
+           ========================= */
+
+        .formula {
+            background: rgba(255,255,255,.7);
+
+            border-radius: 10px;
+
+            padding: 8px;
+
+            margin: 12px 0;
+
+            text-align: center;
+
+            overflow-x: auto;
+        }
+
+
+        /* =========================
+           لیست‌ها
+           ========================= */
+
+        .question-body ul,
+        .question-body ol {
+            padding-right: 25px;
+        }
+
+
+        /* =========================
+           جدول پاسخ
+           ========================= */
+
+        .summary {
+            max-width: 1100px;
+
+            margin: 45px auto;
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .summary h2 {
+            color: #123b5d;
         }
 
         .answer-table {
             width: 100%;
+
             border-collapse: collapse;
+
             margin-top: 20px;
-            background: white;
         }
 
         .answer-table th,
         .answer-table td {
-            border: 1px solid #d7dfe6;
-            padding: 12px;
+            border: 1px solid #d6dfe7;
+
+            padding: 10px;
+
             text-align: center;
         }
 
         .answer-table th {
-            background: #246b9e;
+            background: #17679a;
+
             color: white;
         }
 
         .answer-table tr:nth-child(even) {
-            background: #f7f9fb;
+            background: #f6f8fa;
         }
 
-        .navigation-buttons {
+
+        /* =========================
+           دکمه‌های پایین
+           ========================= */
+
+        .bottom-navigation {
             max-width: 1100px;
+
             margin: 35px auto 50px;
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
+
             padding: 0 20px;
+
+            display: flex;
+
+            gap: 15px;
+
+            justify-content: space-between;
         }
 
-        .navigation-buttons a {
-            text-decoration: none;
-            padding: 13px 22px;
-            border-radius: 12px;
-            background: #246b9e;
+        .bottom-navigation a {
+            background: #17679a;
+
             color: white;
+
+            text-decoration: none;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
             font-weight: 700;
-            transition: 0.2s;
+
+            transition: .2s;
         }
 
-        .navigation-buttons a:hover {
+        .bottom-navigation a:hover {
+            background: #123b5d;
             transform: translateY(-2px);
-            opacity: 0.9;
         }
 
-        .math-center {
-            text-align: center;
-            margin: 18px 0;
-        }
 
-        .important {
-            font-weight: 800;
-        }
+        /* =========================
+           موبایل
+           ========================= */
 
         @media (max-width: 800px) {
 
-            .page-hero h1 {
-                font-size: 1.7rem;
+            .question-index-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
             }
 
-            .question-card {
-                margin-left: 12px;
-                margin-right: 12px;
-                padding: 20px;
+            .question-body {
+                padding: 18px;
             }
 
-            .question-title {
-                margin: -20px -20px 20px;
-            }
-
-            .question-links {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .navigation-buttons {
+            .bottom-navigation {
                 flex-direction: column;
             }
 
-            .navigation-buttons a {
+            .bottom-navigation a {
                 text-align: center;
             }
+
+            .booklet-hero h1 {
+                font-size: 1.6rem;
+            }
+
         }
+
 
         @media (max-width: 500px) {
 
-            .question-links {
-                grid-template-columns: repeat(2, 1fr);
+            .question-index-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            .page-hero {
+            .booklet-hero {
                 padding: 40px 15px;
             }
 
-            .page-hero h1 {
-                font-size: 1.45rem;
+            .booklet-hero h1 {
+                font-size: 1.35rem;
             }
 
-            .question-card {
+            .booklet-hero h2 {
+                font-size: 1.05rem;
+            }
+
+            .question-body {
+                padding: 14px;
+            }
+
+            .info-box {
                 padding: 15px;
             }
 
-            .question-title {
-                margin: -15px -15px 18px;
-            }
-
-            .question-title h2 {
-                font-size: 1.1rem;
-            }
-
-            .box {
-                padding: 15px;
-            }
-
-            .answer-table {
-                font-size: 0.9rem;
-            }
         }
+
+
+        /* =========================
+           چاپ
+           ========================= */
 
         @media print {
 
             .navbar,
-            .navigation-buttons,
+            .question-index,
+            .bottom-navigation,
             #backToTop {
                 display: none !important;
             }
 
-            .question-card {
+            .question {
                 box-shadow: none;
+
                 break-inside: avoid;
             }
 
@@ -385,9 +563,9 @@
 <body>
 
 
-<!-- ========================================================= -->
-<!-- نوار بالای سایت -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     نوار سایت
+     ========================================================= -->
 
 <nav class="navbar">
 
@@ -426,57 +604,65 @@
 </nav>
 
 
-<!-- ========================================================= -->
-<!-- عنوان -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     عنوان
+     ========================================================= -->
 
-<section class="page-hero">
+<header class="booklet-hero">
+
+    <div class="icon">
+        📘
+    </div>
 
     <h1>
         جزوهٔ جامع حل ریاضی کنکور ۱۴۰۵ تجربی
     </h1>
 
-    <p>
+    <h2>
         سؤالات ۱۱۱ تا ۱۲۰
-    </p>
+    </h2>
 
     <p>
-        آموزش مفهومی + حل تشریحی + حل سریع + نکات کنکوری
+        حل تشریحی + حل سریع + نکات امتحانی و کنکوری
     </p>
 
-</section>
+</header>
 
 
-<!-- ========================================================= -->
-<!-- مسیر -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     مسیر
+     ========================================================= -->
 
-<div class="breadcrumb">
+<div class="breadcrumb-box">
 
-    <a href="../index.html">خانه</a>
-    <span> ← </span>
+    <a href="../index.html">
+        خانه
+    </a>
 
-    <a href="index.html">ریاضی دهم</a>
-    <span> ← </span>
+    ←
 
-    <span>
-        حل تشریحی سؤالات ۱۱۱ تا ۱۲۰
-    </span>
+    <a href="index.html">
+        ریاضی دهم
+    </a>
+
+    ←
+
+    سؤالات ۱۱۱ تا ۱۲۰
 
 </div>
 
 
-<!-- ========================================================= -->
-<!-- فهرست سریع -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     فهرست
+     ========================================================= -->
 
-<section class="question-list">
+<section class="question-index">
 
     <h2>
-        📚 دسترسی سریع به سؤال‌ها
+        📚 دسترسی سریع
     </h2>
 
-    <div class="question-links">
+    <div class="question-index-grid">
 
         <a href="#q111">سؤال ۱۱۱</a>
         <a href="#q112">سؤال ۱۱۲</a>
@@ -498,1598 +684,1946 @@
 <main>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 111 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 111
+     ========================================================= -->
 
-<section class="question-card" id="q111">
+<section class="question" id="q111">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۱ ـ سهمی و مساحت مثلث
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
+    <div class="question-body">
 
-        <strong>صورت سؤال:</strong>
 
-        <p>
+        <div class="statement">
+
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
             رأس سهمی
-\[
+
+            \[
             y=-8x^2+ax+1
-\]
-            و صفرهای آن، رأس‌های مثلثی با مساحت
-\[
+            \]
+
+            و صفرهای آن، رأس‌های یک مثلث هستند که مساحت آن
+
+            \[
             \frac{27}{64}
-\]
-            هستند. اگر بخش بزرگ‌تر مساحت مثلث در ناحیهٔ دوم باشد،
-            مقدار a را بیابید.
-        </p>
+            \]
 
-    </div>
+            است. اگر بخش بزرگ‌تر مساحت مثلث در ناحیهٔ دوم باشد،
+            مقدار \(a\) را بیابید.
 
-
-    <div class="box pre-box">
-
-        <div class="box-title">
-            📘 پیش‌نیازهای لازم
         </div>
 
-        <ul>
 
-            <li>
-                رأس سهمی
-                y=Ax^2+Bx+C
-                از رابطهٔ
-\[
-                x_v=-\frac{B}{2A}
-\]
-                به دست می‌آید.
-            </li>
+        <div class="info-box prerequisite">
 
-            <li>
-                اگر دو ریشهٔ سهمی x_1,x_2 باشند،
-                طول قاعدهٔ مثلث برابر
-\[
-                |x_2-x_1|
-\]
-                است.
-            </li>
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
 
-            <li>
-                مساحت مثلث:
-\[
-                S=\frac12\times\text{قاعده}\times\text{ارتفاع}.
-\]
-            </li>
+            رأس سهمی
 
-        </ul>
+            \[
+            y=Ax^2+Bx+C
+            \]
 
-    </div>
+            از رابطهٔ
 
+            \[
+            x_v=-\frac{B}{2A}
+            \]
 
-    <div class="box solution-box">
-
-        <div class="box-title">
-            ✅ حل تشریحی
-        </div>
-
-        <p>
-            داریم:
-        </p>
-
-\[
-        y=-8x^2+ax+1.
-\]
-
-        <p>
-            ابتدا رأس سهمی را پیدا می‌کنیم:
-        </p>
-
-\[
-        x_v
-        =
-        -\frac{a}{2(-8)}
-        =
-        \frac{a}{16}.
-\]
-
-        <p>
-            اکنون مقدار y در رأس:
-        </p>
-
-\[
-        y_v
-        =
-        -8\left(\frac{a}{16}\right)^2
-        +
-        a\left(\frac{a}{16}\right)
-        +1.
-\]
-
-\[
-        y_v
-        =
-        -\frac{a^2}{32}
-        +
-        \frac{a^2}{16}
-        +1.
-\]
-
-        بنابراین:
-
-\[
-        y_v
-        =
-        1+\frac{a^2}{32}.
-\]
-
-        <p>
-            پس ارتفاع مثلث:
-        </p>
-
-\[
-        h=1+\frac{a^2}{32}.
-\]
-
-        <p>
-            از طرف دیگر ریشه‌های سهمی از معادلهٔ
-        </p>
-
-\[
-        -8x^2+ax+1=0
-\]
-
-        <p>
-            به دست می‌آیند.
-        </p>
-
-        <p>
-            ممیّز:
-        </p>
-
-\[
-        \Delta=a^2+32.
-\]
-
-        <p>
-            اختلاف دو ریشهٔ معادلهٔ درجهٔ دوم:
-        </p>
-
-\[
-        |x_1-x_2|
-        =
-        \frac{\sqrt{\Delta}}{|A|}
-        =
-        \frac{\sqrt{a^2+32}}8.
-\]
-
-        <p>
-            بنابراین قاعده:
-        </p>
-
-\[
-        b=
-        \frac{\sqrt{a^2+32}}8.
-\]
-
-        <p>
-            اکنون مساحت:
-        </p>
-
-\[
-        \frac12
-        \left(
-        \frac{\sqrt{a^2+32}}8
-        \right)
-        \left(
-        1+\frac{a^2}{32}
-        \right)
-        =
-        \frac{27}{64}.
-\]
-
-        <p>
-            چون:
-        </p>
-
-\[
-        1+\frac{a^2}{32}
-        =
-        \frac{a^2+32}{32},
-\]
-
-        <p>
-            داریم:
-        </p>
-
-\[
-        \frac{(a^2+32)^{3/2}}{512}
-        =
-        \frac{27}{64}.
-\]
-
-        بنابراین:
-
-\[
-        (a^2+32)^{3/2}=216.
-\]
-
-        چون:
-
-\[
-        216=36^{3/2},
-\]
-
-        پس:
-
-\[
-        a^2+32=36.
-\]
-
-        بنابراین:
-
-\[
-        a^2=4.
-\]
-
-        پس:
-
-\[
-        a=\pm2.
-\]
-
-        <p>
-            اما گفته شده بخش بزرگ‌تر مثلث در ناحیهٔ دوم قرار دارد.
-            بنابراین رأس سهمی باید سمت چپ محور y باشد:
-        </p>
-
-\[
-        x_v=\frac{a}{16}<0.
-\]
-
-        پس:
-
-\[
-        a<0.
-\]
-
-        بنابراین:
-
-\[
-        \boxed{a=-2}.
-\]
-
-    </div>
-
-
-    <div class="box fast-box">
-
-        <div class="box-title">
-            ⚡ حل سریع کنکوری
-        </div>
-
-        <p>
-            در این نوع سؤال مستقیماً از روابط زیر استفاده کن:
-        </p>
-
-\[
-        x_v=\frac{a}{16},
-\]
-
-\[
-        y_v=1+\frac{a^2}{32},
-\]
-
-\[
-        |x_1-x_2|
-        =
-        \frac{\sqrt{a^2+32}}8.
-\]
-
-        <p>
-            پس از تشکیل مساحت، عبارت
-        </p>
-
-\[
-        \frac{(a^2+32)^{3/2}}{512}
-\]
-
-        <p>
             به دست می‌آید.
-        </p>
 
-    </div>
+            همچنین اگر دو ریشه \(x_1,x_2\) باشند، طول قاعده:
 
+            \[
+            |x_1-x_2|
+            \]
 
-    <div class="box tip-box">
+            است.
 
-        <div class="box-title">
-            ⭐ نکتهٔ امتحانی و کنکوری
         </div>
 
-        <p>
-            اگر سؤال بگوید «بخش بزرگ‌تر در ناحیهٔ دوم است»،
-            معمولاً لازم نیست دوباره کل هندسه را بررسی کنیم؛
-            کافی است علامت مختصات رأس را بررسی کنیم.
-        </p>
 
-    </div>
+        <div class="info-box solution">
 
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
 
-    <div class="box answer-box">
+            برای سهمی داریم:
 
-        <div class="box-title">
-            🎯 پاسخ نهایی
+            \[
+            y=-8x^2+ax+1.
+            \]
+
+            مختصات افقی رأس:
+
+            \[
+            x_v
+            =
+            -\frac{a}{2(-8)}
+            =
+            \frac{a}{16}.
+            \]
+
+            اکنون ارتفاع مثلث:
+
+            \[
+            y_v
+            =
+            -8\left(\frac{a}{16}\right)^2
+            +
+            a\left(\frac{a}{16}\right)
+            +1.
+            \]
+
+            بنابراین:
+
+            \[
+            y_v
+            =
+            1+\frac{a^2}{32}.
+            \]
+
+            ممیّز معادلهٔ سهمی:
+
+            \[
+            \Delta=a^2+32.
+            \]
+
+            اختلاف دو ریشه:
+
+            \[
+            |x_1-x_2|
+            =
+            \frac{\sqrt{a^2+32}}8.
+            \]
+
+            بنابراین مساحت مثلث:
+
+            \[
+            \frac12
+            \times
+            \frac{\sqrt{a^2+32}}8
+            \times
+            \left(1+\frac{a^2}{32}\right)
+            =
+            \frac{27}{64}.
+            \]
+
+            پس:
+
+            \[
+            \frac{(a^2+32)^{3/2}}{512}
+            =
+            \frac{27}{64}.
+            \]
+
+            در نتیجه:
+
+            \[
+            (a^2+32)^{3/2}=216.
+            \]
+
+            بنابراین:
+
+            \[
+            a^2+32=36
+            \]
+
+            و:
+
+            \[
+            a^2=4.
+            \]
+
+            پس:
+
+            \[
+            a=\pm2.
+            \]
+
+            چون بخش بزرگ‌تر مثلث در ناحیهٔ دوم قرار دارد،
+            رأس باید در سمت چپ محور \(y\) باشد.
+
+            بنابراین:
+
+            \[
+            x_v<0.
+            \]
+
+            یعنی:
+
+            \[
+            \frac{a}{16}<0.
+            \]
+
+            پس:
+
+            \[
+            \boxed{a=-2}.
+            \]
+
         </div>
 
-\[
-        \boxed{a=-2}
-\]
+
+        <div class="info-box fast">
+
+            <div class="info-title">
+                ⚡ حل سریع کنکوری
+            </div>
+
+            روابط کلیدی:
+
+            \[
+            x_v=\frac{a}{16}
+            \]
+
+            و:
+
+            \[
+            y_v=1+\frac{a^2}{32}.
+            \]
+
+            اختلاف ریشه‌ها:
+
+            \[
+            \frac{\sqrt{a^2+32}}8.
+            \]
+
+            با استفاده از مساحت به:
+
+            \[
+            a^2=4
+            \]
+
+            می‌رسیم.
+
+            سپس شرط ناحیهٔ دوم:
+
+            \[
+            a<0.
+            \]
+
+            بنابراین:
+
+            \[
+            \boxed{a=-2}.
+            \]
+
+        </div>
+
+
+        <div class="info-box tip">
+
+            <div class="info-title">
+                ⭐ نکتهٔ امتحانی و کنکوری
+            </div>
+
+            اگر در سؤال مکان هندسی یا سهمی، ناحیهٔ مختصات ذکر شد،
+            بعد از پیدا کردن جواب‌های عددی حتماً علامت مختصات را
+            با ناحیهٔ موردنظر تطبیق بده.
+
+        </div>
+
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{a=-2}
+            \]
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 112 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 112
+     ========================================================= -->
 
-<section class="question-card" id="q112">
+<section class="question" id="q112">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۲ ـ دامنهٔ تابع مرکب و خارج‌قسمت
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
-
-        <strong>ایدهٔ سؤال:</strong>
-
-        <p>
-            از نمودار f، دامنه و صفرهای تابع را می‌خوانیم و داریم:
-        </p>
-
-\[
-        g(x)=-f\left(x+\frac12\right),
-\]
-
-\[
-        h(x)=\frac{f(x)}{g(x)}.
-\]
-
-        <p>
-            تعداد اعداد صحیح موجود در دامنهٔ h را بیابید.
-        </p>
-
-    </div>
+    <div class="question-body">
 
 
-    <div class="box pre-box">
+        <div class="statement">
 
-        <div class="box-title">
-            📘 پیش‌نیاز
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            از نمودار تابع \(f\) داریم:
+
+            \[
+            D_f=
+            \left[
+            -\frac32,\frac52
+            \right].
+            \]
+
+            صفرهای \(f\):
+
+            \[
+            -\frac32,\quad0,\quad\frac52.
+            \]
+
+            همچنین:
+
+            \[
+            g(x)
+            =
+            -f\left(x+\frac12\right)
+            \]
+
+            و:
+
+            \[
+            h(x)=\frac{f(x)}{g(x)}.
+            \]
+
+            تعداد اعداد صحیح موجود در دامنهٔ \(h\) را بیابید.
+
         </div>
 
-        <p>
-            برای تابع مرکب:
-        </p>
 
-\[
-        D_{f\circ g}
-        =
-        \{x\in D_g\mid g(x)\in D_f\}.
-\]
+        <div class="info-box prerequisite">
 
-        <p>
-            همچنین در تابع خارج‌قسمت:
-        </p>
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
 
-\[
-        \frac{f(x)}{g(x)}
-\]
+            برای تابع خارج‌قسمت، مخرج نباید صفر شود:
 
-        <p>
-            باید داشته باشیم:
-        </p>
+            \[
+            g(x)\neq0.
+            \]
 
-\[
-        g(x)\neq0.
-\]
-
-    </div>
-
-
-    <div class="box solution-box">
-
-        <div class="box-title">
-            ✅ حل تشریحی
         </div>
 
-        <p>
-            از نمودار:
-        </p>
 
-\[
-        D_f=
-        \left[-\frac32,\frac52\right].
-\]
+        <div class="info-box solution">
 
-        <p>
-            صفرهای f:
-        </p>
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
 
-\[
-        x=-\frac32,\qquad
-        x=0,\qquad
-        x=\frac52.
-\]
+            برای تعریف \(g\) باید:
 
-        <p>
-            اکنون:
-        </p>
+            \[
+            x+\frac12
+            \in
+            \left[
+            -\frac32,\frac52
+            \right].
+            \]
 
-\[
-        g(x)
-        =
-        -f\left(x+\frac12\right).
-\]
-
-        <p>
-            برای تعریف شدن g:
-        </p>
-
-\[
-        x+\frac12
-        \in
-        \left[-\frac32,\frac52\right].
-\]
-
-        بنابراین:
-
-\[
-        -2\le x\le2.
-\]
-
-        پس:
-
-\[
-        D_g=[-2,2].
-\]
-
-        <p>
-            برای h، ابتدا اشتراک دامنه‌ها:
-        </p>
-
-\[
-        D_f\cap D_g
-        =
-        \left[-\frac32,2\right].
-\]
-
-        <p>
-            اما مخرج نباید صفر شود.
-        </p>
-
-\[
-        g(x)=0
-\]
-
-        <p>
-            یعنی:
-        </p>
-
-\[
-        f\left(x+\frac12\right)=0.
-\]
-
-        بنابراین:
-
-\[
-        x+\frac12
-        \in
-        \left\{
-        -\frac32,0,\frac52
-        \right\}.
-\]
-
-        پس:
-
-\[
-        x=-2,\quad
-        -\frac12,\quad
-        2.
-\]
-
-        <p>
-            از این سه عدد، فقط دو عدد در دامنهٔ اولیه قرار دارند:
-        </p>
-
-\[
-        -\frac12,\qquad2.
-\]
-
-        بنابراین:
-
-\[
-        D_h=
-        \left[-\frac32,2\right]
-        \setminus
-        \left\{
-        -\frac12,2
-        \right\}.
-\]
-
-        <p>
-            اعداد صحیح باقی‌مانده:
-        </p>
-
-\[
-        -1,\quad0,\quad1.
-\]
-
-        پس تعداد آنها:
-        </p>
-
-\[
-        \boxed{3}.
-\]
-
-    </div>
-
-
-    <div class="box fast-box">
-
-        <div class="box-title">
-            ⚡ حل سریع
-        </div>
-
-        <p>
-            ابتدا اشتراک دامنه‌ها:
-        </p>
-
-\[
-        \left[-\frac32,2\right].
-\]
-
-        <p>
-            سپس صفرهای مخرج را حذف کن:
-        </p>
-
-\[
-        -\frac12,\qquad2.
-\]
-
-        <p>
             بنابراین:
-        </p>
 
-\[
-        -1,\quad0,\quad1
-\]
+            \[
+            -2\le x\le2.
+            \]
 
-        <p>
-            باقی می‌مانند.
-        </p>
+            پس:
 
-    </div>
+            \[
+            D_g=[-2,2].
+            \]
 
+            برای \(h\)، ابتدا اشتراک دامنه‌ها:
 
-    <div class="box answer-box">
+            \[
+            D_f\cap D_g
+            =
+            \left[
+            -\frac32,2
+            \right].
+            \]
 
-        <div class="box-title">
-            🎯 پاسخ نهایی
+            اکنون باید صفرهای \(g\) را حذف کنیم.
+
+            چون:
+
+            \[
+            g(x)=0
+            \]
+
+            داریم:
+
+            \[
+            f\left(x+\frac12\right)=0.
+            \]
+
+            پس:
+
+            \[
+            x+\frac12
+            =
+            -\frac32,\quad0,\quad\frac52.
+            \]
+
+            بنابراین:
+
+            \[
+            x=-2,\quad-\frac12,\quad2.
+            \]
+
+            از این مقادیر، مواردی که داخل بازهٔ
+
+            \[
+            \left[-\frac32,2\right]
+            \]
+
+            هستند:
+
+            \[
+            -\frac12,\quad2.
+            \]
+
+            بنابراین حذف می‌شوند.
+
+            اعداد صحیح باقی‌مانده:
+
+            \[
+            -1,\quad0,\quad1.
+            \]
+
+            تعداد:
+
+            \[
+            \boxed{3}.
+            \]
+
         </div>
 
-\[
-        \boxed{3}
-\]
+
+        <div class="info-box fast">
+
+            <div class="info-title">
+                ⚡ حل سریع
+            </div>
+
+            دامنهٔ مشترک:
+
+            \[
+            \left[-\frac32,2\right].
+            \]
+
+            صفرهای مخرج:
+
+            \[
+            -\frac12,\quad2.
+            \]
+
+            اعداد صحیح باقی‌مانده:
+
+            \[
+            -1,0,1.
+            \]
+
+            پس:
+
+            \[
+            \boxed{3}.
+            \]
+
+        </div>
+
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{3}
+            \]
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 113 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 113
+     ========================================================= -->
 
-<section class="question-card" id="q113">
+<section class="question" id="q113">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۳ ـ تغییر ریشه‌های معادله
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
-
-        <p>
-            معادله:
-        </p>
-
-\[
-        x^2+1.35x-1.3=0
-\]
-
-        <p>
-            داده شده است. هر ریشهٔ معادلهٔ جدید، نیم واحد کمتر از
-            ریشهٔ متناظر معادلهٔ بالا است.
-            حاصل‌ضرب ریشه‌های معادلهٔ جدید را بیابید.
-        </p>
-
-    </div>
+    <div class="question-body">
 
 
-    <div class="box pre-box">
+        <div class="statement">
 
-        <div class="box-title">
-            📘 پیش‌نیاز
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            معادلهٔ
+
+            \[
+            x^2+1.35x-1.3=0
+            \]
+
+            را در نظر بگیرید.
+
+            اگر هر ریشهٔ معادلهٔ جدید نیم واحد کمتر از ریشهٔ متناظر
+            معادلهٔ بالا باشد، حاصل‌ضرب ریشه‌های جدید را بیابید.
+
         </div>
 
-        <p>
-            اگر ریشه‌ها r,s باشند:
-        </p>
 
-\[
-        r+s=-\frac BA,
-\]
+        <div class="info-box prerequisite">
 
-\[
-        rs=\frac CA.
-\]
+            <div class="info-title">
+                📘 روابط ویتا
+            </div>
 
-        <p>
-            اگر هر ریشه به اندازهٔ k تغییر کند:
-        </p>
+            اگر ریشه‌ها \(r,s\) باشند:
 
-\[
-        (r-k)(s-k)
-        =
-        rs-k(r+s)+k^2.
-\]
+            \[
+            r+s=-1.35
+            \]
 
-    </div>
+            و:
 
+            \[
+            rs=-1.3.
+            \]
 
-    <div class="box solution-box">
-
-        <div class="box-title">
-            ✅ حل تشریحی
         </div>
 
-        <p>
-            فرض کنیم ریشه‌های اصلی:
-        </p>
 
-\[
-        r,\quad s.
-\]
+        <div class="info-box solution">
 
-        <p>
-            طبق روابط ویتا:
-        </p>
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
 
-\[
-        r+s=-1.35
-\]
-
-        و:
-
-\[
-        rs=-1.3.
-\]
-
-        <p>
             ریشه‌های جدید:
-        </p>
 
-\[
-        r-\frac12,
-        \qquad
-        s-\frac12.
-\]
+            \[
+            r-\frac12,
+            \qquad
+            s-\frac12.
+            \]
 
-        <p>
             حاصل‌ضرب:
-        </p>
 
-\[
-        \left(r-\frac12\right)
-        \left(s-\frac12\right)
-\]
+            \[
+            \left(r-\frac12\right)
+            \left(s-\frac12\right).
+            \]
 
-\[
-        =
-        rs-\frac12(r+s)+\frac14.
-\]
+            با بسط:
 
-        <p>
+            \[
+            rs-\frac12(r+s)+\frac14.
+            \]
+
             جایگذاری:
-        </p>
 
-\[
-        =
-        -1.3
-        -
-        \frac12(-1.35)
-        +
-        0.25.
-\]
+            \[
+            -1.3
+            -
+            \frac12(-1.35)
+            +
+            \frac14.
+            \]
 
-\[
-        =
-        -1.3+0.675+0.25.
-\]
+            بنابراین:
 
-\[
-        =
-        -0.375.
-\]
+            \[
+            -1.3+0.675+0.25
+            =
+            -0.375.
+            \]
 
-        بنابراین:
+            پس:
 
-\[
-        \boxed{-\frac38}.
-\]
+            \[
+            \boxed{-\frac38}.
+            \]
 
-    </div>
-
-
-    <div class="box fast-box">
-
-        <div class="box-title">
-            ⚡ فرمول طلایی
         </div>
 
-\[
-        (r-k)(s-k)
-        =
-        rs-k(r+s)+k^2.
-\]
 
-        <p>
+        <div class="info-box fast">
+
+            <div class="info-title">
+                ⚡ نکتهٔ سریع
+            </div>
+
+            هیچ نیازی به پیدا کردن خود ریشه‌ها نیست.
+
+            کافی است:
+
+            \[
+            (r-k)(s-k)
+            =
+            rs-k(r+s)+k^2.
+            \]
+
             در این سؤال:
-        </p>
 
-\[
-        k=\frac12.
-\]
+            \[
+            k=\frac12.
+            \]
 
-        <p>
-            بنابراین بدون پیدا کردن خود ریشه‌ها جواب را به دست می‌آوریم.
-        </p>
-
-    </div>
-
-
-    <div class="box answer-box">
-
-        <div class="box-title">
-            🎯 پاسخ نهایی
         </div>
 
-\[
-        \boxed{-\frac38}
-\]
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{-\frac38}
+            \]
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 114 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 114
+     ========================================================= -->
 
-<section class="question-card" id="q114">
+<section class="question" id="q114">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۴ ـ دامنهٔ تابع مرکب
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
-
-        <p>
-            از نمودارها داریم:
-        </p>
-
-\[
-        f:[-3,0]\longrightarrow\mathbb R
-\]
-
-        و:
-
-\[
-        g:\left(-\frac12,\infty\right)
-        \longrightarrow\mathbb R.
-\]
-
-        <p>
-            ضابطهٔ خط f از دو نقطهٔ
-        </p>
-
-\[
-        (-3,0),\qquad(0,-2)
-\]
-
-        <p>
-            به دست می‌آید.
-        </p>
-
-        <p>
-            دامنهٔ
-        </p>
-
-\[
-        (g\circ f)\left(\frac x2\right)
-\]
-
-        <p>
-            را بیابید.
-        </p>
-
-    </div>
+    <div class="question-body">
 
 
-    <div class="box pre-box">
+        <div class="statement">
 
-        <div class="box-title">
-            📘 پیش‌نیاز
-        </div>
+            <div class="statement-title">
+                صورت سؤال
+            </div>
 
-        <p>
-            برای تابع مرکب:
-        </p>
+            داریم:
 
-\[
-        (g\circ f)(u)
-\]
+            \[
+            D_f=[-3,0]
+            \]
 
-        <p>
-            باید:
-        </p>
-
-\[
-        u\in D_f
-\]
-
-        <p>
             و:
-        </p>
 
-\[
-        f(u)\in D_g.
-\]
+            \[
+            D_g=
+            \left(
+            -\frac12,\infty
+            \right).
+            \]
 
-    </div>
+            نمودار \(f\) خطی است که از نقاط
 
+            \[
+            (-3,0)
+            \]
 
-    <div class="box solution-box">
+            و
 
-        <div class="box-title">
-            ✅ حل تشریحی
+            \[
+            (0,-2)
+            \]
+
+            عبور می‌کند.
+
+            دامنهٔ
+
+            \[
+            (g\circ f)\left(\frac x2\right)
+            \]
+
+            را بیابید.
+
         </div>
 
-        <p>
-            شیب خط f:
-        </p>
 
-\[
-        m=
-        \frac{-2-0}{0-(-3)}
-        =
-        -\frac23.
-\]
+        <div class="info-box prerequisite">
 
-        <p>
-            بنابراین:
-        </p>
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
 
-\[
-        f(x)
-        =
-        -\frac23x-2.
-\]
+            برای تابع مرکب باید هم شرط ورودی \(f\) و هم شرط خروجی
+            \(f\) برای ورود به \(g\) برقرار باشد.
 
-        <p>
-            اکنون در
-        </p>
-
-\[
-        (g\circ f)\left(\frac x2\right)
-\]
-
-        <p>
-            باید:
-        </p>
-
-\[
-        \frac x2\in[-3,0].
-\]
-
-        پس:
-
-\[
-        -6\le x\le0.
-\]
-
-        <p>
-            شرط دوم:
-        </p>
-
-\[
-        f\left(\frac x2\right)>-\frac12.
-\]
-
-        بنابراین:
-
-\[
-        -\frac23
-        \left(\frac x2\right)
-        -2
-        >
-        -\frac12.
-\]
-
-\[
-        -\frac x3-2>-\frac12.
-\]
-
-\[
-        -\frac x3>\frac32.
-\]
-
-        <p>
-            با ضرب در -3، جهت نامساوی عوض می‌شود:
-        </p>
-
-\[
-        x<-\frac92.
-\]
-
-        <p>
-            بنابراین:
-        </p>
-
-\[
-        \boxed{
-        -6\le x<-\frac92
-        }.
-\]
-
-        <p>
-            طول این بازه:
-        </p>
-
-\[
-        -\frac92-(-6)
-        =
-        \frac32.
-\]
-
-    </div>
-
-
-    <div class="box answer-box">
-
-        <div class="box-title">
-            🎯 پاسخ نهایی
         </div>
 
-\[
-        \boxed{\frac32}
-\]
+
+        <div class="info-box solution">
+
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
+
+            شیب خط \(f\):
+
+            \[
+            m
+            =
+            \frac{-2-0}{0-(-3)}
+            =
+            -\frac23.
+            \]
+
+            بنابراین:
+
+            \[
+            f(x)
+            =
+            -\frac23x-2.
+            \]
+
+            در تابع موردنظر، ورودی \(f\) برابر است با:
+
+            \[
+            \frac x2.
+            \]
+
+            بنابراین باید:
+
+            \[
+            \frac x2\in[-3,0].
+            \]
+
+            پس:
+
+            \[
+            -6\le x\le0.
+            \]
+
+            از طرف دیگر خروجی \(f\) باید در دامنهٔ \(g\) باشد:
+
+            \[
+            f\left(\frac x2\right)>-\frac12.
+            \]
+
+            بنابراین:
+
+            \[
+            -\frac x3-2>-\frac12.
+            \]
+
+            پس:
+
+            \[
+            -\frac x3>\frac32.
+            \]
+
+            و:
+
+            \[
+            x<-\frac92.
+            \]
+
+            ترکیب دو شرط:
+
+            \[
+            -6\le x<-\frac92.
+            \]
+
+            بنابراین دامنه:
+
+            \[
+            \boxed{
+            \left[-6,-\frac92\right)
+            }.
+            \]
+
+            طول بازه:
+
+            \[
+            -\frac92+6
+            =
+            \frac32.
+            \]
+
+        </div>
+
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{\frac32}
+            \]
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 115 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 115
+     ========================================================= -->
 
-<section class="question-card" id="q115">
+<section class="question" id="q115">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۵ ـ مثلثات و ربع سوم
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
+    <div class="question-body">
 
-        <p>
-            داده شده است:
-        </p>
 
-\[
-        \sqrt{\tan x}
-        -
-        \sqrt{\cot x}
-        =
-        \frac2{\sqrt7}
-\]
+        <div class="statement">
 
-        <p>
-            و x در ربع سوم است.
-            حاصل
-        </p>
+            <div class="statement-title">
+                صورت سؤال
+            </div>
 
-\[
-        \sin x-\cos x
-\]
+            اگر:
 
-        <p>
+            \[
+            \sqrt{\tan x}
+            -
+            \sqrt{\cot x}
+            =
+            \frac2{\sqrt7}
+            \]
+
+            و \(x\) در ربع سوم باشد، مقدار
+
+            \[
+            \sin x-\cos x
+            \]
+
             را بیابید.
-        </p>
 
-    </div>
-
-
-    <div class="box pre-box">
-
-        <div class="box-title">
-            📘 پیش‌نیاز
         </div>
 
-        <p>
+
+        <div class="info-box prerequisite">
+
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
+
             در ربع سوم:
-        </p>
 
-\[
-        \sin x<0,
-        \qquad
-        \cos x<0.
-\]
+            \[
+            \sin x<0
+            \]
 
-        <p>
-            اما:
-        </p>
+            و:
 
-\[
-        \tan x>0,
-        \qquad
-        \cot x>0.
-\]
+            \[
+            \cos x<0.
+            \]
 
-        <p>
-            همچنین:
-        </p>
+            ولی:
 
-\[
-        \cot x=\frac1{\tan x}.
-\]
+            \[
+            \tan x>0.
+            \]
 
-    </div>
-
-
-    <div class="box solution-box">
-
-        <div class="box-title">
-            ✅ حل تشریحی
         </div>
 
-        <p>
-            بگذارید:
-        </p>
 
-\[
-        t=\sqrt{\tan x}.
-\]
+        <div class="info-box solution">
 
-        <p>
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
+
+            قرار می‌دهیم:
+
+            \[
+            t=\sqrt{\tan x}.
+            \]
+
+            آنگاه:
+
+            \[
+            \sqrt{\cot x}=\frac1t.
+            \]
+
             پس:
-        </p>
 
-\[
-        \sqrt{\cot x}
-        =
-        \frac1t.
-\]
+            \[
+            t-\frac1t
+            =
+            \frac2{\sqrt7}.
+            \]
 
-        <p>
+            با توان دوم:
+
+            \[
+            t^2+\frac1{t^2}-2
+            =
+            \frac47.
+            \]
+
             بنابراین:
-        </p>
 
-\[
-        t-\frac1t
-        =
-        \frac2{\sqrt7}.
-\]
+            \[
+            t^2+\frac1{t^2}
+            =
+            \frac{18}{7}.
+            \]
 
-        <p>
-            دو طرف را به توان دوم می‌رسانیم:
-        </p>
+            اکنون:
 
-\[
-        t^2+\frac1{t^2}-2
-        =
-        \frac47.
-\]
+            \[
+            \sin x-\cos x
+            =
+            \cos x(\tan x-1).
+            \]
 
-        پس:
+            چون \(x\) در ربع سوم است:
 
-\[
-        t^2+\frac1{t^2}
-        =
-        \frac{18}{7}.
-\]
+            \[
+            \cos x
+            =
+            -\frac1{\sqrt{1+\tan^2x}}.
+            \]
 
-        <p>
-            از طرف دیگر:
-        </p>
+            و چون:
 
-\[
-        \sin x-\cos x
-        =
-        \cos x(\tan x-1).
-\]
+            \[
+            \tan x=t^2,
+            \]
 
-        <p>
-            چون x در ربع سوم است:
-        </p>
-
-\[
-        \cos x
-        =
-        -\frac1{\sqrt{1+\tan^2x}}.
-\]
-
-        بنابراین:
-
-\[
-        \sin x-\cos x
-        =
-        -\frac{\tan x-1}
-        {\sqrt{1+\tan^2x}}.
-\]
-
-        <p>
-            چون:
-        </p>
-
-\[
-        \tan x=t^2,
-\]
-
-        <p>
             داریم:
-        </p>
 
-\[
-        -\frac{t^2-1}{\sqrt{1+t^4}}.
-\]
+            \[
+            \sin x-\cos x
+            =
+            -\frac{t^2-1}{\sqrt{1+t^4}}.
+            \]
 
-        <p>
-            صورت:
-        </p>
+            از رابطهٔ اولیه:
 
-\[
-        t^2-1
-        =
-        t\left(t-\frac1t\right)
-        =
-        \frac{2t}{\sqrt7}.
-\]
+            \[
+            t^2-1
+            =
+            t\left(t-\frac1t\right)
+            =
+            \frac{2t}{\sqrt7}.
+            \]
 
-        <p>
             همچنین:
-        </p>
 
-\[
-        1+t^4
-        =
-        t^2
-        \left(
-        t^2+\frac1{t^2}
-        \right)
-        =
-        t^2\frac{18}{7}.
-\]
+            \[
+            1+t^4
+            =
+            t^2
+            \left(
+            t^2+\frac1{t^2}
+            \right).
+            \]
 
-        بنابراین:
+            بنابراین:
 
-\[
-        \sqrt{1+t^4}
-        =
-        t\sqrt{\frac{18}{7}}.
-\]
+            \[
+            1+t^4
+            =
+            t^2\frac{18}{7}.
+            \]
 
-        پس:
+            در نتیجه:
 
-\[
-        \sin x-\cos x
-        =
-        -\frac{\frac{2t}{\sqrt7}}
-        {t\sqrt{\frac{18}{7}}}.
-\]
+            \[
+            \sin x-\cos x
+            =
+            -\frac2{\sqrt{18}}.
+            \]
 
-\[
-        =
-        -\frac2{\sqrt{18}}
-        =
-        -\frac{\sqrt2}{3}.
-\]
+            پس:
 
-    </div>
+            \[
+            \boxed{
+            -\frac{\sqrt2}{3}
+            }.
+            \]
 
-
-    <div class="box tip-box">
-
-        <div class="box-title">
-            ⭐ نکتهٔ امتحانی و کنکوری
         </div>
 
-        <p>
-            بزرگ‌ترین دام سؤال علامت است.
-        </p>
 
-        <p>
-            چون x در ربع سوم است:
-        </p>
+        <div class="info-box tip">
 
-\[
-        \sin x<0,
-        \qquad
-        \cos x<0.
-\]
+            <div class="info-title">
+                ⭐ نکتهٔ مهم
+            </div>
 
-        <p>
-            بنابراین جواب نهایی منفی است.
-        </p>
+            ربع سوم را فراموش نکن.
 
-    </div>
+            چون:
 
+            \[
+            \cos x<0,
+            \]
 
-    <div class="box answer-box">
+            علامت جواب نهایی منفی خواهد بود.
 
-        <div class="box-title">
-            🎯 پاسخ نهایی
         </div>
 
-\[
-        \boxed{-\frac{\sqrt2}{3}}
-\]
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{-\frac{\sqrt2}{3}}
+            \]
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 116 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 116
+     ========================================================= -->
 
-<section class="question-card" id="q116">
+<section class="question" id="q116">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۶ ـ قانون سینوس‌ها
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
-
-        <p>
-            در مثلث ABC:
-        </p>
-
-\[
-        \angle ACB=45^\circ,
-        \qquad
-        \angle ABC=30^\circ,
-        \qquad
-        AB=6.
-\]
-
-        <p>
-            طول BC را بیابید.
-        </p>
-
-    </div>
+    <div class="question-body">
 
 
-    <div class="box pre-box">
+        <div class="statement">
 
-        <div class="box-title">
-            📘 پیش‌نیاز
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            در مثلث \(ABC\):
+
+            \[
+            C=45^\circ,
+            \qquad
+            B=30^\circ,
+            \qquad
+            AB=6.
+            \]
+
+            طول \(BC\) را بیابید.
+
         </div>
 
-        <p>
+
+        <div class="info-box prerequisite">
+
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
+
             قانون سینوس‌ها:
-        </p>
 
-\[
-        \frac a{\sin A}
-        =
-        \frac b{\sin B}
-        =
-        \frac c{\sin C}.
-\]
+            \[
+            \frac{a}{\sin A}
+            =
+            \frac{b}{\sin B}
+            =
+            \frac{c}{\sin C}.
+            \]
 
-        <p>
-            ضلع AB مقابل زاویهٔ C قرار دارد.
-        </p>
-
-    </div>
-
-
-    <div class="box solution-box">
-
-        <div class="box-title">
-            ✅ حل تشریحی
         </div>
 
-        <p>
-            ابتدا زاویهٔ سوم:
-        </p>
 
-\[
-        A
-        =
-        180^\circ-45^\circ-30^\circ
-        =
-        105^\circ.
-\]
+        <div class="info-box solution">
 
-        <p>
-            ضلع AB=6 مقابل زاویهٔ C=45^\circ است.
-            ضلع BC نیز مقابل زاویهٔ A=105^\circ قرار دارد.
-        </p>
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
 
-\[
-        \frac{BC}{\sin105^\circ}
-        =
-        \frac6{\sin45^\circ}.
-\]
+            ابتدا:
 
-        بنابراین:
+            \[
+            A
+            =
+            180^\circ-45^\circ-30^\circ
+            =
+            105^\circ.
+            \]
 
-\[
-        BC
-        =
-        6
-        \frac{\sin105^\circ}{\sin45^\circ}.
-\]
+            ضلع \(AB\) مقابل \(C\) و ضلع \(BC\) مقابل \(A\) است.
 
-        <p>
+            بنابراین:
+
+            \[
+            \frac{BC}{\sin105^\circ}
+            =
+            \frac6{\sin45^\circ}.
+            \]
+
+            پس:
+
+            \[
+            BC
+            =
+            6
+            \frac{\sin105^\circ}{\sin45^\circ}.
+            \]
+
             داریم:
-        </p>
 
-\[
-        \sin105^\circ
-        =
-        \sin(60^\circ+45^\circ)
-        =
-        \frac{\sqrt6+\sqrt2}{4}.
-\]
+            \[
+            \sin105^\circ
+            =
+            \frac{\sqrt6+\sqrt2}{4}.
+            \]
 
-        و:
+            و:
 
-\[
-        \sin45^\circ=\frac{\sqrt2}{2}.
-\]
+            \[
+            \sin45^\circ
+            =
+            \frac{\sqrt2}{2}.
+            \]
 
-        بنابراین:
+            بنابراین:
 
-\[
-        BC
-        =
-        6
-        \frac{
-        \frac{\sqrt6+\sqrt2}{4}
-        }{
-        \frac{\sqrt2}{2}
-        }.
-\]
+            \[
+            BC
+            =
+            3(1+\sqrt3).
+            \]
 
-        پس:
-
-\[
-        BC
-        =
-        3(1+\sqrt3).
-\]
-
-    </div>
-
-
-    <div class="box answer-box">
-
-        <div class="box-title">
-            🎯 پاسخ نهایی
         </div>
 
-\[
-        \boxed{3(1+\sqrt3)}
-\]
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{3(1+\sqrt3)}
+            \]
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ========================================================= -->
-<!-- سؤال 117 -->
-<!-- ========================================================= -->
+<!-- =========================================================
+     سؤال 117
+     ========================================================= -->
 
-<section class="question-card" id="q117">
+<section class="question" id="q117">
 
-    <div class="question-title">
-
+    <div class="question-header">
         <h2>
             سؤال ۱۱۷ ـ یکنواختی تابع مثلثاتی
         </h2>
-
     </div>
 
 
-    <div class="question-statement">
+    <div class="question-body">
 
-\[
-        f(x)
-        =
-        -\frac12
-        \cos\left(\frac{3\pi}{2}+3x\right)
-\]
 
-        <p>
+        <div class="statement">
+
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            تابع
+
+            \[
+            f(x)
+            =
+            -\frac12
+            \cos\left(
+            \frac{3\pi}{2}+3x
+            \right)
+            \]
+
             روی بازهٔ
-        </p>
 
-\[
-        [a,0]
-\]
+            \[
+            [a,0]
+            \]
 
-        <p>
             اکیداً نزولی است.
-            کمترین مقدار ممکن a را بیابید.
-        </p>
+            کمترین مقدار ممکن \(a\) را بیابید.
 
-    </div>
-
-
-    <div class="box pre-box">
-
-        <div class="box-title">
-            📘 پیش‌نیاز
         </div>
 
-        <p>
-            برای بررسی نزولی بودن تابع از مشتق استفاده می‌کنیم.
-            اگر:
-        </p>
 
-\[
-        f'(x)<0
-\]
+        <div class="info-box solution">
 
-        <p>
-            در کل بازه برقرار باشد، تابع نزولی است.
-        </p>
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
 
-    </div>
+            مشتق تابع:
 
+            \[
+            f'(x)
+            =
+            -\frac32\cos3x.
+            \]
 
-    <div class="box solution-box">
+            برای نزولی بودن باید:
 
-        <div class="box-title">
-            ✅ حل تشریحی
+            \[
+            f'(x)<0.
+            \]
+
+            بنابراین:
+
+            \[
+            \cos3x>0.
+            \]
+
+            در نزدیکی صفر:
+
+            \[
+            \cos0=1>0.
+            \]
+
+            اولین مرز این ناحیه در سمت چپ:
+
+            \[
+            3x=-\frac\pi2.
+            \]
+
+            پس:
+
+            \[
+            x=-\frac\pi6.
+            \]
+
+            بنابراین:
+
+            \[
+            \boxed{
+            a=-\frac\pi6
+            }.
+            \]
+
         </div>
 
-\[
-        f(x)
-        =
-        -\frac12
-        \cos\left(\frac{3\pi}{2}+3x\right).
-\]
 
-        <p>
-            مشتق:
-        </p>
+        <div class="info-box fast">
 
-\[
-        f'(x)
-        =
-        \frac32
-        \sin\left(\frac{3\pi}{2}+3x\right).
-\]
+            <div class="info-title">
+                ⚡ حل سریع
+            </div>
 
-        <p>
-            چون:
-        </p>
+            کافی است:
 
-\[
-        \sin\left(\frac{3\pi}{2}+3x\right)
-        =
-        -\cos3x,
-\]
+            \[
+            \cos3x>0
+            \]
 
-        <p>
-            داریم:
-        </p>
+            و اولین مرز سمت چپ را پیدا کنیم:
 
-\[
-        f'(x)
-        =
-        -\frac32\cos3x.
-\]
+            \[
+            3x=-\frac\pi2.
+            \]
 
-        <p>
-            برای نزولی بودن:
-        </p>
+            بنابراین:
 
-\[
-        f'(x)<0.
-\]
+            \[
+            \boxed{-\frac\pi6}.
+            \]
 
-        بنابراین:
+        </div>
 
-\[
-        \cos3x>0.
-\]
 
-        <p>
-            در اطراف x=0:
-        </p>
+        <div class="info-box answer">
 
-\[
-        \cos0=1>0.
-\]
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
 
-        <p>
-            وقتی از صفر به سمت چپ حرکت می‌کنیم،
-            اولین مرز این ناحیه:
-        </p>
+            \[
+            \boxed{-\frac\pi6}
+            \]
 
-\[
-        3x=-\frac\pi2.
-\]
+        </div>
 
-        پس:
-
-\[
-        x=-\frac\pi6.
-\]
-
-        بنابراین:
-
-\[
-        \boxed{
-        a=-\frac\pi6
-        }.
-\]
 
     </div>
 
+</section>
 
-    <div class="box fast-box">
 
-        <div class="box-title">
-            ⚡ حل سریع کنکوری
-        </div
+<!-- =========================================================
+     سؤال 118
+     ========================================================= -->
+
+<section class="question" id="q118">
+
+    <div class="question-header">
+        <h2>
+            سؤال ۱۱۸ ـ معادلهٔ مثلثاتی
+        </h2>
+    </div>
+
+
+    <div class="question-body">
+
+
+        <div class="statement">
+
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            تعداد جواب‌های معادلهٔ
+
+            \[
+            \sin(\pi+x)
+            \cos\left(\frac\pi2+x\right)
+            +1
+            =
+            2\sin(\pi-x)
+            \]
+
+            در بازهٔ
+
+            \[
+            [-2\pi,2\pi]
+            \]
+
+            را بیابید.
+
+        </div>
+
+
+        <div class="info-box prerequisite">
+
+            <div class="info-title">
+                📘 اتحادهای موردنیاز
+            </div>
+
+            \[
+            \sin(\pi+x)=-\sin x
+            \]
+
+            \[
+            \cos\left(\frac\pi2+x\right)
+            =
+            -\sin x
+            \]
+
+            \[
+            \sin(\pi-x)=\sin x.
+            \]
+
+        </div>
+
+
+        <div class="info-box solution">
+
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
+
+            جایگذاری:
+
+            \[
+            (-\sin x)(-\sin x)+1
+            =
+            2\sin x.
+            \]
+
+            پس:
+
+            \[
+            \sin^2x+1=2\sin x.
+            \]
+
+            بنابراین:
+
+            \[
+            \sin^2x-2\sin x+1=0.
+            \]
+
+            یعنی:
+
+            \[
+            (\sin x-1)^2=0.
+            \]
+
+            پس:
+
+            \[
+            \sin x=1.
+            \]
+
+            جواب عمومی:
+
+            \[
+            x=\frac\pi2+2k\pi.
+            \]
+
+            در بازهٔ داده‌شده:
+
+            \[
+            x=-\frac{3\pi}{2}
+            \]
+
+            و:
+
+            \[
+            x=\frac\pi2.
+            \]
+
+            بنابراین تعداد جواب‌ها:
+
+            \[
+            \boxed2.
+            \]
+
+        </div>
+
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed2
+            \]
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     سؤال 119
+     ========================================================= -->
+
+<section class="question" id="q119">
+
+    <div class="question-header">
+        <h2>
+            سؤال ۱۱۹ ـ توان و لگاریتم
+        </h2>
+    </div>
+
+
+    <div class="question-body">
+
+
+        <div class="statement">
+
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            حاصل عبارت:
+
+            \[
+            (0.25)^{1-\log_4 10}
+            \]
+
+            را بیابید.
+
+        </div>
+
+
+        <div class="info-box prerequisite">
+
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
+
+            \[
+            0.25=\frac14=4^{-1}.
+            \]
+
+            همچنین:
+
+            \[
+            4^{\log_4 10}=10.
+            \]
+
+        </div>
+
+
+        <div class="info-box solution">
+
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
+
+            ابتدا:
+
+            \[
+            0.25=4^{-1}.
+            \]
+
+            بنابراین:
+
+            \[
+            (0.25)^{1-\log_4 10}
+            =
+            (4^{-1})^{1-\log_4 10}.
+            \]
+
+            پس:
+
+            \[
+            =
+            4^{-1+\log_4 10}.
+            \]
+
+            بنابراین:
+
+            \[
+            =
+            4^{-1}
+            \times
+            4^{\log_4 10}.
+            \]
+
+            یعنی:
+
+            \[
+            =
+            \frac14\times10.
+            \]
+
+            پس:
+
+            \[
+            \boxed{\frac52}.
+            \]
+
+        </div>
+
+
+        <div class="info-box fast">
+
+            <div class="info-title">
+                ⚡ حل سریع
+            </div>
+
+            \[
+            0.25=4^{-1}.
+            \]
+
+            پس:
+
+            \[
+            4^{-1+\log_4 10}
+            =
+            \frac{10}{4}
+            =
+            \boxed{\frac52}.
+            \]
+
+        </div>
+
+
+        <div class="info-box tip">
+
+            <div class="info-title">
+                ⭐ نکتهٔ مهم
+            </div>
+
+            دقت کن:
+
+            \[
+            1-\log_4 10
+            \]
+
+            تماماً در توان قرار دارد.
+
+            یعنی عبارت دقیقاً این است:
+
+            \[
+            (0.25)^{\,1-\log_4 10}.
+            \]
+
+        </div>
+
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{\frac52}
+            \]
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     سؤال 120
+     ========================================================= -->
+
+<section class="question" id="q120">
+
+    <div class="question-header">
+        <h2>
+            سؤال ۱۲۰ ـ چارک‌ها
+        </h2>
+    </div>
+
+
+    <div class="question-body">
+
+
+        <div class="statement">
+
+            <div class="statement-title">
+                صورت سؤال
+            </div>
+
+            داده‌های زیر را در نظر بگیرید:
+
+            \[
+            1,10,12,14,15,16,18,23,25,34,42,45.
+            \]
+
+            با اضافه شدن دو داده، چارک اول و سوم طبق قرارداد سؤال
+            تغییر نمی‌کنند. میانگین دو دادهٔ اضافه‌شده را بیابید.
+
+        </div>
+
+
+        <div class="info-box prerequisite">
+
+            <div class="info-title">
+                📘 پیش‌نیاز
+            </div>
+
+            داده‌ها ابتدا مرتب می‌شوند.
+
+            طبق قرارداد مورد استفاده در متن سؤال:
+
+            \[
+            Q_1=14
+            \]
+
+            و:
+
+            \[
+            Q_3=34.
+            \]
+
+        </div>
+
+
+        <div class="info-box solution">
+
+            <div class="info-title">
+                ✅ حل تشریحی
+            </div>
+
+            دو مقدار اضافه‌شده برای حفظ چارک‌های موردنظر سؤال:
+
+            \[
+            14
+            \]
+
+            و:
+
+            \[
+            34
+            \]
+
+            در نظر گرفته می‌شوند.
+
+            بنابراین:
+
+            \[
+            a+b=14+34=48.
+            \]
+
+            میانگین:
+
+            \[
+            \frac{a+b}{2}
+            =
+            \frac{48}{2}.
+            \]
+
+            پس:
+
+            \[
+            \boxed{24}.
+            \]
+
+        </div>
+
+
+        <div class="info-box fast">
+
+            <div class="info-title">
+                ⚡ حل سریع
+            </div>
+
+            طبق قرارداد سؤال:
+
+            \[
+            Q_1=14,\qquad Q_3=34.
+            \]
+
+            پس:
+
+            \[
+            a+b=48.
+            \]
+
+            بنابراین:
+
+            \[
+            \boxed{\bar{x}=24}.
+            \]
+
+        </div>
+
+
+        <div class="info-box warning">
+
+            <div class="info-title">
+                ⚠️ نکته دربارهٔ چارک‌ها
+            </div>
+
+            روش محاسبهٔ چارک‌ها ممکن است در منابع مختلف با قراردادهای
+            متفاوت ارائه شود. بنابراین در نسخهٔ نهایی جزوه بهتر است
+            تعریف چارک مورد استفادهٔ سؤال اصلی نیز ذکر شود.
+
+        </div>
+
+
+        <div class="info-box answer">
+
+            <div class="info-title">
+                🎯 پاسخ نهایی
+            </div>
+
+            \[
+            \boxed{24}
+            \]
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     جدول پاسخ‌ها
+     ========================================================= -->
+
+<section class="summary">
+
+    <h2>
+        📊 جدول پاسخ‌های سؤالات ۱۱۱ تا ۱۲۰
+    </h2>
+
+    <table class="answer-table">
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    سؤال
+                </th>
+
+                <th>
+                    پاسخ
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr>
+                <td>۱۱۱</td>
+                <td>\(-2\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۲</td>
+                <td>\(3\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۳</td>
+                <td>\(-\frac38\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۴</td>
+                <td>\(\frac32\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۵</td>
+                <td>\(-\frac{\sqrt2}{3}\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۶</td>
+                <td>\(3(1+\sqrt3)\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۷</td>
+                <td>\(-\frac\pi6\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۸</td>
+                <td>\(2\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۱۹</td>
+                <td>\(\frac52\)</td>
+            </tr>
+
+            <tr>
+                <td>۱۲۰</td>
+                <td>\(24\)</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- =========================================================
+     دکمه‌های پایین
+     ========================================================= -->
+
+<div class="bottom-navigation">
+
+    <a href="index.html">
+        ← ریاضی دهم
+    </a>
+
+    <a href="../index.html">
+        🏠 صفحه اصلی
+    </a>
+
+    <a href="../pdf/d10-fasl1.pdf">
+        📄 فایل PDF
+    </a>
+
+</div>
+
+
+<!-- =========================================================
+     پاورقی
+     ========================================================= -->
+
+<footer class="footer">
+
+    <p>
+        © آموزش جامع ریاضی
+    </p>
+
+    <p>
+        حل تشریحی ریاضی کنکور ۱۴۰۵ تجربی
+    </p>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>
