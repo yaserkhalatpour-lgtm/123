@@ -1,1 +1,176 @@
+* {
+    box-sizing: border-box;
+}
 
+body {
+    margin: 0;
+    direction: rtl;
+    text-align: right;
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    line-height: 2;
+}
+
+.container {
+    width: min(1100px, 94%);
+    margin: 30px auto;
+}
+
+/* عنوان اصلی */
+.header {
+    background: linear-gradient(135deg, #17365d, #2563a6);
+    color: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.header p {
+    margin: 8px 0 0;
+    font-size: 17px;
+}
+
+/* جعبه‌های درس */
+.box {
+    background: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    border-right: 6px solid #2563a6;
+}
+
+.box h2 {
+    margin-top: 0;
+    color: #17365d;
+}
+
+/* تعریف */
+.definition {
+    border-right-color: #2563a6;
+}
+
+/* مثال */
+.example {
+    border-right-color: #198754;
+}
+
+.example h2 {
+    color: #198754;
+}
+
+/* نکته */
+.tip {
+    border-right-color: #f0ad00;
+    background: #fffdf3;
+}
+
+.tip h2 {
+    color: #a87500;
+}
+
+/* هشدار */
+.warning {
+    border-right-color: #dc3545;
+    background: #fff5f5;
+}
+
+.warning h2 {
+    color: #b02a37;
+}
+
+/* کنکور */
+.konkur {
+    border-right-color: #7b2cbf;
+    background: #faf5ff;
+}
+
+.konkur h2 {
+    color: #7b2cbf;
+}
+
+/* فرمول */
+.formula {
+    background: #f7f9fc;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 12px;
+    text-align: center;
+    overflow-x: auto;
+}
+
+/* جدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #17365d;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* دکمه */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 8px;
+    background: #2563a6;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,.15);
+}
+
+/* پاورقی */
+.footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+    color: #666;
+}
+
+/* موبایل */
+@media (max-width: 700px) {
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .box {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
