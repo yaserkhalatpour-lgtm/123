@@ -1,11 +1,17 @@
 /* =========================================================
-   تنظیمات اصلی سایت
-========================================================= */
+   آموزش ریاضی
+   فایل اصلی استایل سایت
+   ========================================================= */
+
+
+/* =========================================================
+   تنظیمات پایه
+   ========================================================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -14,27 +20,16 @@ html {
 
 body {
     direction: rtl;
-    text-align: right;
-    font-family: "Vazirmatn", Tahoma, sans-serif;
-    background: #f5f7fb;
-    color: #202733;
-    line-height: 2;
-}
-
-
-/* =========================================================
-   لینک‌ها
-========================================================= */
-
-a {
-    text-decoration: none;
-    color: inherit;
+    font-family: "Vazirmatn", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
 }
 
 
 /* =========================================================
    نوار بالای سایت
-========================================================= */
+   ========================================================= */
 
 .navbar {
     position: sticky;
@@ -43,7 +38,7 @@ a {
 
     background: rgba(255, 255, 255, 0.96);
 
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e2e8f0;
 
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
 
@@ -51,10 +46,12 @@ a {
 }
 
 .nav-container {
-    width: min(1200px, 94%);
+    max-width: 1200px;
+    margin: 0 auto;
+
     min-height: 72px;
 
-    margin: auto;
+    padding: 0 25px;
 
     display: flex;
     align-items: center;
@@ -64,9 +61,11 @@ a {
 }
 
 .logo {
-    font-size: 21px;
+    color: #1d4ed8;
+    text-decoration: none;
+
+    font-size: 1.25rem;
     font-weight: 800;
-    color: #17365d;
 
     white-space: nowrap;
 }
@@ -74,66 +73,60 @@ a {
 .nav-menu {
     display: flex;
     align-items: center;
-
-    gap: 7px;
+    gap: 8px;
 
     flex-wrap: wrap;
 }
 
 .nav-menu a {
-    padding: 8px 13px;
+    position: relative;
+
+    padding: 10px 14px;
+
+    color: #475569;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 600;
 
     border-radius: 10px;
 
-    font-size: 14px;
-    font-weight: 600;
-
-    color: #4b5563;
-
-    transition: all 0.2s ease;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
 }
 
 .nav-menu a:hover {
-    background: #edf4ff;
-    color: #2563a6;
+    color: #2563eb;
+    background: #eff6ff;
+}
 
-    transform: translateY(-1px);
+.nav-menu a.active {
+    color: #2563eb;
+    background: #eff6ff;
+    font-weight: 800;
 }
 
 
 /* =========================================================
-   بخش Hero
-========================================================= */
+   بخش اصلی معرفی
+   ========================================================= */
 
 .hero {
-    width: min(1200px, 94%);
-
-    margin: 35px auto 0;
-
-    min-height: 470px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
 
     background:
         linear-gradient(
             135deg,
-            #17365d,
-            #2563a6
+            #1d4ed8 0%,
+            #2563eb 45%,
+            #0891b2 100%
         );
 
     color: white;
 
-    overflow: hidden;
-
-    position: relative;
-
-    box-shadow: 0 18px 45px rgba(23, 54, 93, 0.22);
+    padding: 80px 20px;
 }
 
 .hero::before {
@@ -146,9 +139,9 @@ a {
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.08);
 
-    top: -130px;
+    top: -150px;
     left: -100px;
 }
 
@@ -164,71 +157,63 @@ a {
 
     background: rgba(255, 255, 255, 0.06);
 
-    bottom: -100px;
+    bottom: -120px;
     right: -70px;
 }
 
 .hero-content {
-    width: min(850px, 90%);
-
     position: relative;
-
     z-index: 2;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
 }
 
 .hero-icon {
-    font-size: 60px;
-
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 15px;
 }
 
 .hero h1 {
-    font-size: clamp(28px, 5vw, 46px);
-
-    line-height: 1.5;
+    font-size: clamp(2rem, 5vw, 3.5rem);
 
     font-weight: 800;
 
-    margin-bottom: 12px;
-}
+    margin-bottom: 15px;
 
-.hero p {
-    font-size: 20px;
-
-    font-weight: 500;
-
-    margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 .hero-description {
-    max-width: 700px;
+    max-width: 750px;
 
-    margin: 10px auto 25px !important;
+    margin: 0 auto 30px;
 
-    font-size: 16px !important;
+    font-size: 1.05rem;
 
-    line-height: 2.2;
+    line-height: 2.1;
 
-    opacity: 0.92;
+    color: rgba(255, 255, 255, 0.92);
 }
 
 
 /* =========================================================
    دکمه‌ها
-========================================================= */
+   ========================================================= */
 
 .hero-buttons {
     display: flex;
 
     justify-content: center;
 
-    align-items: center;
+    gap: 15px;
 
     flex-wrap: wrap;
 
-    gap: 12px;
-
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btn {
@@ -237,90 +222,102 @@ a {
     align-items: center;
     justify-content: center;
 
-    min-height: 48px;
+    min-width: 150px;
 
-    padding: 10px 22px;
+    padding: 12px 24px;
 
     border-radius: 12px;
 
-    font-size: 15px;
+    text-decoration: none;
 
     font-weight: 700;
 
-    transition: all 0.2s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
 }
 
 .btn-primary {
-    background: #ffffff;
+    background: white;
+    color: #1d4ed8;
 
-    color: #17365d;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.14);
 
     color: white;
 
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-
-    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.22);
 }
 
 
 /* =========================================================
    بخش‌های عمومی
-========================================================= */
+   ========================================================= */
 
 .section {
-    width: min(1200px, 94%);
+    max-width: 1200px;
 
-    margin: 75px auto;
+    margin: 0 auto;
+
+    padding: 70px 25px;
 }
 
 .section-title {
+    position: relative;
+
     text-align: center;
 
-    margin-bottom: 35px;
-}
-
-.section-title > span {
-    display: block;
-
-    font-size: 35px;
-
-    margin-bottom: 5px;
-}
-
-.section-title h2 {
-    font-size: 30px;
-
-    color: #17365d;
-
-    margin-bottom: 5px;
+    font-size: 2rem;
 
     font-weight: 800;
+
+    color: #172554;
+
+    margin-bottom: 45px;
 }
 
-.section-title p {
-    color: #6b7280;
+.section-title::after {
+    content: "";
 
-    font-size: 15px;
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    margin: 12px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4
+        );
 }
 
 
 /* =========================================================
-   کارت‌های پایه‌های تحصیلی
-========================================================= */
+   کارت‌های پایه
+   ========================================================= */
 
 .grade-grid {
     display: grid;
@@ -332,24 +329,26 @@ a {
 }
 
 .grade-card {
+    position: relative;
+
+    overflow: hidden;
+
     background: white;
 
-    border-radius: 22px;
+    border-radius: 20px;
 
     padding: 30px 25px;
 
     text-align: center;
 
+    border: 1px solid #e2e8f0;
+
     box-shadow:
-        0 7px 25px rgba(0, 0, 0, 0.07);
+        0 8px 25px rgba(15, 23, 42, 0.06);
 
-    border: 1px solid #edf0f4;
-
-    transition: all 0.25s ease;
-
-    position: relative;
-
-    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .grade-card::before {
@@ -359,119 +358,154 @@ a {
 
     top: 0;
     right: 0;
-    left: 0;
 
+    width: 100%;
     height: 5px;
 
-    background: #2563a6;
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #06b6d4
+        );
 }
 
 .grade-card:hover {
     transform: translateY(-8px);
 
     box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.12);
+        0 18px 40px rgba(15, 23, 42, 0.12);
 }
 
-.grade11::before {
-    background: #198754;
+.grade-card h3 {
+    font-size: 1.25rem;
+
+    line-height: 1.8;
+
+    margin: 12px 0;
+
+    color: #172554;
 }
 
-.grade12::before {
-    background: #7b2cbf;
+.grade-card p {
+    line-height: 2;
+
+    color: #475569;
+
+    font-size: 0.95rem;
+
+    min-height: 76px;
 }
+
+
+/* =========================================================
+   کارت‌های پایه‌های تحصیلی
+   ========================================================= */
+
+.grade10 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fbff
+        );
+}
+
+.grade11 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fffc
+        );
+}
+
+.grade12 {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fffaf5
+        );
+}
+
+
+/* =========================================================
+   آیکون کارت
+   ========================================================= */
 
 .card-icon {
-    font-size: 55px;
-
-    margin-bottom: 10px;
-}
-
-.grade-label {
-    display: inline-block;
-
-    padding: 4px 12px;
-
-    border-radius: 20px;
-
-    background: #edf4ff;
-
-    color: #2563a6;
-
-    font-size: 13px;
-
-    font-weight: 700;
+    font-size: 2.7rem;
 
     margin-bottom: 8px;
 }
 
-.grade11 .grade-label {
-    background: #eaf8f0;
 
-    color: #198754;
+/* =========================================================
+   برچسب کارت
+   ========================================================= */
+
+.grade-label {
+    display: inline-block;
+
+    padding: 5px 14px;
+
+    margin-top: 8px;
+
+    border-radius: 20px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
 }
 
-.grade12 .grade-label {
-    background: #f4eafe;
 
-    color: #7b2cbf;
-}
-
-.grade-card h3 {
-    font-size: 24px;
-
-    color: #1f2937;
-
-    margin-bottom: 10px;
-}
-
-.grade-card p {
-    color: #6b7280;
-
-    font-size: 14px;
-
-    min-height: 82px;
-
-    margin-bottom: 20px;
-}
+/* =========================================================
+   دکمه کارت
+   ========================================================= */
 
 .card-button {
     display: inline-block;
 
-    padding: 9px 18px;
+    margin-top: 15px;
 
-    border-radius: 10px;
+    padding: 10px 22px;
 
-    background: #2563a6;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
 
     color: white;
 
-    font-size: 14px;
+    text-decoration: none;
 
     font-weight: 700;
 
-    transition: 0.2s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .card-button:hover {
     transform: translateY(-2px);
 
     box-shadow:
-        0 6px 15px rgba(37, 99, 166, 0.25);
-}
-
-.grade11 .card-button {
-    background: #198754;
-}
-
-.grade12 .card-button {
-    background: #7b2cbf;
+        0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
 
 /* =========================================================
-   امکانات آموزشی
-========================================================= */
+   بخش امکانات
+   ========================================================= */
 
 .feature-grid {
     display: grid;
@@ -491,79 +525,89 @@ a {
 
     text-align: center;
 
-    border: 1px solid #edf0f4;
+    border: 1px solid #e2e8f0;
 
     box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.05);
+        0 7px 20px rgba(15, 23, 42, 0.05);
 
-    transition: 0.2s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 12px 28px rgba(0, 0, 0, 0.09);
+        0 15px 30px rgba(15, 23, 42, 0.1);
 }
 
 .feature-icon {
-    font-size: 42px;
+    font-size: 2.5rem;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .feature-card h3 {
-    font-size: 18px;
+    color: #172554;
 
-    color: #17365d;
+    margin-bottom: 8px;
 
-    margin-bottom: 7px;
+    font-size: 1.1rem;
 }
 
 .feature-card p {
-    color: #6b7280;
+    color: #64748b;
 
-    font-size: 13px;
+    font-size: 0.9rem;
 
-    line-height: 2;
+    line-height: 1.9;
 }
 
 
 /* =========================================================
    مسیر یادگیری
-========================================================= */
+   ========================================================= */
 
 .learning {
-    background: white;
-
-    padding: 45px 30px;
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 6px 25px rgba(0, 0, 0, 0.05);
+    background: #f8fafc;
 }
 
 .steps {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 25px;
+    gap: 20px;
 }
 
 .step {
+    position: relative;
+
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 18px;
+
     text-align: center;
 
-    position: relative;
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 7px 20px rgba(15, 23, 42, 0.05);
 }
 
 .step-number {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
 
-    margin: 0 auto 12px;
+    margin: 0 auto 15px;
 
     display: flex;
 
@@ -572,190 +616,241 @@ a {
 
     border-radius: 50%;
 
-    background: #17365d;
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0891b2
+        );
 
     color: white;
 
-    font-size: 20px;
+    font-size: 1.2rem;
 
     font-weight: 800;
 }
 
 .step h3 {
-    font-size: 17px;
+    color: #172554;
 
-    color: #17365d;
-
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .step p {
-    font-size: 13px;
+    color: #64748b;
 
-    color: #6b7280;
+    font-size: 0.9rem;
+
+    line-height: 1.9;
 }
 
 
 /* =========================================================
    بخش PDF
-========================================================= */
+   ========================================================= */
 
 .pdf-section {
-    margin-top: 70px;
+    padding-top: 20px;
 }
 
 .pdf-box {
-    background:
-        linear-gradient(
-            135deg,
-            #f0f6ff,
-            #ffffff
-        );
-
-    border: 1px solid #dbe8f7;
-
-    border-radius: 22px;
-
-    padding: 30px;
-
     display: flex;
 
     align-items: center;
 
     gap: 25px;
 
-    box-shadow:
-        0 7px 25px rgba(0, 0, 0, 0.05);
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+
+    border: 1px solid #bfdbfe;
 }
 
 .pdf-icon {
-    font-size: 55px;
-
-    flex-shrink: 0;
+    font-size: 3.5rem;
 }
 
 .pdf-content {
     flex: 1;
 }
 
-.pdf-content h2 {
-    color: #17365d;
+.pdf-content h3 {
+    color: #172554;
 
-    font-size: 24px;
-
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .pdf-content p {
-    color: #6b7280;
+    color: #475569;
 
-    font-size: 14px;
-}
-
-.pdf-box .btn-primary {
-    background: #2563a6;
-
-    color: white;
-
-    flex-shrink: 0;
+    margin-bottom: 15px;
 }
 
 
 /* =========================================================
-   Footer
-========================================================= */
+   صفحه فصل‌های ریاضی دهم
+   ========================================================= */
+
+.grade10 .card-icon {
+    line-height: 1;
+}
+
+.grade10 h3 {
+    min-height: 58px;
+}
+
+.grade10 p {
+    min-height: 105px;
+}
+
+
+/* =========================================================
+   فوتر
+   ========================================================= */
 
 .footer {
-    margin-top: 80px;
+    background: #0f172a;
 
-    background: #14283f;
+    color: #cbd5e1;
 
-    color: white;
+    padding-top: 55px;
 
-    padding-top: 45px;
+    margin-top: 40px;
 }
 
 .footer-container {
-    width: min(1200px, 94%);
+    max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
+
+    padding: 0 25px 40px;
 
     display: grid;
 
     grid-template-columns:
-        2fr 1fr 1fr;
+        2fr 1fr;
 
-    gap: 40px;
-
-    padding-bottom: 40px;
+    gap: 50px;
 }
 
-.footer h3 {
-    font-size: 21px;
-
-    margin-bottom: 10px;
-}
-
-.footer h4 {
-    font-size: 16px;
-
-    margin-bottom: 12px;
-}
-
-.footer p {
-    color: #c7d0dc;
-
-    font-size: 13px;
-}
-
-.footer a {
-    display: block;
-
-    color: #c7d0dc;
-
-    font-size: 13px;
-
-    margin-bottom: 6px;
-
-    transition: 0.2s;
-}
-
-.footer a:hover {
+.footer-container h3 {
     color: white;
 
-    transform: translateX(-3px);
+    margin-bottom: 15px;
+
+    font-size: 1.1rem;
+}
+
+.footer-container p {
+    line-height: 2;
+
+    color: #94a3b8;
+}
+
+.footer-container a {
+    display: block;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    margin: 8px 0;
+
+    transition:
+        color 0.2s ease;
+}
+
+.footer-container a:hover {
+    color: white;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #1e293b;
 
     text-align: center;
 
-    padding: 18px;
+    padding: 20px;
+}
 
-    color: #aeb9c6;
+.footer-bottom p {
+    font-size: 0.85rem;
 
-    font-size: 12px;
+    color: #64748b;
 }
 
 
 /* =========================================================
-   موبایل
-========================================================= */
+   دکمه بازگشت به بالای صفحه
+   ========================================================= */
 
-@media (max-width: 900px) {
+#backToTop {
+    position: fixed;
 
-    .nav-container {
-        flex-direction: column;
+    bottom: 25px;
+    left: 25px;
 
-        padding: 15px 0;
+    width: 48px;
+    height: 48px;
 
-        gap: 10px;
-    }
+    border: none;
 
-    .nav-menu {
-        justify-content: center;
-    }
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        all 0.3s ease;
+
+    z-index: 1000;
+}
+
+#backToTop.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+
+/* =========================================================
+   واکنش‌گرا - تبلت
+   ========================================================= */
+
+@media (max-width: 1000px) {
 
     .grade-grid {
         grid-template-columns:
@@ -772,60 +867,89 @@ a {
             repeat(2, 1fr);
     }
 
-    .footer-container {
-        grid-template-columns:
-            1fr 1fr;
+    .nav-container {
+        flex-direction: column;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
+    .nav-menu {
+        justify-content: center;
+    }
 }
 
 
-@media (max-width: 600px) {
+/* =========================================================
+   واکنش‌گرا - موبایل
+   ========================================================= */
+
+@media (max-width: 768px) {
 
     .hero {
-        min-height: 500px;
-
-        margin-top: 20px;
-
-        border-radius: 22px;
-    }
-
-    .hero-icon {
-        font-size: 48px;
+        padding: 60px 18px;
     }
 
     .hero h1 {
-        font-size: 27px;
-    }
-
-    .hero p {
-        font-size: 17px;
+        font-size: 2rem;
     }
 
     .hero-description {
-        font-size: 14px !important;
+        font-size: 0.95rem;
     }
 
     .section {
-        margin: 55px auto;
+        padding: 50px 18px;
     }
 
-    .section-title h2 {
-        font-size: 24px;
+    .section-title {
+        font-size: 1.6rem;
+
+        margin-bottom: 32px;
     }
 
-    .grade-grid,
-    .feature-grid,
+    .grade-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
     .steps {
         grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .grade-card {
+        padding: 25px 20px;
+    }
+
+    .grade-card h3 {
+        font-size: 1.15rem;
+
+        min-height: auto;
     }
 
     .grade-card p {
         min-height: auto;
     }
 
-    .learning {
-        padding: 30px 18px;
+    .card-icon {
+        font-size: 2.3rem;
+    }
+
+    .card-button {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 11px 15px;
     }
 
     .pdf-box {
@@ -836,28 +960,61 @@ a {
         padding: 25px 18px;
     }
 
-    .pdf-content {
-        width: 100%;
-    }
-
-    .pdf-box .btn {
-        width: 100%;
-    }
-
     .footer-container {
         grid-template-columns: 1fr;
+
+        gap: 30px;
 
         text-align: center;
     }
 
+    #backToTop {
+        bottom: 18px;
+
+        left: 18px;
+
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+/* =========================================================
+   موبایل کوچک
+   ========================================================= */
+
+@media (max-width: 480px) {
+
     .nav-menu {
-        gap: 2px;
+        width: 100%;
+
+        gap: 3px;
     }
 
     .nav-menu a {
-        font-size: 12px;
+        padding: 7px 8px;
 
-        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    .hero-icon {
+        font-size: 3rem;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
     }
 
 }
@@ -865,25 +1022,45 @@ a {
 
 /* =========================================================
    چاپ
-========================================================= */
+   ========================================================= */
 
 @media print {
 
     .navbar,
     .hero-buttons,
-    .footer {
-        display: none;
+    #backToTop {
+        display: none !important;
     }
 
     body {
         background: white;
     }
 
-    .section,
     .hero {
-        width: 100%;
+        background: white;
 
-        box-shadow: none;
+        color: black;
+
+        padding: 30px;
     }
 
+    .hero-description {
+        color: #333;
+    }
+
+    .grade-card,
+    .feature-card,
+    .step {
+        box-shadow: none;
+
+        border: 1px solid #999;
+    }
+
+    .footer {
+        background: white;
+
+        color: black;
+
+        border-top: 1px solid #999;
+    }
 }
