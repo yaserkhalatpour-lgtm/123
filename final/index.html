@@ -1,1 +1,873 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description"
+      content="سؤالات امتحان نهایی ریاضی دوازدهم تجربی همراه با پاسخ تشریحی و نکات مهم">
 
+<title>امتحان نهایی ریاضی دوازدهم | دکتر یاسر خلعت‌پور</title>
+
+<!-- فونت وزیرمتن -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+
+<!-- استایل اصلی سایت -->
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- MathJax -->
+<script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\', '\']],
+            displayMath: [['\', '\']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+
+<script defer
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+<style>
+
+    /* =========================================
+       صفحه امتحان نهایی
+    ========================================= */
+
+    .final-hero {
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+        background:
+            linear-gradient(135deg, #1e3c72, #2a5298);
+        border-radius: 0 0 35px 35px;
+    }
+
+    .final-hero-icon {
+        font-size: 70px;
+        margin-bottom: 15px;
+    }
+
+    .final-hero h1 {
+        font-size: 38px;
+        margin: 10px 0;
+        font-weight: 800;
+    }
+
+    .final-hero h2 {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 15px 0;
+    }
+
+    .final-hero p {
+        max-width: 850px;
+        margin: 20px auto;
+        line-height: 2.2;
+        font-size: 17px;
+    }
+
+    /* =========================================
+       معرفی مؤلف
+    ========================================= */
+
+    .final-author {
+        max-width: 1000px;
+        margin: 35px auto;
+        padding: 25px;
+        border-radius: 20px;
+        background: white;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .final-author-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #eaf2ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        flex-shrink: 0;
+    }
+
+    .final-author h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+    }
+
+    .final-author p {
+        margin: 0;
+        color: #666;
+    }
+
+    /* =========================================
+       فصل‌ها
+    ========================================= */
+
+    .final-section {
+        padding: 45px 0;
+    }
+
+    .final-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .final-title h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .final-title p {
+        color: #666;
+        line-height: 2;
+    }
+
+    .final-chapters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .final-chapter {
+        background: white;
+        border-radius: 22px;
+        padding: 28px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        border-top: 5px solid #2a5298;
+        transition: 0.3s;
+    }
+
+    .final-chapter:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+    }
+
+    .chapter-number {
+        width: 55px;
+        height: 55px;
+        border-radius: 15px;
+        background: #eaf2ff;
+        color: #1e3c72;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .final-chapter h3 {
+        font-size: 21px;
+        margin: 10px 0;
+    }
+
+    .final-chapter p {
+        line-height: 2;
+        color: #666;
+    }
+
+    .chapter-button {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 11px 20px;
+        border-radius: 12px;
+        background: #2a5298;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .chapter-button:hover {
+        background: #1e3c72;
+    }
+
+    /* =========================================
+       بخش نکات نهایی
+    ========================================= */
+
+    .final-tips {
+        margin: 45px auto;
+        max-width: 1000px;
+        padding: 30px;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #fff8e1, #fffdf5);
+        border-right: 6px solid #f5a623;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .final-tips h2 {
+        margin-top: 0;
+        color: #8a5a00;
+    }
+
+    .final-tips ul {
+        line-height: 2.4;
+        margin-bottom: 0;
+    }
+
+    /* =========================================
+       مسیر مطالعه
+    ========================================= */
+
+    .study-path {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .study-step {
+        background: white;
+        border-radius: 18px;
+        padding: 25px 18px;
+        text-align: center;
+        box-shadow: 0 7px 20px rgba(0,0,0,0.07);
+    }
+
+    .study-step-number {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background: #2a5298;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    .study-step h3 {
+        font-size: 17px;
+        margin: 10px 0;
+    }
+
+    .study-step p {
+        font-size: 14px;
+        line-height: 1.9;
+        color: #666;
+    }
+
+    /* =========================================
+       بخش جمع‌بندی
+    ========================================= */
+
+    .final-message {
+        margin: 50px auto;
+        max-width: 900px;
+        padding: 40px 30px;
+        text-align: center;
+        border-radius: 25px;
+        background: linear-gradient(135deg, #eef5ff, #ffffff);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    }
+
+    .final-message .symbol {
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+
+    .final-message h2 {
+        margin: 10px 0;
+    }
+
+    .final-message p {
+        line-height: 2.2;
+        color: #555;
+    }
+
+    .final-message .author-name {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 800;
+        color: #1e3c72;
+    }
+
+    /* =========================================
+       موبایل
+    ========================================= */
+
+    @media (max-width: 800px) {
+
+        .final-hero {
+            padding: 55px 18px;
+        }
+
+        .final-hero h1 {
+            font-size: 28px;
+        }
+
+        .final-hero h2 {
+            font-size: 19px;
+        }
+
+        .final-chapters {
+            grid-template-columns: 1fr;
+        }
+
+        .study-path {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .final-author {
+            margin: 25px 15px;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        .final-hero-icon {
+            font-size: 55px;
+        }
+
+        .final-hero h1 {
+            font-size: 24px;
+        }
+
+        .final-hero h2 {
+            font-size: 17px;
+        }
+
+        .final-hero p {
+            font-size: 15px;
+        }
+
+        .study-path {
+            grid-template-columns: 1fr;
+        }
+
+        .final-author {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+</style>
+
+</head><body><!-- =========================================
+     نوار ناوبری
+========================================= --><header class="navbar"><div class="container nav-container">
+
+    <div class="logo">
+        📘 آموزش ریاضی
+    </div>
+
+    <nav class="nav-menu">
+
+        <a href="../index.html">
+            خانه
+        </a>
+
+        <a href="../d10/index.html">
+            ریاضی دهم
+        </a>
+
+        <a href="../d11/index.html">
+            ریاضی یازدهم
+        </a>
+
+        <a href="../d12/index.html">
+            ریاضی دوازدهم
+        </a>
+
+        <a href="index.html" class="active">
+            🎓 امتحان نهایی
+        </a>
+
+        <a href="../konkoor/index.html">
+            🚀 کنکور
+        </a>
+
+        <a href="../pdf/index.html">
+            📚 PDF
+        </a>
+
+    </nav>
+
+</div>
+
+</header><main><!-- =========================================
+     هدر صفحه
+========================================= --><section class="final-hero"><div class="container">
+
+    <div class="final-hero-icon">
+        🎓
+    </div>
+
+    <h1>
+        امتحان نهایی ریاضی دوازدهم
+    </h1>
+
+    <h2>
+        سؤالات نهایی هفت فصل ریاضی دوازدهم تجربی
+    </h2>
+
+    <p>
+        مجموعه‌ای کامل برای آمادگی امتحان نهایی؛
+        شامل سؤالات امتحانی، پاسخ‌های تشریحی،
+        نکات مهم و روش صحیح پاسخ‌گویی به سؤالات.
+    </p>
+
+</div>
+
+</section><!-- =========================================
+     معرفی مؤلف
+========================================= --><section class="container"><div class="final-author">
+
+    <div class="final-author-icon">
+        👨‍🏫
+    </div>
+
+    <div>
+
+        <h3>
+            دکتر یاسر خلعت‌پور
+        </h3>
+
+        <p>
+            مؤلف و مدرس آموزش تخصصی و مفهومی ریاضی
+        </p>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================
+     معرفی فصل‌ها
+========================================= --><section class="container final-section"><div class="final-title">
+
+    <h2>
+        📚 سؤالات نهایی هفت فصل
+    </h2>
+
+    <p>
+        فصل موردنظر را انتخاب کنید تا سؤالات امتحان نهایی
+        و پاسخ‌های تشریحی آن را مشاهده کنید.
+    </p>
+
+</div>
+
+
+<div class="final-chapters">
+
+    <!-- فصل ۱ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۱
+        </div>
+
+        <h3>
+            فصل اول
+        </h3>
+
+        <p>
+            سؤالات امتحان نهایی مربوط به فصل اول
+            همراه با پاسخ تشریحی و نکات مهم.
+        </p>
+
+        <a href="fasl1.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+
+    <!-- فصل ۲ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۲
+        </div>
+
+        <h3>
+            فصل دوم
+        </h3>
+
+        <p>
+            مجموعه سؤالات نهایی فصل دوم با
+            حل تشریحی مرحله‌به‌مرحله.
+        </p>
+
+        <a href="fasl2.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+
+    <!-- فصل ۳ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۳
+        </div>
+
+        <h3>
+            فصل سوم
+        </h3>
+
+        <p>
+            سؤالات مهم و پرتکرار امتحان نهایی
+            فصل سوم همراه با پاسخ کامل.
+        </p>
+
+        <a href="fasl3.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+
+    <!-- فصل ۴ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۴
+        </div>
+
+        <h3>
+            فصل چهارم
+        </h3>
+
+        <p>
+            تمرین‌ها و سؤالات امتحان نهایی فصل چهارم
+            همراه با راه‌حل تشریحی.
+        </p>
+
+        <a href="fasl4.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+
+    <!-- فصل ۵ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۵
+        </div>
+
+        <h3>
+            فصل پنجم
+        </h3>
+
+        <p>
+            مجموعه سؤالات فصل پنجم برای آمادگی
+            کامل در امتحان نهایی.
+        </p>
+
+        <a href="fasl5.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+
+    <!-- فصل ۶ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۶
+        </div>
+
+        <h3>
+            فصل ششم
+        </h3>
+
+        <p>
+            سؤالات منتخب امتحان نهایی فصل ششم
+            با پاسخ تشریحی کامل.
+        </p>
+
+        <a href="fasl6.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+
+    <!-- فصل ۷ -->
+
+    <div class="final-chapter">
+
+        <div class="chapter-number">
+            ۷
+        </div>
+
+        <h3>
+            فصل هفتم
+        </h3>
+
+        <p>
+            سؤالات امتحان نهایی فصل هفتم
+            همراه با پاسخ و نکات مهم.
+        </p>
+
+        <a href="fasl7.html" class="chapter-button">
+            مشاهده سؤالات ←
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================
+     نکات مهم امتحان نهایی
+========================================= --><section class="container"><div class="final-tips">
+
+    <h2>
+        ⭐ نکات طلایی امتحان نهایی
+    </h2>
+
+    <ul>
+
+        <li>
+            پاسخ‌ها را مرحله‌به‌مرحله و کاملاً تشریحی بنویسید.
+        </li>
+
+        <li>
+            فقط نوشتن جواب نهایی کافی نیست؛ مراحل حل اهمیت دارند.
+        </li>
+
+        <li>
+            فرمول‌ها را قبل از جایگذاری به‌صورت واضح بنویسید.
+        </li>
+
+        <li>
+            در سؤالات محاسباتی، علامت‌ها و پرانتزها را با دقت بررسی کنید.
+        </li>
+
+        <li>
+            در پایان هر سؤال، جواب به‌دست‌آمده را با صورت سؤال مقایسه کنید.
+        </li>
+
+        <li>
+            تمرین سؤالات امتحان‌های نهایی سال‌های گذشته یکی از مهم‌ترین
+            مراحل آمادگی برای امتحان است.
+        </li>
+
+    </ul>
+
+</div>
+
+</section><!-- =========================================
+     مسیر مطالعه
+========================================= --><section class="container final-section"><div class="final-title">
+
+    <h2>
+        🧭 روش پیشنهادی مطالعه برای امتحان نهایی
+    </h2>
+
+    <p>
+        برای هر فصل این چهار مرحله را انجام دهید.
+    </p>
+
+</div>
+
+
+<div class="study-path">
+
+    <div class="study-step">
+
+        <div class="study-step-number">
+            ۱
+        </div>
+
+        <h3>
+            مطالعه درس‌نامه
+        </h3>
+
+        <p>
+            ابتدا مفهوم و فرمول‌های اصلی فصل را یاد بگیرید.
+        </p>
+
+    </div>
+
+
+    <div class="study-step">
+
+        <div class="study-step-number">
+            ۲
+        </div>
+
+        <h3>
+            حل مثال
+        </h3>
+
+        <p>
+            مثال‌های تشریحی را بدون عجله و مرحله‌به‌مرحله حل کنید.
+        </p>
+
+    </div>
+
+
+    <div class="study-step">
+
+        <div class="study-step-number">
+            ۳
+        </div>
+
+        <h3>
+            حل سؤالات نهایی
+        </h3>
+
+        <p>
+            سؤالات امتحان‌های نهایی سال‌های گذشته را تمرین کنید.
+        </p>
+
+    </div>
+
+
+    <div class="study-step">
+
+        <div class="study-step-number">
+            ۴
+        </div>
+
+        <h3>
+            مرور و جمع‌بندی
+        </h3>
+
+        <p>
+            نکات مهم و اشتباهات خود را دوباره مرور کنید.
+        </p>
+
+    </div>
+
+</div>
+
+</section><!-- =========================================
+     پیام پایانی
+========================================= --><section class="container"><div class="final-message">
+
+    <div class="symbol">
+        ∑
+    </div>
+
+    <h2>
+        هدف: تسلط کامل بر امتحان نهایی
+    </h2>
+
+    <p>
+        با مطالعه منظم، حل سؤالات سال‌های گذشته و نوشتن
+        پاسخ‌های تشریحی می‌توانید مهارت خود را در امتحان
+        نهایی به‌صورت مرحله‌به‌مرحله افزایش دهید.
+    </p>
+
+    <div class="author-name">
+        دکتر یاسر خلعت‌پور
+    </div>
+
+</div>
+
+</section></main><!-- =========================================
+     فوتر
+========================================= --><footer class="footer"><div class="container">
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                📘 آموزش ریاضی
+            </h3>
+
+            <p>
+                آموزش مفهومی ریاضی از پایه تا امتحان نهایی
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                دسترسی سریع
+            </h3>
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="../d10/index.html">
+                ریاضی دهم
+            </a>
+
+            <a href="../d11/index.html">
+                ریاضی یازدهم
+            </a>
+
+            <a href="../d12/index.html">
+                ریاضی دوازدهم
+            </a>
+
+            <a href="index.html">
+                امتحان نهایی
+            </a>
+
+            <a href="../konkoor/index.html">
+                کنکور
+            </a>
+
+            <a href="../pdf/index.html">
+                فایل‌های PDF
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                مؤلف
+            </h3>
+
+            <p>
+                دکتر یاسر خلعت‌پور
+            </p>
+
+            <p>
+                آموزش تخصصی و مفهومی ریاضی
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © تمامی حقوق این مجموعه محفوظ است.
+        </p>
+
+        <p>
+            تألیف و تدوین:
+            <strong>
+                دکتر یاسر خلعت‌پور
+            </strong>
+        </p>
+
+    </div>
+
+</div>
+
+</footer><script src="../js/main.js"></script></body></html>
