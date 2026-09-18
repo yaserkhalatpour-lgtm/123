@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>آموزش حرفه‌ای مشتق | ریاضی</title>
+
+    <!-- فونت وزیرمتن -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- استایل اصلی سایت -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- MathJax -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+    <style>
+        /* =====================================================
+           استایل اختصاصی صفحه مشتق
+           ===================================================== */
+
+        body {
+            font-family: "Vazirmatn", sans-serif;
+        }
+
+        .lesson-container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 25px 15px 60px;
+        }
+
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .lesson-header h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .lesson-header p {
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+
+        /* باکس‌های آموزشی */
+
+        .lesson-box {
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 15px;
+            line-height: 2.2;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        .box-blue {
+            background: #f3f8ff;
+            border-right: 6px solid #2563eb;
+        }
+
+        .box-green {
+            background: #f2fbf5;
+            border-right: 6px solid #16a34a;
+        }
+
+        .box-orange {
+            background: #fff8ed;
+            border-right: 6px solid #ea580c;
+        }
+
+        .box-yellow {
+            background: #fffbea;
+            border-right: 6px solid #f59e0b;
+        }
+
+        .box-red {
+            background: #fff5f5;
+            border-right: 6px solid #dc2626;
+        }
+
+        .box-purple {
+            background: #faf5ff;
+            border-right: 6px solid #9333ea;
+        }
+
+        .box-cyan {
+            background: #f0fcff;
+            border-right: 6px solid #0891b2;
+        }
+
+        .lesson-box h2 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .lesson-box p {
+            margin: 12px 0;
+        }
+
+        /* فرمول */
+
+        .formula {
+            background: white;
+            border-radius: 12px;
+            padding: 12px;
+            margin: 18px auto;
+            text-align: center;
+            overflow-x: auto;
+            direction: ltr;
+        }
+
+        .formula-text {
+            text-align: center;
+            font-weight: 700;
+            direction: rtl;
+        }
+
+        /* نکته‌ها */
+
+        .exam-tip {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 13px;
+            background: #fff7ed;
+            border: 2px solid #fb923c;
+        }
+
+        .exam-tip h3 {
+            margin-top: 0;
+            color: #c2410c;
+        }
+
+        .konkoor-tip {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 13px;
+            background: #f5f3ff;
+            border: 2px solid #8b5cf6;
+        }
+
+        .konkoor-tip h3 {
+            margin-top: 0;
+            color: #6d28d9;
+        }
+
+        /* مثال */
+
+        .example {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+        }
+
+        .example-title {
+            font-weight: 800;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* مراحل حل */
+
+        .step {
+            margin: 12px 0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-right: 4px solid #64748b;
+        }
+
+        /* جدول */
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        .summary-table th,
+        .summary-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .summary-table th {
+            font-weight: 800;
+        }
+
+        /* نمودار */
+
+        .chart-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px auto;
+            text-align: center;
+        }
+
+        .chart-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ناوبری درس */
+
+        .lesson-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 45px;
+            flex-wrap: wrap;
+        }
+
+        .lesson-navigation a {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* موبایل */
+
+        @media (max-width: 700px) {
+
+            .lesson-container {
+                padding: 15px 10px 40px;
+            }
+
+            .lesson-box {
+                padding: 18px 14px;
+                margin: 18px 0;
+            }
+
+            .lesson-box h2 {
+                font-size: 1.15rem;
+            }
+
+            .lesson-box p {
+                font-size: 0.95rem;
+            }
+
+            .formula {
+                padding: 8px 4px;
+            }
+
+            .summary-table {
+                font-size: 0.85rem;
+            }
+
+            .summary-table th,
+            .summary-table td {
+                padding: 8px 5px;
+            }
+
+            .lesson-navigation {
+                flex-direction: column;
+            }
+
+            .lesson-navigation a {
+                min-width: 100%;
+            }
+        }
+
+        /* اصلاح جهت MathJax */
+
+        mjx-container {
+            direction: ltr !important;
+        }
+
+        mjx-container[display="true"] {
+            direction: ltr !important;
+            text-align: center !important;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         منوی سایت
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="../../index.html" class="logo">
+                📐 آموزش ریاضی
+            </a>
+
+            <div class="nav-menu">
+
+                <a href="../../index.html">
+                    خانه
+                </a>
+
+                <a href="../index.html">
+                    ریاضی دوازدهم
+                </a>
+
+                <a href="../fasl1.html">
+                    فصل
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         محتوای اصلی
+         ===================================================== -->
+
+    <main class="lesson-container">
+
+
+        <!-- عنوان -->
+
+        <header class="lesson-header">
+
+            <h1>
+                آموزش حرفه‌ای مشتق
+            </h1>
+
+            <p>
+                از مفهوم شیب خط تا مشتق، شیب مماس و معادلهٔ خط مماس
+            </p>
+
+        </header>
+
+
+        <!-- =================================================
+             ۱. شیب خط
+             ================================================= -->
+
+        <section class="lesson-box box-blue">
+
+            <h2>
+                ۱. شیب خط چیست؟
+            </h2>
+
+            <p>
+                فرض کنید دو نقطهٔ زیر روی یک خط داشته باشیم:
+            </p>
+
+            <div class="formula">
+                \[
+                A(x_1,y_1),\qquad B(x_2,y_2)
+                \]
+            </div>
+
+            <p>
+                شیب خط از رابطهٔ زیر به دست می‌آید:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                m=\frac{y_2-y_1}{x_2-x_1}
+                }
+                \]
+            </div>
+
+            <p>
+                یعنی شیب، میزان تغییرات \(y\) نسبت به تغییرات \(x\) است:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                m=\frac{\Delta y}{\Delta x}
+                }
+                \]
+            </div>
+
+            <p>
+                اگر \(m>0\) باشد، خط صعودی است.
+            </p>
+
+            <p>
+                اگر \(m<0\) باشد، خط نزولی است.
+            </p>
+
+            <p>
+                اگر \(m=0\) باشد، خط افقی است.
+            </p>
+
+
+            <!-- نمودار شیب -->
+
+            <div class="chart-container">
+
+                <svg viewBox="0 0 800 470" role="img"
+                    aria-label="نمودار خط و دو نقطه">
+
+                    <!-- شبکه -->
+
+                    <g stroke="#dbe4ee" stroke-width="1">
+
+                        <line x1="80" y1="60" x2="80" y2="400" />
+                        <line x1="180" y1="60" x2="180" y2="400" />
+                        <line x1="280" y1="60" x2="280" y2="400" />
+                        <line x1="380" y1="60" x2="380" y2="400" />
+                        <line x1="480" y1="60" x2="480" y2="400" />
+                        <line x1="580" y1="60" x2="580" y2="400" />
+                        <line x1="680" y1="60" x2="680" y2="400" />
+
+                        <line x1="80" y1="100" x2="680" y2="100" />
+                        <line x1="80" y1="160" x2="680" y2="160" />
+                        <line x1="80" y1="220" x2="680" y2="220" />
+                        <line x1="80" y1="280" x2="680" y2="280" />
+                        <line x1="80" y1="340" x2="680" y2="340" />
+                        <line x1="80" y1="400" x2="680" y2="400" />
+
+                    </g>
+
+
+                    <!-- محور x -->
+
+                    <line x1="50" y1="400" x2="720" y2="400"
+                        stroke="#222" stroke-width="3" />
+
+                    <!-- محور y -->
+
+                    <line x1="80" y1="430" x2="80" y2="40"
+                        stroke="#222" stroke-width="3" />
+
+
+                    <!-- خط -->
+
+                    <line x1="180" y1="340" x2="580" y2="100"
+                        stroke="#2563eb" stroke-width="5" />
+
+
+                    <!-- نقطه A -->
+
+                    <circle cx="180" cy="340" r="8" />
+
+                    <!-- نقطه B -->
+
+                    <circle cx="580" cy="100" r="8" />
+
+
+                    <!-- دلتا x -->
+
+                    <line x1="180" y1="340"
+                        x2="580" y2="340"
+                        stroke="#64748b"
+                        stroke-width="3"
+                        stroke-dasharray="8 8" />
+
+
+                    <!-- دلتا y -->
+
+                    <line x1="580" y1="340"
+                        x2="580" y2="100"
+                        stroke="#64748b"
+                        stroke-width="3"
+                        stroke-dasharray="8 8" />
+
+
+                    <text x="175" y="365"
+                        font-family="Vazirmatn"
+                        font-size="22">
+                        A
+                    </text>
+
+                    <text x="590" y="90"
+                        font-family="Vazirmatn"
+                        font-size="22">
+                        B
+                    </text>
+
+                    <text x="365" y="370"
+                        font-family="Vazirmatn"
+                        font-size="20">
+                        Δx
+                    </text>
+
+                    <text x="595" y="225"
+                        font-family="Vazirmatn"
+                        font-size="20">
+                        Δy
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <div class="formula">
+                \[
+                m=\frac{6-2}{5-1}=1
+                \]
+            </div>
+
+            <p>
+                پس شیب خط برابر \(1\) است.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             ۲. منحنی درجه دوم
+             ================================================= -->
+
+        <section class="lesson-box box-green">
+
+            <h2>
+                ۲. اگر به جای خط، یک منحنی داشته باشیم چه می‌شود؟
+            </h2>
+
+            <p>
+                اکنون تابع درجهٔ دوم زیر را در نظر بگیرید:
+            </p>
+
+            <div class="formula">
+                \[
+                f(x)=x^2
+                \]
+            </div>
+
+            <p>
+                این تابع یک خط نیست، بلکه یک منحنی است.
+                بنابراین شیب کل منحنی ثابت نیست.
+            </p>
+
+            <p>
+                اما نکتهٔ بسیار مهم این است:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{در هر نقطه از منحنی می‌توان شیب خط مماس را تعیین کرد.}
+                }
+                \]
+            </div>
+
+            <p>
+                خط مماس، خطی است که در یک نقطه با منحنی تماس پیدا می‌کند
+                و جهت حرکت منحنی را در همان نقطه نشان می‌دهد.
+            </p>
+
+
+            <div class="chart-container">
+
+                <svg viewBox="0 0 800 500">
+
+                    <!-- محورها -->
+
+                    <line x1="80" y1="430"
+                        x2="740" y2="430"
+                        stroke="#222"
+                        stroke-width="3" />
+
+                    <line x1="400" y1="470"
+                        x2="400" y2="40"
+                        stroke="#222"
+                        stroke-width="3" />
+
+                    <!-- منحنی -->
+
+                    <path d="
+                        M 170 390
+                        C 240 280,
+                          300 190,
+                          400 120
+                        C 500 190,
+                          560 280,
+                          630 390"
+                        fill="none"
+                        stroke="#16a34a"
+                        stroke-width="6" />
+
+                    <!-- مماس -->
+
+                    <line x1="300" y1="400"
+                        x2="610" y2="90"
+                        stroke="#ea580c"
+                        stroke-width="5" />
+
+                    <!-- نقطه تماس -->
+
+                    <circle cx="500" cy="200"
+                        r="9" />
+
+                    <text x="515" y="190"
+                        font-family="Vazirmatn"
+                        font-size="22">
+                        نقطهٔ تماس
+                    </text>
+
+                    <text x="555" y="105"
+                        font-family="Vazirmatn"
+                        font-size="22">
+                        خط مماس
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <p>
+                در نقطهٔ \(x=2\)، خط مماس به منحنی دارای شیب مشخصی است.
+            </p>
+
+            <p>
+                این شیب دقیقاً همان چیزی است که مشتق تابع در آن نقطه به ما می‌دهد:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                f'(2)=\text{شیب خط مماس در }x=2
+                }
+                \]
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۳. منحنی درجه سوم
+             ================================================= -->
+
+        <section class="lesson-box box-orange">
+
+            <h2>
+                ۳. همین مفهوم برای تابع درجهٔ سوم
+            </h2>
+
+            <p>
+                برای مثال تابع زیر را در نظر بگیرید:
+            </p>
+
+            <div class="formula">
+                \[
+                f(x)=x^3-3x
+                \]
+            </div>
+
+            <p>
+                این بار منحنی درجهٔ سوم داریم.
+                در هر نقطه، بسته به محل قرار گرفتن نقطه روی منحنی،
+                شیب خط مماس می‌تواند مثبت، منفی یا حتی صفر باشد.
+            </p>
+
+
+            <div class="chart-container">
+
+                <svg viewBox="0 0 800 500">
+
+                    <line x1="60" y1="250"
+                        x2="740" y2="250"
+                        stroke="#222"
+                        stroke-width="3" />
+
+                    <line x1="400" y1="450"
+                        x2="400" y2="50"
+                        stroke="#222"
+                        stroke-width="3" />
+
+                    <!-- منحنی تقریبی درجه سوم -->
+
+                    <path d="
+                        M 100 390
+                        C 200 300,
+                          250 120,
+                          360 210
+                        C 410 250,
+                          450 380,
+                          530 290
+                        C 600 210,
+                          640 120,
+                          700 80"
+                        fill="none"
+                        stroke="#ea580c"
+                        stroke-width="6" />
+
+                    <!-- مماس -->
+
+                    <line x1="400" y1="350"
+                        x2="650" y2="100"
+                        stroke="#2563eb"
+                        stroke-width="5" />
+
+                    <circle cx="520" cy="230" r="9" />
+
+                    <text x="535" y="220"
+                        font-family="Vazirmatn"
+                        font-size="22">
+                        نقطهٔ تماس
+                    </text>
+
+                    <text x="600" y="95"
+                        font-family="Vazirmatn"
+                        font-size="22">
+                        مماس
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <p>
+                پس مهم نیست تابع درجهٔ دوم باشد، درجهٔ سوم باشد یا هر منحنی
+                دیگری؛ در هر نقطه‌ای که مشتق وجود داشته باشد،
+                می‌توان شیب مماس را به دست آورد.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             ۴. ارتباط شیب و مشتق
+             ================================================= -->
+
+        <section class="lesson-box box-yellow">
+
+            <h2>
+                ۴. ارتباط شیب و مشتق؛ ایدهٔ اصلی مشتق
+            </h2>
+
+            <p>
+                در یک خط راست، شیب با رابطهٔ زیر به دست می‌آید:
+            </p>
+
+            <div class="formula">
+                \[
+                m=\frac{\Delta y}{\Delta x}
+                \]
+            </div>
+
+            <p>
+                اما روی یک منحنی، اگر بخواهیم شیب را دقیقاً در یک نقطه پیدا کنیم،
+                دو نقطه را به هم نزدیک می‌کنیم.
+            </p>
+
+            <p>
+                فرض کنید نقطهٔ مورد نظر \(x=a\) باشد.
+                یک نقطهٔ دیگر را در \(x=a+h\) در نظر می‌گیریم.
+            </p>
+
+            <p>
+                شیب خطی که این دو نقطه را به هم وصل می‌کند:
+            </p>
+
+            <div class="formula">
+                \[
+                m=
+                \frac{f(a+h)-f(a)}
+                {(a+h)-a}
+                \]
+            </div>
+
+            <p>
+                یعنی:
+            </p>
+
+            <div class="formula">
+                \[
+                m=
+                \frac{f(a+h)-f(a)}{h}
+                \]
+            </div>
+
+            <p>
+                اکنون اگر نقطهٔ دوم را بی‌نهایت به نقطهٔ اول نزدیک کنیم،
+                خط واصل به خط مماس تبدیل می‌شود.
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                f'(a)=
+                \lim_{h\to0}
+                \frac{f(a+h)-f(a)}{h}
+                }
+                \]
+            </div>
+
+            <p>
+                این یکی از مهم‌ترین تعریف‌های مشتق است.
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{مشتق در یک نقطه}
+                =
+                \text{شیب خط مماس در آن نقطه}
+                }
+                \]
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۵. تعریف مشتق
+             ================================================= -->
+
+        <section class="lesson-box box-blue">
+
+            <h2>
+                ۵. تعریف مشتق در یک نقطه
+            </h2>
+
+            <p>
+                اگر تابع \(f(x)\) در نقطهٔ \(x=a\) مشتق‌پذیر باشد،
+                مشتق آن در این نقطه از رابطهٔ زیر تعریف می‌شود:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                f'(a)=
+                \lim_{h\to0}
+                \frac{f(a+h)-f(a)}{h}
+                }
+                \]
+            </div>
+
+            <p>
+                این فرمول از نظر هندسی یعنی:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{شیب خط مماس در }x=a
+                }
+                \]
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۶. مثال اول
+             ================================================= -->
+
+        <section class="lesson-box box-green">
+
+            <h2>
+                ۶. مثال ــ محاسبهٔ مشتق \(f(x)=x^2+10x\) با تعریف مشتق
+            </h2>
+
+            <div class="example">
+
+                <div class="example-title">
+                    صورت سؤال
+                </div>
+
+                <p>
+                    تابع زیر را در نظر بگیرید:
+                </p>
+
+                <div class="formula">
+                    \[
+                    f(x)=x^2+10x
+                    \]
+                </div>
+
+                <p>
+                    می‌خواهیم مشتق تابع را در نقاط \(x=8\) و \(x=5\)
+                    با استفاده از تعریف مشتق به دست آوریم.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ اول: محاسبهٔ \(f(8)\)</strong>
+
+                <div class="formula">
+                    \[
+                    f(8)=8^2+10(8)=144
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ دوم: نوشتن تعریف مشتق در \(x=8\)</strong>
+
+                <div class="formula">
+                    \[
+                    f'(8)
+                    =
+                    \lim_{h\to0}
+                    \frac{f(8+h)-f(8)}{h}
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ سوم: محاسبهٔ \(f(8+h)\)</strong>
+
+                <div class="formula">
+                    \[
+                    f(8+h)
+                    =
+                    (8+h)^2+10(8+h)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    f(8+h)
+                    =
+                    64+16h+h^2+80+10h
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    f(8+h)=144+26h+h^2
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ چهارم: قرار دادن در تعریف مشتق</strong>
+
+                <div class="formula">
+                    \[
+                    f'(8)
+                    =
+                    \lim_{h\to0}
+                    \frac{144+26h+h^2-144}{h}
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    =
+                    \lim_{h\to0}
+                    \frac{26h+h^2}{h}
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    =
+                    \lim_{h\to0}(26+h)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    \boxed{f'(8)=26}
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ پنجم: محاسبهٔ مشتق در \(x=5\)</strong>
+
+                <div class="formula">
+                    \[
+                    f'(5)
+                    =
+                    \lim_{h\to0}
+                    \frac{f(5+h)-f(5)}{h}
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    f(5+h)
+                    =
+                    (5+h)^2+10(5+h)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    f(5+h)=75+20h+h^2
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    f'(5)
+                    =
+                    \lim_{h\to0}
+                    \frac{75+20h+h^2-75}{h}
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    =
+                    \lim_{h\to0}(20+h)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    \boxed{f'(5)=20}
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="exam-tip">
+
+                <h3>⭐ نکتهٔ امتحان نهایی</h3>
+
+                <p>
+                    در سؤال‌های تعریف مشتق، مهم‌ترین مرحله این است که
+                    \(f(a+h)\) را با دقت محاسبه کنیم.
+                    سپس عبارت را ساده کنیم تا عامل \(h\) در صورت حذف شود.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۷. مثال دوم
+             ================================================= -->
+
+        <section class="lesson-box box-red">
+
+            <h2>
+                ۷. مثال ــ تابع \(f(x)=-x^2+10x\)
+            </h2>
+
+            <p>
+                تابع زیر را در نظر بگیرید:
+            </p>
+
+            <div class="formula">
+                \[
+                f(x)=-x^2+10x
+                \]
+            </div>
+
+            <p>
+                مشتق در \(x=5\):
+            </p>
+
+            <div class="formula">
+                \[
+                f'(5)
+                =
+                \lim_{h\to0}
+                \frac{f(5+h)-f(5)}{h}
+                \]
+            </div>
+
+            <div class="step">
+
+                <div class="formula">
+                    \[
+                    f(5)=25
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    f(5+h)
+                    =
+                    -(5+h)^2+10(5+h)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    =-25-10h-h^2+50+10h
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    =25-h^2
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="formula">
+                    \[
+                    f'(5)
+                    =
+                    \lim_{h\to0}
+                    \frac{25-h^2-25}{h}
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    =
+                    \lim_{h\to0}(-h)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    \boxed{f'(5)=0}
+                    \]
+                </div>
+
+            </div>
+
+
+            <p>
+                همچنین برای \(x=8\):
+            </p>
+
+            <div class="formula">
+                \[
+                f(8)=-64+80=16
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                \boxed{f'(8)=-6}
+                \]
+            </div>
+
+            <p>
+                پس در نقطهٔ \(x=5\)، مماس افقی است و در \(x=8\)،
+                شیب مماس منفی است.
+            </p>
+
+
+            <div class="exam-tip">
+
+                <h3>⭐ نکتهٔ امتحان نهایی</h3>
+
+                <p>
+                    اگر مشتق در یک نقطه صفر شود، الزاماً به معنی بیشینه یا کمینه
+                    بودن تابع نیست؛ فقط می‌دانیم در آن نقطه مماس افقی است.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۸. شیب‌های قرینه
+             ================================================= -->
+
+        <section class="lesson-box box-purple">
+
+            <h2>
+                ۸. دو نقطه با شیب‌های قرینه
+            </h2>
+
+            <p>
+                برای تابع زیر داریم:
+            </p>
+
+            <div class="formula">
+                \[
+                f(x)=-x^2+10x
+                \]
+            </div>
+
+            <p>
+                مشتق تابع:
+            </p>
+
+            <div class="formula">
+                \[
+                f'(x)=-2x+10
+                \]
+            </div>
+
+            <p>
+                دو نقطهٔ \(x=3\) و \(x=7\) را انتخاب می‌کنیم.
+            </p>
+
+            <div class="formula">
+                \[
+                f'(3)=-6+10=4
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                f'(7)=-14+10=-4
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                \boxed{
+                f'(3)=4
+                \qquad
+                f'(7)=-4
+                }
+                \]
+            </div>
+
+            <p>
+                بنابراین شیب‌های این دو مماس قرینهٔ یکدیگرند:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                f'(3)=-f'(7)
+                }
+                \]
+            </div>
+
+            <p>
+                مختصات دو نقطه:
+            </p>
+
+            <div class="formula">
+                \[
+                f(3)=21
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                f(7)=21
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                \boxed{
+                A(3,21),\qquad B(7,21)
+                }
+                \]
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۹. علامت مشتق از روی نمودار
+             ================================================= -->
+
+        <section class="lesson-box box-yellow">
+
+            <h2>
+                ۹. بدون محاسبه؛ از روی شکل بفهمیم مشتق مثبت یا منفی است
+            </h2>
+
+            <p>
+                یک قانون بسیار مهم:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{تابع صعودی}
+                \Rightarrow
+                f'(x)>0
+                }
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{تابع نزولی}
+                \Rightarrow
+                f'(x)<0
+                }
+                \]
+            </div>
+
+            <p>
+                همچنین اگر مماس افقی باشد:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{f'(x)=0}
+                \]
+            </div>
+
+
+            <div class="exam-tip">
+
+                <h3>⭐ نکتهٔ امتحان نهایی</h3>
+
+                <p>
+                    برای تشخیص علامت مشتق از روی نمودار، نمودار را از
+                    <strong>چپ به راست</strong> دنبال کنید:
+                </p>
+
+                <ul>
+                    <li>حرکت رو به بالا → مشتق مثبت</li>
+                    <li>حرکت رو به پایین → مشتق منفی</li>
+                    <li>مماس افقی → مشتق صفر</li>
+                </ul>
+
+            </div>
+
+
+            <div class="konkoor-tip">
+
+                <h3>🚀 نکتهٔ کنکوری</h3>
+
+                <p>
+                    در تست‌های نموداری معمولاً لازم نیست مشتق را محاسبه کنید.
+                    فقط جهت حرکت منحنی و شیب مماس را بررسی کنید.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۱۰. مقایسه شیب
+             ================================================= -->
+
+        <section class="lesson-box box-cyan">
+
+            <h2>
+                ۱۰. مقایسهٔ شیب مماس در دو نقطه فقط با کمک نمودار
+            </h2>
+
+            <p>
+                فرض کنید نمودار یک تابع در اختیار ما باشد و بخواهیم
+                بدون محاسبهٔ مشتق، شیب مماس را در \(x=3\) و \(x=4\)
+                مقایسه کنیم.
+            </p>
+
+            <p>
+                روش کار:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{هرچه خط مماس به حالت عمودی نزدیک‌تر باشد،
+                قدر مطلق شیب آن بیشتر است.}
+                }
+                \]
+            </div>
+
+            <p>
+                پس باید زاویهٔ مماس با محور \(x\) را بررسی کنیم.
+            </p>
+
+            <p>
+                برای مثال اگر هر دو مماس صعودی باشند و مماس در \(x=4\)
+                شیب بیشتری داشته باشد:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                f'(4)>f'(3)
+                }
+                \]
+            </div>
+
+
+            <div class="exam-tip">
+
+                <h3>⭐ نکتهٔ امتحان نهایی</h3>
+
+                <p>
+                    در مقایسهٔ دو شیب، فقط «بزرگ‌تر بودن زاویه» کافی نیست؛
+                    باید علامت شیب را نیز در نظر گرفت.
+                </p>
+
+            </div>
+
+
+            <div class="konkoor-tip">
+
+                <h3>🚀 نکتهٔ کنکوری</h3>
+
+                <p>
+                    اگر یکی از شیب‌ها مثبت و دیگری منفی باشد، ابتدا علامت‌ها
+                    را مشخص کنید و سپس مقدار آن‌ها را مقایسه کنید.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۱۱. معادله خط مماس
+             ================================================= -->
+
+        <section class="lesson-box box-green">
+
+            <h2>
+                ۱۱. چگونه معادلهٔ خط مماس را به دست آوریم؟
+            </h2>
+
+            <p>
+                معادلهٔ خطی که شیب آن \(m\) باشد و از نقطهٔ
+                \((x_0,y_0)\) عبور کند، به صورت زیر است:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                y-y_0=m(x-x_0)
+                }
+                \]
+            </div>
+
+            <p>
+                برای خط مماس، شیب برابر مشتق تابع در نقطهٔ مورد نظر است:
+            </p>
+
+            <div class="formula">
+                \[
+                m=f'(x_0)
+                \]
+            </div>
+
+            <p>
+                و چون:
+            </p>
+
+            <div class="formula">
+                \[
+                y_0=f(x_0)
+                \]
+            </div>
+
+            <p>
+                فرمول اصلی خط مماس:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                y-f(x_0)
+                =
+                f'(x_0)(x-x_0)
+                }
+                \]
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ۱۲. مثال خط مماس
+             ================================================= -->
+
+        <section class="lesson-box box-blue">
+
+            <h2>
+                ۱۲. مثال ــ معادلهٔ خط مماس
+            </h2>
+
+            <p>
+                تابع زیر را در نظر بگیرید:
+            </p>
+
+            <div class="formula">
+                \[
+                f(x)=x^2+10x
+                \]
+            </div>
+
+            <p>
+                معادلهٔ خط مماس در \(x=5\) را به دست آورید.
+            </p>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ اول: پیدا کردن نقطهٔ تماس</strong>
+
+                <div class="formula">
+                    \[
+                    f(5)=25+50=75
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    (x_0,y_0)=(5,75)
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ دوم: پیدا کردن شیب مماس</strong>
+
+                <div class="formula">
+                    \[
+                    f'(5)=20
+                    \]
+                </div>
+
+                <p>
+                    بنابراین:
+                </p>
+
+                <div class="formula">
+                    \[
+                    m=20
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <strong>مرحلهٔ سوم: استفاده از فرمول خط مماس</strong>
+
+                <div class="formula">
+                    \[
+                    y-y_0=m(x-x_0)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    y-75=20(x-5)
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    y-75=20x-100
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    \boxed{
+                    y=20x-25
+                    }
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="exam-tip">
+
+                <h3>⭐ نکتهٔ امتحان نهایی</h3>
+
+                <p>
+                    برای نوشتن معادلهٔ مماس، سه مقدار اصلی را پیدا کنید:
+                </p>
+
+                <div class="formula">
+                    \[
+                    \boxed{
+                    x_0,\qquad f(x_0),\qquad f'(x_0)
+                    }
+                    \]
+                </div>
+
+                <p>
+                    سپس مستقیماً از رابطهٔ زیر استفاده کنید:
+                </p>
+
+                <div class="formula">
+                    \[
+                    \boxed{
+                    y-f(x_0)
+                    =
+                    f'(x_0)(x-x_0)
+                    }
+                    \]
+                </div>
+
+            </div>
+
+
+            <div class="konkoor-tip">
+
+                <h3>🚀 نکتهٔ کنکوری</h3>
+
+                <p>
+                    اگر در تست، نقطهٔ تماس و شیب مماس داده شده باشند،
+                    اصلاً لازم نیست ابتدا معادلهٔ تابع را پیدا کنید؛
+                    مستقیماً از فرم نقطه ـ شیب استفاده کنید.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             جمع بندی
+             ================================================= -->
+
+        <section class="lesson-box box-yellow">
+
+            <h2>
+                🎯 جمع‌بندی سریع مبحث مشتق
+            </h2>
+
+            <p>
+                مهم‌ترین ارتباط این مبحث:
+            </p>
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{شیب خط}
+                \longrightarrow
+                \text{شیب مماس}
+                \longrightarrow
+                \text{مشتق}
+                }
+                \]
+            </div>
+
+
+            <table class="summary-table">
+
+                <thead>
+                    <tr>
+                        <th>مفهوم</th>
+                        <th>رابطه</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>شیب خط</td>
+                        <td>
+                            \[
+                            m=\frac{\Delta y}{\Delta x}
+                            \]
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>تعریف مشتق</td>
+                        <td>
+                            \[
+                            f'(a)=
+                            \lim_{h\to0}
+                            \frac{f(a+h)-f(a)}{h}
+                            \]
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>تفسیر هندسی مشتق</td>
+                        <td>
+                            \[
+                            f'(a)=
+                            \text{شیب خط مماس}
+                            \]
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>تابع صعودی</td>
+                        <td>
+                            \[
+                            f'(x)>0
+                            \]
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>تابع نزولی</td>
+                        <td>
+                            \[
+                            f'(x)<0
+                            \]
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>مماس افقی</td>
+                        <td>
+                            \[
+                            f'(x)=0
+                            \]
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>معادلهٔ مماس</td>
+                        <td>
+                            \[
+                            y-f(x_0)
+                            =
+                            f'(x_0)(x-x_0)
+                            \]
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <div class="formula">
+                \[
+                \boxed{
+                \text{برای معادلهٔ مماس: }
+                x_0,\quad f(x_0),\quad f'(x_0)
+                }
+                \]
+            </div>
+
+
+            <div class="exam-tip">
+
+                <h3>
+                    ⭐ نکتهٔ طلایی امتحان نهایی
+                </h3>
+
+                <p>
+                    اگر سؤال از شما «شیب مماس» بخواهد، دنبال مشتق باشید.
+                    اگر «معادلهٔ مماس» بخواهد، علاوه بر مشتق باید
+                    نقطهٔ تماس را نیز داشته باشید.
+                </p>
+
+            </div>
+
+
+            <div class="konkoor-tip">
+
+                <h3>
+                    🚀 نکتهٔ طلایی کنکوری
+                </h3>
+
+                <p>
+                    سه کلیدواژهٔ مهم را همیشه به هم مرتبط کنید:
+                </p>
+
+                <div class="formula">
+                    \[
+                    \boxed{
+                    \text{صعودی}
+                    \Longleftrightarrow
+                    f'(x)>0
+                    }
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    \boxed{
+                    \text{نزولی}
+                    \Longleftrightarrow
+                    f'(x)<0
+                    }
+                    \]
+                </div>
+
+                <div class="formula">
+                    \[
+                    \boxed{
+                    \text{مماس افقی}
+                    \Longleftrightarrow
+                    f'(x)=0
+                    }
+                    \]
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ناوبری
+             ================================================= -->
+
+        <div class="lesson-navigation">
+
+            <a href="../fasl1.html" class="btn btn-secondary">
+                ↩️ بازگشت به فصل
+            </a>
+
+            <a href="../../index.html" class="btn btn-primary">
+                🏠 صفحهٔ اصلی
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         پاورقی
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                آموزش جامع و مفهومی ریاضی
+            </p>
+
+            <p>
+                تهیه و تدوین: دکتر یاسر خلعت‌پور
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>
