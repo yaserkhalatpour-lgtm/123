@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="فصل اول ریاضی دهم؛ مجموعه، الگو و دنباله، شامل ۱۰ درس کامل همراه با مثال، تمرین، نکات امتحان نهایی و کنکور">
+
+    <title>فصل اول ریاضی دهم | مجموعه، الگو و دنباله</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        body {
+            background:
+                linear-gradient(
+                    180deg,
+                    #f6f9ff 0%,
+                    #ffffff 50%,
+                    #f7f9fc 100%
+                );
+        }
+
+        .chapter-page {
+            max-width: 1150px;
+            margin: auto;
+            padding: 25px 18px 60px;
+        }
+
+        /* =========================
+           هدر فصل
+        ========================= */
+
+        .chapter-hero {
+            background: linear-gradient(135deg, #193255, #2d6ec8);
+            color: white;
+            border-radius: 28px;
+            padding: 45px 25px;
+            text-align: center;
+            margin: 25px 0 35px;
+            box-shadow: 0 15px 40px rgba(25,50,85,.18);
+        }
+
+        .chapter-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .chapter-hero h1 {
+            margin: 5px 0 12px;
+            font-size: 2.2rem;
+            font-weight: 900;
+        }
+
+        .chapter-hero p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 2;
+            font-size: 1.05rem;
+        }
+
+        /* =========================
+           مسیر دسترسی
+        ========================= */
+
+        .breadcrumb {
+            background: white;
+            padding: 14px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,.05);
+            margin-bottom: 25px;
+        }
+
+        .breadcrumb a {
+            color: #2d6ec8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* =========================
+           معرفی فصل
+        ========================= */
+
+        .chapter-intro {
+            background: white;
+            border-right: 6px solid #2d6ec8;
+            border-radius: 20px;
+            padding: 25px;
+            line-height: 2.2;
+            margin-bottom: 35px;
+            box-shadow: 0 7px 25px rgba(0,0,0,.06);
+        }
+
+        .chapter-intro h2 {
+            margin-top: 0;
+            color: #193255;
+        }
+
+        /* =========================
+           عنوان درس‌ها
+        ========================= */
+
+        .lessons-title {
+            text-align: center;
+            margin: 40px 0 25px;
+        }
+
+        .lessons-title h2 {
+            color: #193255;
+            font-size: 1.7rem;
+        }
+
+        .lessons-title p {
+            color: #666;
+        }
+
+        /* =========================
+           شبکه درس‌ها
+        ========================= */
+
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .lesson-card {
+            position: relative;
+            background: white;
+            border-radius: 22px;
+            padding: 25px 25px 22px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 8px 25px rgba(0,0,0,.07);
+            border: 1px solid #e5eaf1;
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+            overflow: hidden;
+        }
+
+        .lesson-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(
+                90deg,
+                #193255,
+                #2d6ec8
+            );
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.12);
+        }
+
+        .lesson-number {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #193255;
+            color: white;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 17px;
+        }
+
+        .lesson-card h3 {
+            color: #193255;
+            font-size: 1.25rem;
+            margin: 8px 0 10px;
+        }
+
+        .lesson-card p {
+            color: #666;
+            line-height: 1.9;
+            margin: 0 0 17px;
+        }
+
+        .lesson-enter {
+            display: inline-block;
+            color: #2d6ec8;
+            font-weight: 800;
+        }
+
+        /* =========================
+           PDF
+        ========================= */
+
+        .pdf-box {
+            margin-top: 40px;
+            background: linear-gradient(
+                135deg,
+                #fff8e9,
+                #ffffff
+            );
+            border: 2px solid #e4a32a;
+            border-radius: 22px;
+            padding: 28px;
+            text-align: center;
+        }
+
+        .pdf-box h2 {
+            color: #895900;
+            margin-top: 0;
+        }
+
+        .pdf-box p {
+            line-height: 2;
+            color: #555;
+        }
+
+        .pdf-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .pdf-btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 800;
+            transition: .2s;
+        }
+
+        .pdf-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .pdf-view {
+            background: #c97918;
+        }
+
+        .pdf-download {
+            background: #193255;
+        }
+
+        /* =========================
+           نکات
+        ========================= */
+
+        .important-box {
+            margin-top: 35px;
+            background: #f3f0fb;
+            border-right: 6px solid #6e46a0;
+            border-radius: 20px;
+            padding: 25px;
+            line-height: 2.1;
+        }
+
+        .important-box h2 {
+            margin-top: 0;
+            color: #5d398b;
+        }
+
+        /* =========================
+           موبایل
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            .chapter-page {
+                padding: 15px 10px 45px;
+            }
+
+            .chapter-hero {
+                padding: 32px 18px;
+                border-radius: 20px;
+            }
+
+            .chapter-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .chapter-icon {
+                font-size: 45px;
+            }
+
+            .lessons-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-card {
+                padding: 23px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     منوی سایت
+========================= -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <div class="logo">
+            📘 آموزش ریاضی
+        </div>
+
+        <nav class="nav-menu">
+
+            <a href="../index.html">
+                خانه
+            </a>
+
+            <a href="index.html" class="active">
+                ریاضی دهم
+            </a>
+
+            <a href="../d11/index.html">
+                ریاضی یازدهم
+            </a>
+
+            <a href="../d12/index.html">
+                ریاضی دوازدهم
+            </a>
+
+            <a href="../final/index.html">
+                🎓 امتحان نهایی
+            </a>
+
+            <a href="../konkoor/index.html">
+                🚀 کنکور
+            </a>
+
+            <a href="../pdf/index.html">
+                📚 PDF
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main class="chapter-page">
+
+
+<!-- =========================
+     مسیر
+========================= -->
+
+<div class="breadcrumb">
+
+    <a href="../index.html">
+        خانه
+    </a>
+
+    <span> ← </span>
+
+    <a href="index.html">
+        ریاضی دهم
+    </a>
+
+    <span> ← </span>
+
+    <strong>
+        فصل اول
+    </strong>
+
+</div>
+
+
+<!-- =========================
+     هدر فصل
+========================= -->
+
+<section class="chapter-hero">
+
+    <div class="chapter-icon">
+        🔢
+    </div>
+
+    <h1>
+        فصل اول ریاضی دهم
+    </h1>
+
+    <p>
+        مجموعه، الگو و دنباله
+    </p>
+
+    <p>
+        آموزش کامل و مرحله‌به‌مرحله،
+        از مفاهیم پایه تا تمرین‌های امتحانی و کنکوری
+    </p>
+
+</section>
+
+
+<!-- =========================
+     معرفی
+========================= -->
+
+<section class="chapter-intro">
+
+    <h2>
+        📚 دربارهٔ این فصل
+    </h2>
+
+    <p>
+        فصل اول ریاضی دهم یکی از فصل‌های پایه‌ای و مهم ریاضی است.
+        در این فصل ابتدا با مفهوم مجموعه و مجموعه‌های عددی آشنا می‌شویم
+        و سپس بازه‌ها، اجتماع، اشتراک و تفاضل مجموعه‌ها را یاد می‌گیریم.
+    </p>
+
+    <p>
+        مطالب فصل به صورت <strong>۱۰ درس مستقل</strong> تنظیم شده است
+        تا مطالعهٔ آن ساده‌تر و منظم‌تر باشد.
+    </p>
+
+    <p>
+        در هر درس، ابتدا آموزش مفهومی ارائه می‌شود،
+        سپس مثال‌های ساده و متوسط، تمرین، نکات امتحان نهایی
+        و نکات کنکوری قرار می‌گیرد.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     عنوان درس‌ها
+========================= -->
+
+<section class="lessons-title">
+
+    <h2>
+        📖 درس‌های فصل اول
+    </h2>
+
+    <p>
+        برای شروع، درس موردنظر خود را انتخاب کنید.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     درس‌ها
+========================= -->
+
+<section class="lessons-grid">
+
+
+<!-- درس ۱ -->
+
+<a href="fasl1/dars1.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۱
+    </div>
+
+    <h3>
+        درس اول: آشنایی با مجموعه
+    </h3>
+
+    <p>
+        مفهوم مجموعه، عضو مجموعه،
+        روش‌های نمایش مجموعه و نمادهای عضویت
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۲ -->
+
+<a href="fasl1/dars2.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۲
+    </div>
+
+    <h3>
+        درس دوم: زیرمجموعه
+    </h3>
+
+    <p>
+        مفهوم زیرمجموعه، رابطهٔ بین مجموعه‌ها
+        و تشخیص زیرمجموعه‌ها
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۳ -->
+
+<a href="fasl1/dars3.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۳
+    </div>
+
+    <h3>
+        درس سوم: مجموعه‌های عددی
+    </h3>
+
+    <p>
+        اعداد طبیعی، حسابی، صحیح، گویا،
+        گنگ و حقیقی
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۴ -->
+
+<a href="fasl1/dars4.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۴
+    </div>
+
+    <h3>
+        درس چهارم: رابطهٔ مجموعه‌های عددی
+    </h3>
+
+    <p>
+        رابطهٔ بین مجموعه‌های عددی و
+        نمودار مجموعه‌های عددی
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۵ -->
+
+<a href="fasl1/dars5.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۵
+    </div>
+
+    <h3>
+        درس پنجم: بازه‌ها
+    </h3>
+
+    <p>
+        بازهٔ باز، بسته، نیم‌باز و
+        نمایش بازه‌ها روی محور اعداد
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۶ -->
+
+<a href="fasl1/dars6.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۶
+    </div>
+
+    <h3>
+        درس ششم: عضویت و بازه‌ها
+    </h3>
+
+    <p>
+        تشخیص عضویت اعداد در بازه‌ها
+        و حل مثال‌های متنوع
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۷ -->
+
+<a href="fasl1/dars7.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۷
+    </div>
+
+    <h3>
+        درس هفتم: اجتماع و اشتراک
+    </h3>
+
+    <p>
+        اجتماع، اشتراک و روش محاسبهٔ
+        آن‌ها در مجموعه‌ها و بازه‌ها
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۸ -->
+
+<a href="fasl1/dars8.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۸
+    </div>
+
+    <h3>
+        درس هشتم: تفاضل مجموعه‌ها
+    </h3>
+
+    <p>
+        تفاضل \(A-B\)، تفاضل \(B-A\)
+        و حل مسائل ترکیبی بازه‌ها
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۹ -->
+
+<a href="fasl1/dars9.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۹
+    </div>
+
+    <h3>
+        درس نهم: مجموعه‌های متناهی و نامتناهی
+    </h3>
+
+    <p>
+        تشخیص مجموعه‌های متناهی و نامتناهی،
+        زیرمجموعه‌های نامتناهی و مثال‌های مهم
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+<!-- درس ۱۰ -->
+
+<a href="fasl1/dars10.html"
+   class="lesson-card">
+
+    <div class="lesson-number">
+        ۱۰
+    </div>
+
+    <h3>
+        درس دهم: جمع‌بندی و آزمون
+    </h3>
+
+    <p>
+        جمع‌بندی کل فصل، نکات طلایی،
+        تمرین‌های نهایی و آزمون جامع
+    </p>
+
+    <span class="lesson-enter">
+        ورود به درس ←
+    </span>
+
+</a>
+
+
+</section>
+
+
+<!-- =========================
+     PDF
+========================= -->
+
+<section class="pdf-box">
+
+    <h2>
+        📄 جزوهٔ PDF فصل اول
+    </h2>
+
+    <p>
+        نسخهٔ PDF کامل فصل اول نیز در دسترس شماست.
+    </p>
+
+    <div class="pdf-buttons">
+
+        <a
+            href="pdf/fasl1.pdf"
+            target="_blank"
+            class="pdf-btn pdf-view">
+
+            📖 مشاهده PDF
+
+        </a>
+
+        <a
+            href="pdf/fasl1.pdf"
+            download
+            class="pdf-btn pdf-download">
+
+            ⬇️ دانلود PDF
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     نکات
+========================= -->
+
+<section class="important-box">
+
+    <h2>
+        ⭐ روش مطالعهٔ پیشنهادی
+    </h2>
+
+    <p>
+        ابتدا درس را به صورت مفهومی مطالعه کنید،
+        سپس مثال‌های حل‌شده را بررسی کنید.
+    </p>
+
+    <p>
+        بعد از آن بدون نگاه کردن به پاسخ،
+        تمرین‌های همان درس را حل کنید.
+    </p>
+
+    <p>
+        در پایان، بخش
+        <strong>نکتهٔ امتحان نهایی</strong>
+        و
+        <strong>نکتهٔ کنکوری</strong>
+        را مرور کنید.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     نویسنده
+========================= -->
+
+<section class="chapter-intro">
+
+    <h2>
+        👨‍🏫 مؤلف
+    </h2>
+
+    <p>
+        <strong>
+            دکتر یاسر خلعت‌پور
+        </strong>
+    </p>
+
+    <p>
+        آموزش مفهومی و مرحله‌به‌مرحلهٔ ریاضی
+        از پایه تا امتحان نهایی و کنکور
+    </p>
+
+</section>
+
+
+<!-- =========================
+     بازگشت
+========================= -->
+
+<div class="bottom-navigation">
+
+    <a href="index.html">
+        ← بازگشت به ریاضی دهم
+    </a>
+
+</div>
+
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    📘 آموزش ریاضی
+                </h3>
+
+                <p>
+                    آموزش مفهومی ریاضی از پایه تا کنکور
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    دسترسی سریع
+                </h3>
+
+                <a href="../index.html">
+                    خانه
+                </a>
+
+                <a href="index.html">
+                    ریاضی دهم
+                </a>
+
+                <a href="../d11/index.html">
+                    ریاضی یازدهم
+                </a>
+
+                <a href="../d12/index.html">
+                    ریاضی دوازدهم
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    مؤلف
+                </h3>
+
+                <p>
+                    دکتر یاسر خلعت‌پور
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © تمامی حقوق این مجموعه محفوظ است.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
