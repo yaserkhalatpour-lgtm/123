@@ -1,6 +1,11 @@
 /* =========================================================
    آموزش ریاضی
-   استایل کامل سایت
+   استایل کامل و اصلاح‌شده سایت
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -23,6 +28,19 @@ body {
 
 
 /* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+/* =========================================================
    NAVBAR
    ========================================================= */
 
@@ -31,12 +49,12 @@ body {
     top: 0;
     z-index: 1000;
 
-    background: rgba(255,255,255,0.97);
+    background: rgba(255, 255, 255, 0.97);
 
     border-bottom: 1px solid #e2e8f0;
 
     box-shadow:
-        0 3px 15px rgba(0,0,0,0.06);
+        0 3px 15px rgba(0, 0, 0, 0.06);
 
     backdrop-filter: blur(10px);
 }
@@ -72,9 +90,13 @@ body {
 
     gap: 8px;
     flex-wrap: wrap;
+
+    list-style: none;
 }
 
 .nav-menu a {
+    display: block;
+
     padding: 10px 14px;
 
     border-radius: 10px;
@@ -135,7 +157,7 @@ body {
     border-radius: 50%;
 
     background:
-        rgba(255,255,255,0.08);
+        rgba(255, 255, 255, 0.08);
 }
 
 .hero::after {
@@ -152,7 +174,7 @@ body {
     border-radius: 50%;
 
     background:
-        rgba(255,255,255,0.06);
+        rgba(255, 255, 255, 0.06);
 }
 
 .hero-content {
@@ -168,11 +190,13 @@ body {
 
 .hero-icon {
     font-size: 4rem;
-
     margin-bottom: 15px;
 }
 
 .hero h1 {
+    position: relative;
+    z-index: 2;
+
     font-size:
         clamp(2rem, 5vw, 3.5rem);
 
@@ -181,6 +205,13 @@ body {
     line-height: 1.5;
 
     margin-bottom: 15px;
+
+    text-align: center;
+}
+
+.hero p {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-description {
@@ -193,7 +224,7 @@ body {
     line-height: 2.1;
 
     color:
-        rgba(255,255,255,0.92);
+        rgba(255, 255, 255, 0.92);
 }
 
 
@@ -243,18 +274,18 @@ body {
 
     box-shadow:
         0 8px 20px
-        rgba(0,0,0,0.12);
+        rgba(0, 0, 0, 0.12);
 }
 
 .btn-secondary {
     background:
-        rgba(255,255,255,0.14);
+        rgba(255, 255, 255, 0.14);
 
     color: white;
 
     border:
         1px solid
-        rgba(255,255,255,0.5);
+        rgba(255, 255, 255, 0.5);
 }
 
 
@@ -313,7 +344,7 @@ body {
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
     gap: 25px;
 }
@@ -336,7 +367,7 @@ body {
 
     box-shadow:
         0 8px 25px
-        rgba(15,23,42,0.06);
+        rgba(15, 23, 42, 0.06);
 
     transition:
         transform 0.3s ease,
@@ -368,7 +399,7 @@ body {
 
     box-shadow:
         0 18px 40px
-        rgba(15,23,42,0.12);
+        rgba(15, 23, 42, 0.12);
 }
 
 .grade-card h3 {
@@ -473,7 +504,7 @@ body {
 
     box-shadow:
         0 8px 20px
-        rgba(37,99,235,0.3);
+        rgba(37, 99, 235, 0.3);
 }
 
 .grade10 .card-icon {
@@ -497,7 +528,7 @@ body {
     display: grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        repeat(4, 1fr);
 
     gap: 20px;
 }
@@ -516,7 +547,7 @@ body {
 
     box-shadow:
         0 7px 20px
-        rgba(15,23,42,0.05);
+        rgba(15, 23, 42, 0.05);
 
     transition: all 0.3s ease;
 }
@@ -527,7 +558,7 @@ body {
 
     box-shadow:
         0 15px 30px
-        rgba(15,23,42,0.1);
+        rgba(15, 23, 42, 0.1);
 }
 
 .feature-icon {
@@ -567,7 +598,7 @@ body {
     display: grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        repeat(4, 1fr);
 
     gap: 20px;
 }
@@ -586,7 +617,7 @@ body {
 
     box-shadow:
         0 7px 20px
-        rgba(15,23,42,0.05);
+        rgba(15, 23, 42, 0.05);
 }
 
 .step-number {
@@ -686,6 +717,17 @@ body {
    محتوای درس
    ========================================================= */
 
+.lesson-content {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    direction: rtl;
+}
+
 .lesson-box {
     position: relative;
 
@@ -702,7 +744,11 @@ body {
 
     box-shadow:
         0 8px 25px
-        rgba(15,23,42,0.05);
+        rgba(15, 23, 42, 0.05);
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .lesson-box h2 {
@@ -716,6 +762,10 @@ body {
 
     border-bottom:
         2px solid #e0f2fe;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .lesson-box h3 {
@@ -724,6 +774,10 @@ body {
     margin-top: 22px;
 
     margin-bottom: 12px;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .lesson-box p {
@@ -732,18 +786,31 @@ body {
     line-height: 2.15;
 
     margin-bottom: 12px;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
-.lesson-box ul {
+.lesson-box ul,
+.lesson-box ol {
     padding-right: 25px;
 
     color: #334155;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .lesson-box li {
     margin-bottom: 10px;
 
     line-height: 2;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 
@@ -785,16 +852,28 @@ body {
     border-radius: 14px;
 
     background: #eff6ff;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .definition-box h3 {
     color: #1d4ed8;
 
     margin-top: 0;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .definition-box p {
     color: #1e3a8a;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 
@@ -813,6 +892,10 @@ body {
     border-radius: 14px;
 
     background: #ecfeff;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .example-box h3 {
@@ -823,6 +906,10 @@ body {
 
 .example-box p {
     color: #164e63;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 
@@ -839,8 +926,6 @@ body {
 
     border-radius: 16px;
 
-    text-align: center;
-
     background:
         linear-gradient(
             135deg,
@@ -853,9 +938,74 @@ body {
 
     box-shadow:
         0 5px 15px
-        rgba(37,99,235,0.06);
+        rgba(37, 99, 235, 0.06);
 
     overflow-x: auto;
+
+    /*
+       فرمول‌های ریاضی چپ به راست هستند.
+       این قسمت عمداً LTR است.
+    */
+    direction: ltr;
+
+    text-align: center;
+
+    unicode-bidi: isolate;
+}
+
+/*
+   اگر داخل formula-box متن فارسی معمولی وجود داشت،
+   آن متن باید دوباره RTL شود.
+*/
+.formula-box .formula-text {
+    direction: rtl;
+
+    text-align: right;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    line-height: 2;
+
+    unicode-bidi: plaintext;
+}
+
+
+/* =========================================================
+   تنظیم MathJax
+   ========================================================= */
+
+mjx-container {
+    direction: ltr !important;
+}
+
+mjx-container[display="true"] {
+    direction: ltr !important;
+
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   خط ترکیبی فارسی + فرمول
+   ========================================================= */
+
+.math-line {
+    direction: rtl;
+
+    text-align: right;
+
+    line-height: 2.3;
+
+    unicode-bidi: plaintext;
+}
+
+.math-line mjx-container {
+    direction: ltr !important;
+
+    display: inline-block !important;
+
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 
@@ -874,16 +1024,30 @@ body {
     border-radius: 14px;
 
     background: #fffbeb;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
+.exam-tip h2,
 .exam-tip h3 {
     color: #b45309;
 
     margin-top: 0;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
-.exam-tip p {
+.exam-tip p,
+.exam-tip li {
     color: #78350f;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 
@@ -892,6 +1056,12 @@ body {
    ========================================================= */
 
 .konkoor-tip {
+    margin: 25px 0;
+
+    padding: 22px 25px;
+
+    border-radius: 14px;
+
     background:
         linear-gradient(
             135deg,
@@ -901,26 +1071,39 @@ body {
 
     border:
         1px solid #bbf7d0;
-}
 
-.konkoor-tip .lesson-number {
-    background: #dcfce7;
+    direction: rtl;
 
-    color: #15803d;
-}
-
-.konkoor-tip h2 {
-    border-bottom-color:
-        #bbf7d0;
+    text-align: right;
 }
 
 .konkoor-tip h2,
 .konkoor-tip h3 {
     color: #166534;
+
+    margin-top: 0;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
+.konkoor-tip p,
 .konkoor-tip li {
     color: #14532d;
+
+    direction: rtl;
+
+    text-align: right;
+}
+
+.konkoor-tip ul,
+.konkoor-tip ol {
+    direction: rtl;
+
+    text-align: right;
+
+    padding-right: 25px;
 }
 
 
@@ -929,12 +1112,20 @@ body {
    ========================================================= */
 
 .exercise-box {
+    padding: 10px;
+
+    border-radius: 16px;
+
     background:
         linear-gradient(
             135deg,
             #fff7ed,
             #ffffff
         );
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .exercise {
@@ -951,6 +1142,10 @@ body {
 
     border-right:
         5px solid #f97316;
+
+    direction: rtl;
+
+    text-align: right;
 }
 
 .exercise h3 {
@@ -961,6 +1156,47 @@ body {
 
 .exercise p {
     color: #431407;
+
+    direction: rtl;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   AUTHOR
+   ========================================================= */
+
+.author-box {
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+
+    border:
+        1px solid #bfdbfe;
+
+    text-align: center;
+}
+
+.author-box h3 {
+    color: #172554;
+
+    margin-bottom: 8px;
+}
+
+.author-box p {
+    color: #475569;
 }
 
 
@@ -971,70 +1207,25 @@ body {
 .footer {
     margin-top: 40px;
 
-    padding-top: 55px;
+    padding: 55px 20px 35px;
 
     background: #0f172a;
 
     color: #cbd5e1;
-}
-
-.footer-container {
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    padding:
-        0 25px 40px;
-
-    display: grid;
-
-    grid-template-columns:
-        2fr 1fr;
-
-    gap: 50px;
-}
-
-.footer-container h3 {
-    color: white;
-
-    margin-bottom: 15px;
-}
-
-.footer-container p {
-    color: #94a3b8;
-
-    line-height: 2;
-}
-
-.footer-container a {
-    display: block;
-
-    color: #cbd5e1;
-
-    text-decoration: none;
-
-    margin: 8px 0;
-
-    transition: color 0.2s ease;
-}
-
-.footer-container a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    padding: 20px;
-
-    border-top:
-        1px solid #1e293b;
 
     text-align: center;
 }
 
-.footer-bottom p {
-    color: #64748b;
+.footer p {
+    color: #94a3b8;
 
-    font-size: 0.85rem;
+    line-height: 2;
+
+    margin-bottom: 6px;
+}
+
+.footer strong {
+    color: white;
 }
 
 
@@ -1100,17 +1291,17 @@ body {
 
     .grade-grid {
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
     }
 
     .feature-grid {
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
     }
 
     .steps {
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
     }
 
     .nav-container {
@@ -1131,6 +1322,11 @@ body {
    ========================================================= */
 
 @media (max-width: 768px) {
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
 
     .hero {
         padding: 60px 18px;
@@ -1211,6 +1407,7 @@ body {
     .definition-box,
     .example-box,
     .exam-tip,
+    .konkoor-tip,
     .exercise {
         padding: 18px;
     }
@@ -1277,6 +1474,11 @@ body {
         font-size: 1.4rem;
     }
 
+    .lesson-content {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
 }
 
 
@@ -1325,4 +1527,5 @@ body {
         border-top:
             1px solid #999;
     }
+
 }
